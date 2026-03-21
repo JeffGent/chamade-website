@@ -1,0 +1,23 @@
+html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chamade Hotel Gent — Boutique hotel nabij Sint-Pietersstation</title>
+  <meta name="description" content="Hotel Chamade is een 3-sterren boutique hotel in Gent, op 2 minuten van het Sint-Pietersstation. Vers ontbijt met lokale producten, Green Key gecertificeerd.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.chamade.be/nl/">
+  <meta property="og:title" content="Chamade Hotel Gent">
+  <meta property="og:description" content="Hotel Chamade is een 3-sterren boutique hotel in Gent, op 2 minuten van het Sint-Pietersstation. Vers ontbijt met lokale producten, Green Key gecertificeerd.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.chamade.be/nl/">
+  <meta property="og:image" content="https://www.chamade.be/images/hero.jpg">
+  <link rel="alternate" hreflang="nl" href="https://www.chamade.be/nl/">
+  <link rel="alternate" hreflang="fr" href="https://www.chamade.be/fr/">
+  <link rel="alternate" hreflang="en" href="https://www.chamade.be/en/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Hotel","name":"Chamade Hotel","description":"3-sterren boutique hotel in Gent, 2 minuten van Sint-Pietersstation.","url":"https://www.chamade.be","telephone":"+3292201515","email":"info@chamade.be","address":{"@type":"PostalAddress","streetAddress":"Koningin Elisabethlaan 3","addressLocality":"Gent","postalCode":"9000","addressCountry":"BE"},"geo":{"@type":"GeoCoordinates","latitude":51.0376,"longitude":3.71501},"starRating":{"@type":"Rating","ratingValue":"3"},"aggregateRating":{"@type":"AggregateRating","ratingValue":"9.1","reviewCount":"500","bestRating":"10"},"checkinTime":"15:00","checkoutTime":"11:00","priceRange":"€€"}
+  </script>
+  <style>
+    
