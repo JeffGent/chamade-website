@@ -56,4 +56,25 @@
     <priority>0.3</priority>
   </url>
 
+  <!-- CO2 rapport NL -->
+  <url>
+    <loc>https://www.chamade.be/nl/co2.html</loc>
+    <lastmod>2026-03-22</lastmod>
+    <priority>0.4</priority>
+  </url>
+
+  <!-- CO2 rapport EN -->
+  <url>
+    <loc>https://www.chamade.be/en/co2.html</loc>
+    <lastmod>2026-03-22</lastmod>
+    <priority>0.4</priority>
+  </url>
+
+  <!-- CO2 rapport FR -->
+  <url>
+    <loc>https://www.chamade.be/fr/co2.html</loc>
+    <lastmod>2026-03-22</lastmod>
+    <priority>0.4</priority>
+  </url>
+
 </urlset>
