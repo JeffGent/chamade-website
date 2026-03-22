@@ -148,8 +148,8 @@
     </ul></div>
     <div class="footer-col"><h4>Infos</h4><ul>
       <li><a href="conditions.html">Conditions d'annulation</a></li>
-      <li><a href="#" onclick="document.getElementById('modal-privacy').classList.add('active');return false">Politique de confidentialité</a></li>
-      <li><a href="#" onclick="document.getElementById('modal-terms').classList.add('active');return false">Conditions générales</a></li>
+      <li><a href="#" onclick="var m=document.getElementById('modal-privacy');m.style.display='flex';m.classList.add('active');return false">Politique de confidentialité</a></li>
+      <li><a href="#" onclick="var m=document.getElementById('modal-terms');m.style.display='flex';m.classList.add('active');return false">Conditions générales</a></li>
       <li><a href="https://www.instagram.com/chamadehotel/" target="_blank" rel="noopener">Instagram</a></li>
     </ul></div>
   </div>
@@ -193,9 +193,9 @@ window.addEventListener("load", function(){ if(window.location.hash) window.scro
 </a>
 
 
-<div class="policy-overlay" id="modal-privacy" onclick="if(event.target===this)this.classList.remove('active')">
+<div class="policy-overlay" id="modal-privacy" style="display:none" onclick="if(event.target===this){this.classList.remove('active');this.style.display='none'}">
   <div class="policy-modal">
-    <div class="policy-header"><h2>Politique de confidentialité et cookies</h2><button class="policy-close" onclick="this.closest('.policy-overlay').classList.remove('active')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M18 6L6 18M6 6l12 12"/></svg></button></div>
+    <div class="policy-header"><h2>Politique de confidentialité et cookies</h2><button class="policy-close" onclick="var o=this.closest('.policy-overlay');o.classList.remove('active');o.style.display='none'"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M18 6L6 18M6 6l12 12"/></svg></button></div>
     <div class="policy-body">
       <p>Votre vie privée est notre priorité. Cette déclaration de confidentialité s'applique à (1) notre site web www.chamade.be et (2) à toutes les relations entre Hotel Chamade et ses clients, prospects et partenaires commerciaux.</p>
       <p>Hotel Chamade s'efforce d'agir conformément à la loi belge sur la vie privée du 8 décembre 1992 et au règlement européen de 2016 (RGPD) relatif à la protection des personnes physiques à l'égard du traitement des données à caractère personnel.</p>
@@ -247,9 +247,9 @@ window.addEventListener("load", function(){ if(window.location.hash) window.scro
   </div>
 </div>
 
-<div class="policy-overlay" id="modal-terms" onclick="if(event.target===this)this.classList.remove('active')">
+<div class="policy-overlay" id="modal-terms" style="display:none" onclick="if(event.target===this){this.classList.remove('active');this.style.display='none'}">
   <div class="policy-modal">
-    <div class="policy-header"><h2>Conditions générales</h2><button class="policy-close" onclick="this.closest('.policy-overlay').classList.remove('active')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M18 6L6 18M6 6l12 12"/></svg></button></div>
+    <div class="policy-header"><h2>Conditions générales</h2><button class="policy-close" onclick="var o=this.closest('.policy-overlay');o.classList.remove('active');o.style.display='none'"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M18 6L6 18M6 6l12 12"/></svg></button></div>
     <div class="policy-body">
       <h3>1. Réservations et paiement</h3>
       <p>Une réservation est définitive après confirmation par e-mail. Le paiement s'effectue selon le tarif choisi : pour les tarifs flexibles, votre carte est débitée immédiatement avec possibilité d'annulation gratuite jusqu'à 24 heures avant l'arrivée. Pour les tarifs non remboursables, le montant total est dû immédiatement et n'est pas remboursable.</p>
