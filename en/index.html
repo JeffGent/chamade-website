@@ -246,6 +246,7 @@
     .review-stars-row{display:flex;gap:2px}
     .review-stars-row svg{fill:var(--terra);width:12px;height:12px}
     .review-text{font-size:13px;font-weight:300;color:var(--text);line-height:1.78;font-style:italic}
+    .review-loading{grid-column:1/-1;padding:40px 0;text-align:center;color:var(--text-mid);font-size:13px;font-weight:300}
 
     /* ═══ FAQ ═══ */
     .faq-wrap{padding:88px 48px;background:var(--cream)}
@@ -707,7 +708,7 @@
   <h2 class="section-title">Google Reviews</h2>
   <div class="reviews-intro">
     <div class="reviews-rating">
-      <div class="reviews-score" id="reviews-score">4.4</div>
+      <div class="reviews-score" id="reviews-score">·</div>
       <div class="reviews-stars">
         <div class="reviews-stars-row">
           <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
@@ -719,30 +720,10 @@
         <span class="reviews-stars-label" id="reviews-count">on Google</span>
       </div>
     </div>
-    <a href="https://www.google.com/maps/place/Hotel+Chamade/@51.035,3.715,15z/data=!4m6!3m5!1s0x47c371b0de28f14d:0x6b20f265a5b32c3d!8m2!3d51.035!4d3.715!16s%2Fg%2F1hm3fdh4g" class="reviews-cta-link" target="_blank" rel="noopener">Read all reviews on Google →</a>
+    <a href="https://www.google.com/maps/search/?api=1&query=Hotel+Chamade+Gent&query_place_id=ChIJD1Dkj19xw0cR46Fzb_YNnXk" class="reviews-cta-link" target="_blank" rel="noopener">Read all reviews on Google →</a>
   </div>
   <div class="reviews-grid" id="reviews-grid">
-    <div class="review-card">
-      <div class="review-header">
-        <div><div class="review-author-name">Sofie V.</div><div class="review-date">February 2025</div></div>
-        <div class="review-stars-row"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
-      </div>
-      <p class="review-text">"Charming hotel within walking distance of the station. Warm welcome, comfortable room and a wonderful breakfast. We will definitely return."</p>
-    </div>
-    <div class="review-card">
-      <div class="review-header">
-        <div><div class="review-author-name">Thomas D.</div><div class="review-date">January 2025</div></div>
-        <div class="review-stars-row"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
-      </div>
-      <p class="review-text">"Ideal location next to Sint-Pietersstation. Quiet, well-kept rooms and personal service you wouldn't expect in a 3-star hotel."</p>
-    </div>
-    <div class="review-card">
-      <div class="review-header">
-        <div><div class="review-author-name">Marie-Claire B.</div><div class="review-date">December 2024</div></div>
-        <div class="review-stars-row"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
-      </div>
-      <p class="review-text">"Sustainable, warm and well-located. The breakfast is exceptional, with local products. Highly recommended for anyone exploring Ghent."</p>
-    </div>
+    <div class="review-loading"><p>Loading reviews…</p></div>
   </div>
 </section>
 
@@ -1041,5 +1022,64 @@
 <div class="mobile-book-bar">
   <a href="https://booking.roomraccoon.com/hotel-chamade/en/">Book now</a>
 </div>
+
+<!-- ═══ GOOGLE REVIEWS (Places API) ═══ -->
+<script>
+(function(){
+  var PLACE_ID='ChIJD1Dkj19xw0cR46Fzb_YNnXk';
+  var API_KEY='AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8';
+  var MAPS_URL='https://www.google.com/maps/search/?api=1&query=Hotel+Chamade+Gent&query_place_id=ChIJD1Dkj19xw0cR46Fzb_YNnXk';
+  var LANG='en';
+  var FALLBACK='Read our reviews on Google';
+  function star(){return'<svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>';}
+  function renderReviews(place){
+    var grid=document.getElementById('reviews-grid');
+    var scoreEl=document.getElementById('reviews-score');
+    var countEl=document.getElementById('reviews-count');
+    if(scoreEl&&place.rating)scoreEl.textContent=place.rating.toFixed(1);
+    if(countEl&&place.user_ratings_total)countEl.textContent=place.user_ratings_total+' reviews';
+    if(!place.reviews||!place.reviews.length){
+      grid.innerHTML='<div class="review-card"><p class="review-text"><a href="'+MAPS_URL+'" target="_blank" rel="noopener" style="color:var(--terra)">'+FALLBACK+' →</a></p></div>';
+      return;
+    }
+    var revs=place.reviews.slice(0,3);
+    grid.innerHTML=revs.map(function(r){
+      var txt=r.text&&r.text.length>240?r.text.substring(0,240)+'…':r.text||'';
+      var stars='';
+      for(var i=0;i<Math.round(r.rating);i++)stars+=star();
+      return'<div class="review-card">'
+        +'<div class="review-header">'
+        +'<div><div class="review-author-name">'+r.author_name+'</div>'
+        +'<div class="review-date">'+r.relative_time_description+'</div></div>'
+        +'<div class="review-stars-row">'+stars+'</div>'
+        +'</div>'
+        +'<p class="review-text">"'+txt+'"</p>'
+        +'</div>';
+    }).join('');
+  }
+  window.__initReviews=function(){
+    var mapDiv=document.createElement('div');
+    mapDiv.style.display='none';
+    document.body.appendChild(mapDiv);
+    var map=new google.maps.Map(mapDiv,{center:{lat:51.035,lng:3.715},zoom:15});
+    var svc=new google.maps.places.PlacesService(map);
+    svc.getDetails({
+      placeId:PLACE_ID,
+      fields:['rating','user_ratings_total','reviews']
+    },function(place,status){
+      if(status===google.maps.places.PlacesServiceStatus.OK){
+        renderReviews(place);
+      }else{
+        var grid=document.getElementById('reviews-grid');
+        grid.innerHTML='<div class="review-card"><p class="review-text"><a href="'+MAPS_URL+'" target="_blank" rel="noopener" style="color:var(--terra)">'+FALLBACK+' →</a></p></div>';
+      }
+    });
+  };
+  var s=document.createElement('script');
+  s.src='https://maps.googleapis.com/maps/api/js?key='+API_KEY+'&libraries=places&language='+LANG+'&callback=__initReviews';
+  s.async=true;s.defer=true;
+  document.head.appendChild(s);
+})();
+</script>
 </body>
 </html>
