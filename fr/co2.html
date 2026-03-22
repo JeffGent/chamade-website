@@ -83,8 +83,8 @@
     .tt-float svg{flex-shrink:0}
     @media(max-width:768px){.tt-float{display:flex}
   
-    .policy-overlay{position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,.45);backdrop-filter:blur(4px);display:none;align-items:center;justify-content:center;padding:24px}
-    .policy-overlay.active{display:flex}
+    .policy-overlay{position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,.45);backdrop-filter:blur(4px);display:none!important;align-items:center;justify-content:center;padding:24px}
+    .policy-overlay.active{display:flex!important}
     .policy-modal{background:var(--cream);max-width:720px;width:100%;max-height:85vh;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 20px 60px rgba(0,0,0,.2)}
     .policy-header{display:flex;align-items:center;justify-content:space-between;padding:20px 28px;border-bottom:1px solid var(--sand);flex-shrink:0}
     .policy-header h2{font-family:Dahlia,serif;font-size:1.3rem;color:var(--green);margin:0}
@@ -318,105 +318,5 @@
   <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
   <span>Chat met ons</span>
 </a>
-
-
-<div class="policy-overlay" id="modal-privacy" onclick="if(event.target===this)this.classList.remove('active')">
-  <div class="policy-modal">
-    <div class="policy-header"><h2>Privacy- en cookiebeleid</h2><button class="policy-close" onclick="this.closest('.policy-overlay').classList.remove('active')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M18 6L6 18M6 6l12 12"/></svg></button></div>
-    <div class="policy-body">
-      <p>Uw privacy komt op de eerste plaats. Deze privacyverklaring is van toepassing op (1) onze website www.chamade.be en (2) op alle relaties tussen Hotel Chamade en haar klanten, prospecten en zakenpartners.</p>
-      <p>Hotel Chamade tracht te allen tijde te handelen in overeenstemming met de Belgische Privacywet van 8 december 1992 en de EU Verordening van 2016 (GDPR) betreffende de bescherming van natuurlijke personen in verband met de verwerking van persoonsgegevens.</p>
-
-      <h3>Soorten persoonsgegevens</h3>
-      <p>Hotel Chamade kan volgende persoonsgegevens verzamelen en verwerken:</p>
-      <ul>
-        <li>Naam en voornaam</li>
-        <li>Woon- en bedrijfsadres</li>
-        <li>E-mailadres en telefoonnummer</li>
-        <li>Geboortedatum</li>
-        <li>Paspoortnummer / identiteitskaartnummer</li>
-        <li>Bedrijfsnaam</li>
-        <li>Informatie betreffende het gebruik van de website (IP-adres, browsertype, etc.)</li>
-        <li>Communicatievoorkeur</li>
-      </ul>
-
-      <h3>Gebruik persoonsgegevens</h3>
-      <p>Hotel Chamade kan gebruik maken van uw persoonsgegevens voor:</p>
-      <ul>
-        <li>De uitvoering van een overeenkomst met Hotel Chamade</li>
-        <li>Het leveren van onze diensten en klantendienst</li>
-        <li>Het verzenden van gerichte marketing, updates en promotionele aanbiedingen</li>
-        <li>Het verzenden van facturen en de invordering van betalingen</li>
-        <li>Het optimaliseren van de kwaliteit en inhoud van de website</li>
-        <li>Statistische doeleinden</li>
-      </ul>
-
-      <h3>Openbaarmaking aan derden</h3>
-      <p>Hotel Chamade zal uw persoonsgegevens niet openbaar maken aan derden, tenzij wanneer het noodzakelijk is in kader van het verlenen van onze diensten. In alle overige gevallen zal Hotel Chamade uw persoonsgegevens niet verkopen, verhuren of doorgeven aan derde partijen zonder uw toestemming.</p>
-
-      <h3>Uw privacy rechten</h3>
-      <p>U heeft recht op toegang, rectificatie, schrapping, beperking, overdraagbaarheid en bezwaar. Contacteer ons via <strong>info@chamade.be</strong>.</p>
-
-      <h3>Cookiebeleid</h3>
-      <p>Hotel Chamade maakt gebruik van cookies voor het verbeteren van de gebruikerservaring en voor het verzamelen van webstatistieken. Wij gebruiken:</p>
-      <ul>
-        <li><strong>Noodzakelijke cookies</strong> - onmisbaar om de website te bezoeken</li>
-        <li><strong>Functionele cookies</strong> - onthouden uw voorkeuren zoals taal</li>
-        <li><strong>Performantie-cookies</strong> - helpen ons de website te verbeteren</li>
-      </ul>
-      <p>U kunt uw browser zo instellen dat cookies worden geblokkeerd. Bepaalde functies van de website werken dan mogelijk niet optimaal.</p>
-
-      <h3>Bedrijfsgegevens</h3>
-      <p><strong>LEKKER LANG SLAPEN BV</strong><br>Koningin Elisabethlaan 3<br>9000 Gent<br>BTW: BE0762 993 981</p>
-      <p><strong>Bankgegevens</strong><br>IBAN BE73 0018 9979 9560<br>BIC GEBABEBB<br>BNP Paribas Fortis</p>
-      <p>Vragen? Contacteer ons via <strong>info@chamade.be</strong></p>
-    </div>
-  </div>
-</div>
-
-<div class="policy-overlay" id="modal-terms" onclick="if(event.target===this)this.classList.remove('active')">
-  <div class="policy-modal">
-    <div class="policy-header"><h2>Algemene voorwaarden</h2><button class="policy-close" onclick="this.closest('.policy-overlay').classList.remove('active')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M18 6L6 18M6 6l12 12"/></svg></button></div>
-    <div class="policy-body">
-      <h3>1. Reserveringen en betaling</h3>
-      <p>Een reservering is definitief na bevestiging per e-mail. Betaling geschiedt conform het gekozen tarief: bij flexibele tarieven wordt uw kaart direct belast met mogelijkheid tot kosteloze annulering tot 24 uur voor aankomst. Bij non-refundable tarieven is het volledige bedrag onmiddellijk verschuldigd en niet restitueerbaar.</p>
-
-      <h3>2. Check-in en check-out</h3>
-      <p>Check-in is mogelijk vanaf 15:00 uur. Check-out dient te gebeuren voor 11:00 uur. Vroege check-in of late check-out is op aanvraag mogelijk en kan extra kosten met zich meebrengen. Gelieve ons te contacteren voor beschikbaarheid.</p>
-
-      <h3>3. Identificatie</h3>
-      <p>Bij check-in dient elke gast een geldig identiteitsbewijs of paspoort voor te leggen. Dit is wettelijk verplicht conform de Belgische wetgeving.</p>
-
-      <h3>4. Huisregels</h3>
-      <h4>Roken</h4>
-      <p>Hotel Chamade is volledig rookvrij. Roken is niet toegestaan in de kamers, gangen of gemeenschappelijke ruimtes. Bij overtreding wordt een reinigingskost van €150 in rekening gebracht.</p>
-      <h4>Nachtrust</h4>
-      <p>Wij vragen onze gasten om de nachtrust te respecteren tussen 22:00 en 08:00 uur. Muziek en lawaai dienen tot een minimum beperkt te worden.</p>
-      <h4>Huisdieren</h4>
-      <p>Helaas zijn huisdieren niet toegestaan in ons hotel.</p>
-      <h4>Schade</h4>
-      <p>De gast is aansprakelijk voor schade aan het hotel of de kamerinrichting veroorzaakt tijdens het verblijf. Eventuele kosten worden in rekening gebracht op de bij ons bekende betaalkaart.</p>
-      <h4>Ontbijt</h4>
-      <p>Het ontbijt wordt geserveerd van maandag tot vrijdag van 07:00 tot 10:00 uur en op zaterdag en zondag van 08:00 tot 11:00 uur. Gasten die hun ontbijt niet hebben geboekt, kunnen dit bijboeken aan de receptie.</p>
-      <h4>Parking</h4>
-      <p>De ondergrondse hotelparking is beschikbaar aan €18 per nacht. Reserveren is aanbevolen gezien het beperkt aantal plaatsen. Hotel Chamade is niet aansprakelijk voor schade aan of diefstal uit geparkeerde voertuigen.</p>
-
-      <h3>5. Aansprakelijkheid</h3>
-      <p>Hotel Chamade is niet aansprakelijk voor verlies, diefstal of beschadiging van persoonlijke bezittingen van gasten. Waardevolle voorwerpen kunnen in de kamerkluis bewaard worden.</p>
-
-      <h3>6. Overmacht</h3>
-      <p>Hotel Chamade is niet aansprakelijk voor het niet nakomen van verplichtingen als gevolg van overmacht, waaronder maar niet beperkt tot natuurrampen, stakingen, pandemieën of overheidsmaatregelen.</p>
-
-      <h3>7. Toepasselijk recht</h3>
-      <p>Op deze voorwaarden is het Belgisch recht van toepassing. Eventuele geschillen worden voorgelegd aan de bevoegde rechtbanken van Gent.</p>
-
-      <h3>8. Website gebruik</h3>
-      <p>De inhoud van deze website is eigendom van Hotel Chamade (Lekker Lang Slapen BV). Het kopiëren, herdistribueren of hergebruiken van teksten, foto's of ander materiaal is niet toegestaan zonder schriftelijke toestemming.</p>
-
-      <h3>9. Contact</h3>
-      <p><strong>LEKKER LANG SLAPEN BV</strong><br>Koningin Elisabethlaan 3, 9000 Gent<br>BTW: BE0762 993 981<br>E-mail: <strong>info@chamade.be</strong><br>Tel: <strong>+32 (0)9 220 15 15</strong></p>
-    </div>
-  </div>
-</div>
 </body>
 </html>
