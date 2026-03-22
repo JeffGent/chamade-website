@@ -353,7 +353,8 @@
       .reviews-grid{grid-template-columns:1fr}
       .faq-wrap{padding:56px 20px}
       .faq-grid{grid-template-columns:1fr}
-      footer{padding:52px 20px 24px}
+      .reviews-intro{flex-direction:column;align-items:flex-start;gap:20px}
+      footer{padding:52px 20px 80px}
       .footer-top{grid-template-columns:1fr;gap:28px}
       .f-brand-name{font-size:28px}
       .footer-bottom{flex-direction:column;align-items:flex-start;gap:14px}
@@ -374,13 +375,13 @@
     .wa-float{position:fixed;bottom:24px;right:24px;z-index:900;display:flex;align-items:center;gap:10px;background:#25D366;color:#fff;text-decoration:none;padding:12px 20px 12px 16px;border-radius:50px;box-shadow:0 4px 16px rgba(0,0,0,0.18);transition:all 0.3s;font-family:'Jost',sans-serif;font-size:13px;font-weight:500;letter-spacing:0.02em}
     .wa-float:hover{background:#1fba59;transform:translateY(-2px);box-shadow:0 6px 24px rgba(0,0,0,0.22)}
     .wa-float svg{flex-shrink:0}
-    @media(max-width:768px){.wa-float span{display:none}.wa-float{padding:14px;border-radius:50%}}
+    @media(max-width:768px){.wa-float span{display:none}.wa-float{padding:14px;border-radius:50%;bottom:80px}}
 
     /* ═══ TIKTOK WIDGET (mobile only) ═══ */
     .tt-float{display:none;position:fixed;bottom:24px;right:76px;z-index:900;align-items:center;justify-content:center;background:#010101;color:#fff;text-decoration:none;padding:14px;border-radius:50%;box-shadow:0 4px 16px rgba(0,0,0,0.18);transition:all 0.3s}
     .tt-float:hover{background:#333;transform:translateY(-2px);box-shadow:0 6px 24px rgba(0,0,0,0.22)}
     .tt-float svg{flex-shrink:0}
-    @media(max-width:768px){.tt-float{display:flex}}
+    @media(max-width:768px){.tt-float{display:flex;bottom:80px}}
 
   /* ── Policy Modals ── */
   .policy-overlay{position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,.45);backdrop-filter:blur(4px);display:none;align-items:center;justify-content:center;padding:24px}
