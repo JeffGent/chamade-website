@@ -177,6 +177,8 @@ window.addEventListener("load", function(){ if(window.location.hash) window.scro
   if(hash) {
     var btn = document.querySelector('.terms-nav a[href="#' + hash + '"]');
     if(btn) btn.click();
+  } else {
+    document.querySelector('.terms-nav a').click();
   }
 </script>
 
