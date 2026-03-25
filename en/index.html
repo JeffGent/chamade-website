@@ -129,7 +129,7 @@
     .usp-head{display:flex;align-items:baseline;gap:10px}
     .usp-num{font-family:'Dahlia',serif;font-size:24px;color:var(--rose);opacity:0.7;line-height:1}
     .usp-item h3{font-family:'Dahlia',serif;font-size:17px;color:var(--green)}
-    .usp-item p{font-size:12px;font-weight:300;color:var(--text-mid);line-height:1.6}
+    .usp-item p{font-size:14.5px;font-weight:300;color:var(--text-mid);line-height:1.6}
 
     /* ═══ SHARED ═══ */
     .section-label{font-size:9px;font-weight:500;letter-spacing:0.38em;text-transform:uppercase;color:var(--terra);display:block;margin-bottom:16px}
@@ -159,6 +159,18 @@
     .slide-arrow:hover{background:rgba(250,247,242,0.22)}
     .slide-prev{left:10px}
     .slide-next{right:10px}
+
+    /* ═══ LIGHTBOX ═══ */
+    .lightbox{position:fixed;inset:0;z-index:9999;background:rgba(20,32,22,0.92);display:none;align-items:center;justify-content:center;opacity:0;transition:opacity 0.3s}
+    .lightbox.active{display:flex;opacity:1}
+    .lightbox img{max-width:90vw;max-height:85vh;object-fit:contain;border-radius:4px;box-shadow:0 8px 40px rgba(0,0,0,0.4)}
+    .lightbox-close{position:absolute;top:24px;right:24px;background:none;border:none;color:var(--cream);cursor:pointer;opacity:0.6;transition:opacity 0.3s;padding:8px}
+    .lightbox-close:hover{opacity:1}
+    .lightbox-prev,.lightbox-next{position:absolute;top:50%;transform:translateY(-50%);background:rgba(250,247,242,0.1);border:none;cursor:pointer;color:var(--cream);width:48px;height:48px;display:flex;align-items:center;justify-content:center;transition:background 0.2s;border-radius:50%}
+    .lightbox-prev:hover,.lightbox-next:hover{background:rgba(250,247,242,0.22)}
+    .lightbox-prev{left:24px}
+    .lightbox-next{right:24px}
+    .lightbox-caption{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);color:var(--cream);font-family:'Dahlia',serif;font-size:18px;text-align:center;opacity:0.8}
 
     /* ═══ VIDEO (autoplay, portrait) ═══ */
     .video-section{background:var(--cream-warm);padding:88px 0;overflow:hidden}
@@ -206,7 +218,7 @@
     .s-tile:hover{background:var(--sand)}
     .s-icon{color:var(--green);margin-bottom:12px;display:flex}
     .s-tile h4{font-family:'Dahlia',serif;font-size:19px;color:var(--green);margin-bottom:6px}
-    .s-tile p{font-size:12px;font-weight:300;color:var(--text-mid);line-height:1.65}
+    .s-tile p{font-size:14.5px;font-weight:300;color:var(--text-mid);line-height:1.65}
 
     /* ═══ LOCATION ═══ */
     .location-wrap{display:grid;grid-template-columns:1fr 1fr;background:var(--green-dark);min-height:500px}
@@ -228,7 +240,7 @@
     .g-tip{border-top:2px solid var(--rose-pale);padding-top:24px}
     .g-cat{font-size:9px;font-weight:500;letter-spacing:0.34em;text-transform:uppercase;color:var(--terra);margin-bottom:10px}
     .g-tip h3{font-family:'Dahlia',serif;font-size:21px;color:var(--green);margin-bottom:8px}
-    .g-tip p{font-size:13px;font-weight:300;color:var(--text-mid);line-height:1.72}
+    .g-tip p{font-size:15px;font-weight:300;color:var(--text-mid);line-height:1.72}
 
     /* ═══ REVIEWS ═══ */
     .reviews-wrap{padding:88px 48px;background:var(--sand)}
@@ -907,6 +919,51 @@
       const dx = e.changedTouches[0].clientX - sx;
       if (Math.abs(dx) > 40) goToSlide(card, parseInt(card.dataset.slide||0) + (dx<0?1:-1));
     });
+  });
+</script>
+
+<!-- ═══ LIGHTBOX ═══ -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" onclick="closeLightbox()" aria-label="Close"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button>
+  <button class="lightbox-prev" onclick="lbStep(-1)"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="m15 18-6-6 6-6"/></svg></button>
+  <button class="lightbox-next" onclick="lbStep(1)"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="m9 18 6-6-6-6"/></svg></button>
+  <img id="lb-img" src="" alt="">
+  <div class="lightbox-caption" id="lb-caption"></div>
+</div>
+<script>
+  var lbImages = [], lbIdx = 0;
+  document.querySelectorAll('.room-card').forEach(function(card) {
+    card.addEventListener('click', function(e) {
+      if (e.target.closest('.slide-arrow') || e.target.closest('.slide-dot')) return;
+      var imgs = card.querySelectorAll('.room-slides img');
+      var name = card.querySelector('.room-name').textContent;
+      lbImages = Array.from(imgs).map(function(img) { return { src: img.src, alt: name }; });
+      lbIdx = parseInt(card.dataset.slide || 0);
+      showLb();
+    });
+  });
+  function showLb() {
+    document.getElementById('lb-img').src = lbImages[lbIdx].src;
+    document.getElementById('lb-caption').textContent = lbImages[lbIdx].alt;
+    document.getElementById('lightbox').classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('active');
+    document.body.style.overflow = '';
+  }
+  function lbStep(dir) {
+    lbIdx = ((lbIdx + dir) % lbImages.length + lbImages.length) % lbImages.length;
+    showLb();
+  }
+  document.getElementById('lightbox').addEventListener('click', function(e) {
+    if (e.target === this) closeLightbox();
+  });
+  document.addEventListener('keydown', function(e) {
+    if (!document.getElementById('lightbox').classList.contains('active')) return;
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft') lbStep(-1);
+    if (e.key === 'ArrowRight') lbStep(1);
   });
 </script>
 
