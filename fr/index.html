@@ -113,6 +113,7 @@
     .b-date{cursor:pointer}
     .b-input::placeholder{color:var(--text-light)}
     .b-input:focus{background:#fff}
+    .coupon-hint{font-size:11px;color:var(--text-light);font-style:italic;white-space:nowrap;align-self:center;padding:0 8px}
     .b-cal{position:absolute;z-index:999;background:#fff;border:1px solid rgba(58,82,64,0.1);padding:16px;width:260px;font-family:'Jost',sans-serif;box-shadow:0 8px 24px rgba(0,0,0,0.1);max-width:calc(100vw - 32px)}
     .bc-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:13px;font-weight:500;color:var(--green)}
     .bc-arr{background:none;border:none;font-size:20px;cursor:pointer;color:var(--green);padding:0 4px;line-height:1}
@@ -482,7 +483,7 @@
   <div class="booking-fields">
     <input type="text" class="b-input b-date" id="b-arrival" placeholder="Check-in" aria-label="Check-in" readonly>
     <input type="text" class="b-input b-date" id="b-departure" placeholder="Check-out" aria-label="Check-out" readonly>
-    <input type="text" class="b-input" id="b-coupon" placeholder="Code promo" aria-label="Code promo">
+    <input type="text" class="b-input" id="b-coupon" placeholder="Code promo" aria-label="Code promo" value="OURSECRET"><span class="coupon-hint">psst — 5% off</span>
   </div>
   <a href="https://booking.roomraccoon.com/hotel-chamade/fr/" class="btn-book-bar" onclick="return goBook(this)">Vérifier la disponibilité</a>
 </div>
