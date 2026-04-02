@@ -1102,7 +1102,7 @@
       grid.innerHTML='<div class="review-card"><p class="review-text"><a href="'+MAPS_URL+'" target="_blank" rel="noopener" style="color:var(--terra)">'+FALLBACK+' →</a></p></div>';
       return;
     }
-    var revs=place.reviews.slice(0,3);
+    var revs=place.reviews.sort(function(a,b){return b.time-a.time}).slice(0,3);
     grid.innerHTML=revs.map(function(r){
       var txt=r.text&&r.text.length>240?r.text.substring(0,240)+'…':r.text||'';
       var stars='';
