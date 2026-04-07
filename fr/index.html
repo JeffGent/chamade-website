@@ -830,7 +830,7 @@
     <div class="footer-col"><h4>Infos</h4><ul>
       <li><a href="conditions.html">Conditions d'annulation</a></li>
       <li><a href="#" onclick="document.getElementById('modal-privacy').classList.add('active');return false">Politique de confidentialité</a></li>
-      <li><a href="#" onclick="document.getElementById('modal-terms').classList.add('active');return false">Conditions générales</a></li>
+      <li><a href="#conditions" onclick="document.getElementById('modal-terms').classList.add('active');return false">Conditions générales</a></li>
       <li><a href="https://www.instagram.com/chamadehotel/" target="_blank" rel="noopener">Instagram</a></li>
     </ul></div>
   </div>
@@ -1143,6 +1143,17 @@
   s.src='https://maps.googleapis.com/maps/api/js?key='+API_KEY+'&libraries=places&language='+LANG+'&callback=__initReviews';
   s.async=true;s.defer=true;
   document.head.appendChild(s);
+})();
+</script>
+<script>
+(function(){
+  var map = {'conditions':'modal-terms','confidentialite':'modal-privacy'};
+  var h = window.location.hash.substring(1);
+  if(map[h]){var m=document.getElementById(map[h]);if(m)m.classList.add('active');}
+  window.addEventListener('hashchange',function(){
+    var h=window.location.hash.substring(1);
+    if(map[h]){var m=document.getElementById(map[h]);if(m)m.classList.add('active');}
+  });
 })();
 </script>
 </body>
