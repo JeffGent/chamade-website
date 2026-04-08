@@ -56,6 +56,36 @@
     <priority>0.3</priority>
   </url>
 
+  <!-- Giveaway NL -->
+  <url>
+    <loc>https://www.chamade.be/nl/win.html</loc>
+    <lastmod>2026-04-08</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.chamade.be/nl/win.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.chamade.be/en/win.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.chamade.be/fr/win.html" />
+  </url>
+
+  <!-- Giveaway EN -->
+  <url>
+    <loc>https://www.chamade.be/en/win.html</loc>
+    <lastmod>2026-04-08</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.chamade.be/nl/win.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.chamade.be/en/win.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.chamade.be/fr/win.html" />
+  </url>
+
+  <!-- Giveaway FR -->
+  <url>
+    <loc>https://www.chamade.be/fr/win.html</loc>
+    <lastmod>2026-04-08</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.chamade.be/nl/win.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.chamade.be/en/win.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.chamade.be/fr/win.html" />
+  </url>
+
   <!-- CO2 rapport NL -->
   <url>
     <loc>https://www.chamade.be/nl/co2.html</loc>

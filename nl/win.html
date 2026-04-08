@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z6NFK4TC6M"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-Z6NFK4TC6M');</script>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#1e2820">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>Getaway Giveaway — Chamade Hotel Gent</title>
+  <meta name="description" content="Win een nacht in onze Deluxe Double kamer inclusief ontbijt voor twee personen. Doe mee aan de Chamade Hotel giveaway!">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.chamade.be/nl/win.html">
+  <meta property="og:title" content="Getaway Giveaway — Chamade Hotel Gent">
+  <meta property="og:description" content="Win een nacht in onze Deluxe Double kamer inclusief ontbijt voor twee. Doe mee en maak kans!">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.chamade.be/nl/win.html">
+  <meta property="og:image" content="https://www.chamade.be/images/kamer-deluxe-1.jpg">
+  <meta property="og:locale" content="nl_BE">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="alternate" hreflang="nl" href="https://www.chamade.be/nl/win.html">
+  <link rel="alternate" hreflang="fr" href="https://www.chamade.be/fr/win.html">
+  <link rel="alternate" hreflang="en" href="https://www.chamade.be/en/win.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    @font-face{font-family:'Dahlia';src:url('../fonts/dahlia.woff2') format('woff2');font-weight:500;font-style:normal;font-display:swap}
+    *{margin:0;padding:0;box-sizing:border-box}
+    :root{
+      --cream:#faf7f2;--cream-warm:#f5efe6;--sand:#ede4d6;
+      --green:#3a5240;--green-dark:#2a3d2f;--green-light:#4d6b55;
+      --terra:#b8604a;--terra-light:#c4785a;--blush:#d9927e;
+      --rose:#e8b4a0;--rose-pale:#f2d5c8;
+      --text:#1e2820;--text-mid:#5a5248;--text-light:#8a7d74;
+    }
+    body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);overflow-x:hidden}
+    a{color:inherit}
+
+    /* NAV */
+    nav.site-nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:22px 48px;display:flex;align-items:center;gap:28px;transition:all 0.4s ease}
+    nav.site-nav.scrolled{background:rgba(250,247,242,0.97);backdrop-filter:blur(16px);padding:12px 48px;box-shadow:0 1px 0 rgba(58,82,64,0.1)}
+    .nav-logo{font-family:'Dahlia',serif;font-size:24px;letter-spacing:0.07em;color:var(--cream);text-decoration:none;text-transform:uppercase;transition:color 0.4s;margin-right:auto}
+    nav.site-nav.scrolled .nav-logo{color:var(--green)}
+    .nav-links{display:flex;gap:26px;list-style:none}
+    .nav-links a{font-size:10px;font-weight:400;letter-spacing:0.2em;text-transform:uppercase;color:rgba(250,247,242,0.72);text-decoration:none;transition:color 0.3s}
+    nav.site-nav.scrolled .nav-links a{color:var(--text-mid)}
+    .nav-links a:hover{color:var(--rose)!important}
+    .nav-langs{display:flex;gap:8px;align-items:center;flex-shrink:0}
+    .nav-langs a{font-size:9px;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:rgba(250,247,242,0.38);text-decoration:none;transition:color 0.3s;padding-bottom:2px;border-bottom:1px solid transparent}
+    nav.site-nav.scrolled .nav-langs a{color:rgba(90,82,72,0.42)}
+    .nav-langs a.active{color:var(--terra)!important;border-bottom-color:var(--terra)}
+    .nav-langs a:hover:not(.active){color:rgba(250,247,242,0.85)}
+    nav.site-nav.scrolled .nav-langs a:hover:not(.active){color:var(--terra)}
+    .nav-sep{width:1px;height:9px;background:rgba(250,247,242,0.2)}
+    nav.site-nav.scrolled .nav-sep{background:rgba(58,82,64,0.18)}
+    .nav-book{font-size:10px;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:var(--cream)!important;background:var(--terra);padding:11px 22px;text-decoration:none;transition:all 0.3s;white-space:nowrap;flex-shrink:0}
+    .nav-book:hover{background:var(--green)}
+    .nav-toggle{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px;flex-shrink:0}
+    .nav-toggle span{display:block;width:22px;height:1.5px;background:var(--cream);transition:all 0.3s}
+    nav.site-nav.scrolled .nav-toggle span{background:var(--green)}
+    .nav-toggle.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+    .nav-toggle.open span:nth-child(2){opacity:0}
+    .nav-toggle.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+    .nav-drawer{display:none;position:fixed;inset:0;background:var(--green-dark);flex-direction:column;align-items:center;justify-content:center;gap:28px;z-index:190}
+    .nav-drawer.open{display:flex}
+    .nav-drawer a{font-size:15px;font-weight:300;letter-spacing:0.12em;color:rgba(250,247,242,0.78);text-decoration:none;transition:color 0.2s}
+    .nav-drawer a:hover{color:var(--rose)}
+    .drawer-langs a{font-size:10px;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:rgba(250,247,242,0.38);text-decoration:none;padding-bottom:2px;border-bottom:1px solid transparent}
+    .drawer-langs a.active{color:var(--terra)!important;border-bottom-color:var(--terra)}
+    .drawer-langs .nav-sep{background:rgba(250,247,242,0.15)!important}
+
+    /* HERO */
+    .hero{min-height:100svh;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden}
+    .hero-bg{position:absolute;inset:0;background:url('../images/kamer-deluxe-1.webp') center/cover no-repeat}
+    .hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(30,40,32,0.52),rgba(30,40,32,0.72))}
+    .hero-content{position:relative;text-align:center;padding:120px 24px 80px;max-width:680px}
+    .hero-eyebrow{font-size:10px;font-weight:500;letter-spacing:0.36em;text-transform:uppercase;color:var(--rose);margin-bottom:20px;opacity:0;animation:fadeUp 0.8s ease 0.4s forwards}
+    .hero-title{font-family:'Dahlia',serif;font-size:clamp(42px,7vw,72px);line-height:1;color:var(--cream);margin-bottom:20px;opacity:0;animation:fadeUp 1s ease 0.6s forwards}
+    .hero-sub{font-size:clamp(15px,2vw,18px);font-weight:300;color:rgba(250,247,242,0.78);line-height:1.7;margin-bottom:36px;opacity:0;animation:fadeUp 1s ease 0.8s forwards}
+    .scroll-hint{opacity:0;animation:fadeUp 0.8s ease 1.2s forwards}
+    .scroll-hint a{font-size:10px;font-weight:500;letter-spacing:0.24em;text-transform:uppercase;color:var(--rose);text-decoration:none;transition:color 0.3s}
+    .scroll-hint a:hover{color:var(--cream)}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+
+    /* PRIZE SECTION */
+    .prize{padding:100px 48px;text-align:center;background:var(--cream)}
+    .prize-eyebrow{font-size:10px;font-weight:500;letter-spacing:0.36em;text-transform:uppercase;color:var(--terra);margin-bottom:16px}
+    .prize-grid{display:flex;gap:48px;justify-content:center;margin-top:48px;flex-wrap:wrap}
+    .prize-card{background:var(--cream-warm);padding:40px 36px;max-width:300px;flex:1;min-width:240px}
+    .prize-icon{font-size:32px;margin-bottom:16px;color:var(--green)}
+    .prize-card h3{font-family:'Dahlia',serif;font-size:22px;color:var(--green);margin-bottom:8px}
+    .prize-card p{font-size:14px;font-weight:300;color:var(--text-mid);line-height:1.6}
+
+    /* FORM SECTION */
+    .form-section{padding:100px 48px;background:var(--green-dark);text-align:center}
+    .form-section .section-eyebrow{font-size:10px;font-weight:500;letter-spacing:0.36em;text-transform:uppercase;color:var(--rose);margin-bottom:16px}
+    .form-section h2{font-family:'Dahlia',serif;font-size:clamp(28px,4vw,42px);color:var(--cream);margin-bottom:16px}
+    .form-section .form-intro{font-size:15px;font-weight:300;color:rgba(250,247,242,0.65);line-height:1.7;max-width:520px;margin:0 auto 48px}
+    .giveaway-form{max-width:440px;margin:0 auto;display:flex;flex-direction:column;gap:16px}
+    .giveaway-form input[type="text"],
+    .giveaway-form input[type="email"]{background:rgba(250,247,242,0.08);border:1px solid rgba(250,247,242,0.12);padding:16px 20px;color:var(--cream);font-family:'Jost',sans-serif;font-size:14px;font-weight:300;letter-spacing:0.04em;transition:border-color 0.3s;outline:none}
+    .giveaway-form input::placeholder{color:rgba(250,247,242,0.3)}
+    .giveaway-form input:focus{border-color:var(--terra)}
+    .gdpr-label{display:flex;align-items:flex-start;gap:10px;text-align:left;cursor:pointer;margin-top:8px}
+    .gdpr-label input[type="checkbox"]{margin-top:3px;accent-color:var(--terra);flex-shrink:0}
+    .gdpr-label span{font-size:12px;font-weight:300;color:rgba(250,247,242,0.45);line-height:1.6}
+    .gdpr-label a{color:var(--rose);text-decoration:underline}
+    .btn-submit{font-size:10px;font-weight:500;letter-spacing:0.24em;text-transform:uppercase;color:var(--cream);background:var(--terra);padding:16px 34px;border:none;cursor:pointer;transition:all 0.3s;font-family:'Jost',sans-serif;margin-top:8px}
+    .btn-submit:hover{background:var(--green-light)}
+    .btn-submit:disabled{opacity:0.4;cursor:not-allowed}
+    .form-fine{font-size:11px;font-weight:300;color:rgba(250,247,242,0.28);margin-top:20px;line-height:1.6}
+    .form-success{display:none;color:var(--cream);text-align:center}
+    .form-success h3{font-family:'Dahlia',serif;font-size:28px;margin-bottom:12px}
+    .form-success p{font-size:15px;font-weight:300;color:rgba(250,247,242,0.65);line-height:1.7}
+
+    /* FOOTER */
+    footer{background:var(--green-dark);padding:72px 48px 36px;border-top:1px solid rgba(250,247,242,0.06)}
+    .footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;padding-bottom:48px;border-bottom:1px solid rgba(250,247,242,0.08);margin-bottom:32px}
+    .f-brand-name{font-family:'Dahlia',serif;font-size:34px;color:rgba(250,247,242,0.9);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:12px}
+    .f-tagline{font-size:13px;font-weight:300;font-style:italic;color:rgba(250,247,242,0.36);margin-bottom:20px;line-height:1.6}
+    .f-addr{font-size:12px;font-weight:300;color:rgba(250,247,242,0.3);line-height:1.85}
+    .f-addr a{color:rgba(250,247,242,0.3);text-decoration:none;transition:color 0.3s}
+    .f-addr a:hover{color:var(--rose)}
+    .footer-col h4{font-size:9px;font-weight:500;letter-spacing:0.28em;text-transform:uppercase;color:rgba(250,247,242,0.52);margin-bottom:20px}
+    .footer-col ul{list-style:none}
+    .footer-col li{font-size:13px;font-weight:300;color:rgba(250,247,242,0.32);margin-bottom:12px}
+    .footer-col a{color:rgba(250,247,242,0.32);text-decoration:none;transition:color 0.3s}
+    .footer-col a:hover{color:var(--rose)}
+    .footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+    .f-copy{font-size:11px;font-weight:300;color:rgba(250,247,242,0.18)}
+    .f-langs{display:flex;gap:12px;align-items:center}
+    .f-langs-icon{color:rgba(250,247,242,0.2);display:flex;align-items:center;margin-right:2px}
+    .f-langs a{font-size:10px;font-weight:400;letter-spacing:0.18em;text-transform:uppercase;color:rgba(250,247,242,0.25);text-decoration:none;transition:color 0.3s;padding-bottom:2px;border-bottom:1px solid transparent}
+    .f-langs a:hover{color:rgba(250,247,242,0.6)}
+    .f-langs a.active{color:var(--terra);border-bottom-color:var(--terra)}
+
+    /* RESPONSIVE */
+    @media(max-width:1024px){
+      nav.site-nav{padding:18px 32px;gap:20px}
+      nav.site-nav.scrolled{padding:12px 32px}
+      .nav-links{gap:18px}
+      .prize{padding:80px 32px}
+      .form-section{padding:80px 32px}
+      footer{padding:60px 32px 32px}
+      .footer-top{grid-template-columns:1fr 1fr;gap:32px}
+    }
+    @media(max-width:768px){
+      nav.site-nav{padding:16px 20px;gap:10px}
+      nav.site-nav.scrolled{padding:12px 20px}
+      .nav-links{display:none}
+      .nav-langs{display:none}
+      .nav-book{display:none}
+      .nav-toggle{display:flex;z-index:201}
+      .prize{padding:64px 20px}
+      .prize-grid{gap:20px}
+      .form-section{padding:64px 20px}
+      footer{padding:52px 20px 80px}
+      .footer-top{grid-template-columns:1fr;gap:28px}
+      .f-brand-name{font-size:28px}
+      .footer-bottom{flex-direction:column;align-items:flex-start;gap:14px}
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══ NAV ═══ -->
+<nav class="site-nav" id="nav">
+  <a href="./" class="nav-logo">Chamade</a>
+  <ul class="nav-links">
+      <li><a href="./#kamers">Kamers</a></li>
+      <li><a href="./#ontbijt">Ontbijt</a></li>
+      <li><a href="./#duurzaamheid">Duurzaamheid</a></li>
+      <li><a href="./#contact">Contact</a></li></ul>
+  <div class="nav-langs" aria-label="Taal kiezen">
+      <a href="win.html" class="active" hreflang="nl">NL</a>
+      <span class="nav-sep"></span>
+      <a href="../fr/win.html" hreflang="fr">FR</a>
+      <span class="nav-sep"></span>
+      <a href="../en/win.html" hreflang="en">EN</a>
+  </div>
+  <a href="https://booking.roomraccoon.com/hotel-chamade/nl/" class="nav-book">Boek nu</a>
+  <button class="nav-toggle" id="navToggle" aria-label="Menu openen" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="nav-drawer" id="navDrawer" role="dialog" aria-modal="true" aria-label="Menu">
+  <a href="./#kamers">Kamers</a>
+  <a href="./#ontbijt">Ontbijt</a>
+  <a href="./#duurzaamheid">Duurzaamheid</a>
+  <a href="./#contact">Contact</a>
+  <a href="https://booking.roomraccoon.com/hotel-chamade/nl/" style="color:var(--rose)!important">Boek nu</a>
+  <div class="drawer-langs">
+      <a href="win.html" class="active" hreflang="nl">NL</a>
+      <span class="nav-sep"></span>
+      <a href="../fr/win.html" hreflang="fr">FR</a>
+      <span class="nav-sep"></span>
+      <a href="../en/win.html" hreflang="en">EN</a>
+  </div>
+</div>
+
+<!-- ═══ HERO ═══ -->
+<header class="hero">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="hero-overlay" aria-hidden="true"></div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">Getaway Giveaway</p>
+    <h1 class="hero-title">Win een nacht in Chamade&nbsp;Hotel</h1>
+    <p class="hero-sub">We hebben een nieuwe website en dat willen we vieren! We geven een heerlijk verblijf weg in onze Deluxe Double kamer, inclusief ontbijt voor twee personen.</p>
+    <div class="scroll-hint"><a href="#form">Doe mee ↓</a></div>
+  </div>
+</header>
+
+<!-- ═══ PRIZE ═══ -->
+<section class="prize">
+  <p class="prize-eyebrow">Jouw prijs</p>
+  <div class="prize-grid">
+    <div class="prize-card">
+      <div class="prize-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4v16"/><path d="M2 8h18a2 2 0 0 1 2 2v10"/><path d="M2 17h20"/><path d="M6 8v9"/></svg></div>
+      <h3>1 nacht</h3>
+      <p>In onze Deluxe Double kamer</p>
+    </div>
+    <div class="prize-card">
+      <div class="prize-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8h1a4 4 0 1 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/><line x1="6" x2="6" y1="2" y2="4"/><line x1="10" x2="10" y1="2" y2="4"/><line x1="14" x2="14" y1="2" y2="4"/></svg></div>
+      <h3>Ontbijt voor 2</h3>
+      <p>Een heerlijk vers ontbijt met lokale producten</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FORM ═══ -->
+<section class="form-section" id="form">
+  <p class="section-eyebrow">Hoe doe je mee?</p>
+  <h2>Vul het formulier in</h2>
+  <p class="form-intro">Vul je naam en e-mailadres in. Dat is alles! De winnaar wordt willekeurig gekozen en via e-mail verwittigd op 20 april.</p>
+  <form class="giveaway-form" id="giveawayForm" action="https://formsubmit.co/info@chamade.be" method="POST">
+    <input type="hidden" name="_subject" value="Giveaway deelname 🎉">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_next" value="https://www.chamade.be/nl/win.html#bedankt">
+    <input type="text" name="naam" placeholder="Je naam" required autocomplete="name">
+    <input type="email" name="email" placeholder="Je e-mailadres" required autocomplete="email">
+    <label class="gdpr-label">
+      <input type="checkbox" name="gdpr" required>
+      <span>Ik ga akkoord met het ontvangen van updates van Chamade Hotel. Jouw gegevens worden nooit gedeeld met derden. Lees onze <a href="voorwaarden.html" target="_blank">privacyverklaring</a>.</span>
+    </label>
+    <button type="submit" class="btn-submit">Doe mee</button>
+    <p class="form-fine">De wedstrijd sluit op 19 april 2026. Eén deelname per persoon.</p>
+  </form>
+  <div class="form-success" id="formSuccess">
+    <h3>Bedankt!</h3>
+    <p>Je deelname is geregistreerd. We nemen contact op met de winnaar op 20 april. Veel succes!</p>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <div class="f-brand-name">Chamade</div>
+      <p class="f-tagline">"Make Yourself At Home."</p>
+      <address class="f-addr">Koningin Elisabethlaan 3<br>9000 Gent, België<br><br>
+        <a href="tel:+3292201515">+32 (0)9 220 15 15</a><br>
+        <a href="mailto:info@chamade.be">info@chamade.be</a>
+      </address>
+    </div>
+    <div class="footer-col"><h4>Hotel</h4><ul>
+      <li><a href="./#kamers">Kamers</a></li>
+      <li><a href="./#ontbijt">Ontbijt</a></li>
+      <li><a href="./#duurzaamheid">Duurzaamheid</a></li>
+      <li><a href="./#contact">Parking &amp; contact</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Gent</h4><ul>
+      <li><a href="https://visit.gent.be/nl" target="_blank" rel="noopener">Ontdek Gent</a></li>
+      <li><a href="https://visit.gent.be/nl/citycard-gent" target="_blank" rel="noopener">Gentse Citycard</a></li>
+      <li><a href="https://iccnxt.gent/" target="_blank" rel="noopener">ICC Convention</a></li>
+      <li><a href="https://www.flandersexpo.be" target="_blank" rel="noopener">Flanders Expo</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Info</h4><ul>
+      <li><a href="voorwaarden.html">Annuleringsbeleid</a></li>
+      <li><a href="https://www.instagram.com/chamadehotel/" target="_blank" rel="noopener">Instagram</a></li>
+      <li><a href="https://www.tiktok.com/@chamadehotel" target="_blank" rel="noopener">TikTok</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom">
+    <p class="f-copy">&copy; 2026 Hotel Chamade &middot; BE0762993981</p>
+    <nav class="f-langs" aria-label="Taal kiezen">
+      <span class="f-langs-icon"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></span>
+      <a href="win.html" class="active" hreflang="nl">NL</a>
+      <span class="nav-sep"></span>
+      <a href="../fr/win.html" hreflang="fr">FR</a>
+      <span class="nav-sep"></span>
+      <a href="../en/win.html" hreflang="en">EN</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+  // Nav scroll
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 60); }, {passive:true});
+
+  // Mobile drawer
+  const toggle = document.getElementById('navToggle');
+  const drawer = document.getElementById('navDrawer');
+  toggle.addEventListener('click', () => {
+    const open = drawer.classList.toggle('open');
+    toggle.classList.toggle('open', open);
+    toggle.setAttribute('aria-expanded', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  });
+  drawer.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      drawer.classList.remove('open');
+      toggle.classList.remove('open');
+      toggle.setAttribute('aria-expanded','false');
+      document.body.style.overflow = '';
+    });
+  });
+
+  // Smooth scroll
+  document.addEventListener('click', function(e) {
+    var a = e.target.closest('a[href^="#"]');
+    if (!a || a.getAttribute('href') === '#') return;
+    var id = a.getAttribute('href').slice(1);
+    var el = document.getElementById(id);
+    if (el) { e.preventDefault(); el.scrollIntoView({behavior:'smooth', block:'start'}); }
+  });
+
+  // Show success message after FormSubmit redirect
+  if (window.location.hash === '#bedankt') {
+    document.getElementById('giveawayForm').style.display = 'none';
+    document.querySelector('.form-intro').style.display = 'none';
+    document.getElementById('formSuccess').style.display = 'block';
+  }
+</script>
+
+</body>
+</html>
