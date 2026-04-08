@@ -985,7 +985,7 @@
 
 <div class="policy-overlay" id="modal-privacy" onclick="if(event.target===this)this.classList.remove('active')">
   <div class="policy-modal">
-    <div class="policy-header"><h2>Privacy- en cookiebeleid</h2><button class="policy-close" onclick="if(location.hash){history.back()}else{this.closest('.policy-overlay').classList.remove('active')}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M19 12H5M12 19l-7-7 7-7"/></svg></button></div>
+    <div class="policy-header"><h2>Privacy- en cookiebeleid</h2><button class="policy-close" onclick="if(window._openedExternal){history.back()}else{this.closest('.policy-overlay').classList.remove('active');history.replaceState(null,'',location.pathname)}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M19 12H5M12 19l-7-7 7-7"/></svg></button></div>
     <div class="policy-body">
       <p>Uw privacy komt op de eerste plaats. Deze privacyverklaring is van toepassing op (1) onze website www.chamade.be en (2) op alle relaties tussen Hotel Chamade en haar klanten, prospecten en zakenpartners.</p>
       <p>Hotel Chamade tracht te allen tijde te handelen in overeenstemming met de Belgische Privacywet van 8 december 1992 en de EU Verordening van 2016 (GDPR) betreffende de bescherming van natuurlijke personen in verband met de verwerking van persoonsgegevens.</p>
@@ -1039,7 +1039,7 @@
 
 <div class="policy-overlay" id="modal-terms" onclick="if(event.target===this)this.classList.remove('active')">
   <div class="policy-modal">
-    <div class="policy-header"><h2>Algemene voorwaarden</h2><button class="policy-close" onclick="if(location.hash){history.back()}else{this.closest('.policy-overlay').classList.remove('active')}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M19 12H5M12 19l-7-7 7-7"/></svg></button></div>
+    <div class="policy-header"><h2>Algemene voorwaarden</h2><button class="policy-close" onclick="if(window._openedExternal){history.back()}else{this.closest('.policy-overlay').classList.remove('active');history.replaceState(null,'',location.pathname)}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M19 12H5M12 19l-7-7 7-7"/></svg></button></div>
     <div class="policy-body">
       <h3>1. Reserveringen en betaling</h3>
       <p>Een reservering is definitief na bevestiging per e-mail. Betaling geschiedt conform het gekozen tarief: bij flexibele tarieven wordt uw kaart direct belast met mogelijkheid tot kosteloze annulering tot 24 uur voor aankomst. Bij non-refundable tarieven is het volledige bedrag onmiddellijk verschuldigd en niet restitueerbaar.</p>
@@ -1149,7 +1149,7 @@
 (function(){
   var map = {'voorwaarden':'modal-terms','privacy':'modal-privacy'};
   var h = window.location.hash.substring(1);
-  if(map[h]){var m=document.getElementById(map[h]);if(m)m.classList.add('active');}
+  if(map[h]){window._openedExternal=true;var m=document.getElementById(map[h]);if(m)m.classList.add('active');}
   window.addEventListener('hashchange',function(){
     var h=window.location.hash.substring(1);
     if(map[h]){var m=document.getElementById(map[h]);if(m)m.classList.add('active');}

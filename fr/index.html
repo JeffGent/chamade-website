@@ -985,7 +985,7 @@
 
 <div class="policy-overlay" id="modal-privacy" onclick="if(event.target===this)this.classList.remove('active')">
   <div class="policy-modal">
-    <div class="policy-header"><h2>Politique de confidentialité et cookies</h2><button class="policy-close" onclick="if(location.hash){history.back()}else{this.closest('.policy-overlay').classList.remove('active')}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M19 12H5M12 19l-7-7 7-7"/></svg></button></div>
+    <div class="policy-header"><h2>Politique de confidentialité et cookies</h2><button class="policy-close" onclick="if(window._openedExternal){history.back()}else{this.closest('.policy-overlay').classList.remove('active');history.replaceState(null,'',location.pathname)}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M19 12H5M12 19l-7-7 7-7"/></svg></button></div>
     <div class="policy-body">
       <p>Votre vie privée est notre priorité. Cette déclaration de confidentialité s'applique à (1) notre site web www.chamade.be et (2) à toutes les relations entre Hotel Chamade et ses clients, prospects et partenaires commerciaux.</p>
       <p>Hotel Chamade s'efforce d'agir conformément à la loi belge sur la vie privée du 8 décembre 1992 et au règlement européen de 2016 (RGPD) relatif à la protection des personnes physiques à l'égard du traitement des données à caractère personnel.</p>
@@ -1039,7 +1039,7 @@
 
 <div class="policy-overlay" id="modal-terms" onclick="if(event.target===this)this.classList.remove('active')">
   <div class="policy-modal">
-    <div class="policy-header"><h2>Conditions générales</h2><button class="policy-close" onclick="if(location.hash){history.back()}else{this.closest('.policy-overlay').classList.remove('active')}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M19 12H5M12 19l-7-7 7-7"/></svg></button></div>
+    <div class="policy-header"><h2>Conditions générales</h2><button class="policy-close" onclick="if(window._openedExternal){history.back()}else{this.closest('.policy-overlay').classList.remove('active');history.replaceState(null,'',location.pathname)}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M19 12H5M12 19l-7-7 7-7"/></svg></button></div>
     <div class="policy-body">
       <h3>1. Réservations et paiement</h3>
       <p>Une réservation est définitive après confirmation par e-mail. Le paiement s'effectue selon le tarif choisi : pour les tarifs flexibles, votre carte est débitée immédiatement avec possibilité d'annulation gratuite jusqu'à 24 heures avant l'arrivée. Pour les tarifs non remboursables, le montant total est dû immédiatement et n'est pas remboursable.</p>
@@ -1149,7 +1149,7 @@
 (function(){
   var map = {'conditions':'modal-terms','confidentialite':'modal-privacy'};
   var h = window.location.hash.substring(1);
-  if(map[h]){var m=document.getElementById(map[h]);if(m)m.classList.add('active');}
+  if(map[h]){window._openedExternal=true;var m=document.getElementById(map[h]);if(m)m.classList.add('active');}
   window.addEventListener('hashchange',function(){
     var h=window.location.hash.substring(1);
     if(map[h]){var m=document.getElementById(map[h]);if(m)m.classList.add('active');}
