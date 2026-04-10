@@ -37,7 +37,7 @@ jobs:
           COUNT: ${{ steps.fetch.outputs.count }}
         run: |
           for file in nl/index.html en/index.html fr/index.html; do
-            sed -i "s/\"ratingValue\":\"[^\"]*\",\"reviewCount\":\"[^\"]*\"/\"ratingValue\":\"${RATING}\",\"reviewCount\":\"${COUNT}\"/" "$file"
+            sed -i "s/\"ratingValue\":\"[^\"]*\",\"reviewCount\":\"[^\"]*\",\"bestRating\":\"[^\"]*\"/\"ratingValue\":\"${RATING}\",\"reviewCount\":\"${COUNT}\",\"bestRating\":\"5\"/" "$file"
             echo "Updated $file — rating: $RATING, reviews: $COUNT"
           done
 
