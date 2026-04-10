@@ -1,0 +1,51 @@
+name: Update Google review count
+
+on:
+  schedule:
+    - cron: '0 6 1 * *'  # 1st of each month at 06:00 UTC
+  workflow_dispatch: # allow manual trigger
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch review count from Google Places API
+        id: fetch
+        env:
+          API_KEY: ${{ secrets.GOOGLE_PLACES_API_KEY }}
+          PLACE_ID: ChIJD1Dkj19xw0cR46Fzb_YNnXk
+        run: |
+          RESPONSE=$(curl -s "https://places.googleapis.com/v1/places/${PLACE_ID}?fields=rating,userRatingCount&key=${API_KEY}")
+          echo "Response: $RESPONSE"
+          RATING=$(echo "$RESPONSE" | jq -r '.rating')
+          COUNT=$(echo "$RESPONSE" | jq -r '.userRatingCount')
+          if [ "$RATING" = "null" ] || [ "$COUNT" = "null" ]; then
+            echo "Failed to fetch rating data"
+            exit 1
+          fi
+          echo "rating=$RATING" >> "$GITHUB_OUTPUT"
+          echo "count=$COUNT" >> "$GITHUB_OUTPUT"
+
+      - name: Update schema in HTML files
+        env:
+          RATING: ${{ steps.fetch.outputs.rating }}
+          COUNT: ${{ steps.fetch.outputs.count }}
+        run: |
+          for file in nl/index.html en/index.html fr/index.html; do
+            sed -i "s/\"ratingValue\":\"[^\"]*\",\"reviewCount\":\"[^\"]*\"/\"ratingValue\":\"${RATING}\",\"reviewCount\":\"${COUNT}\"/" "$file"
+            echo "Updated $file — rating: $RATING, reviews: $COUNT"
+          done
+
+      - name: Commit and push if changed
+        run: |
+          git diff --quiet && exit 0
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add nl/index.html en/index.html fr/index.html
+          git commit -m "Update Google review count to ${COUNT} (rating ${RATING})"
+          git push
+        env:
+          COUNT: ${{ steps.fetch.outputs.count }}
+          RATING: ${{ steps.fetch.outputs.rating }}
