@@ -244,7 +244,9 @@
   </form>
   <div class="form-success" id="formSuccess">
     <h3>Merci !</h3>
-    <p>Votre participation a été enregistrée. Nous contacterons le gagnant le 20 avril. Bonne chance !</p>
+    <p>Votre participation a été enregistrée. Bonne chance !</p>
+    <p style="margin-top:24px;font-size:14px;font-weight:300;color:rgba(250,247,242,0.45)">Redirection dans <span id="countdown">5</span> secondes...</p>
+    <a href="./" style="display:inline-block;margin-top:16px;font-size:10px;font-weight:500;letter-spacing:0.24em;text-transform:uppercase;color:var(--cream);background:var(--terra);padding:14px 28px;text-decoration:none;transition:background 0.3s">Découvrir le site</a>
   </div>
 </section>
 
@@ -323,6 +325,13 @@
     document.getElementById('giveawayForm').style.display = 'none';
     document.querySelector('.form-intro').style.display = 'none';
     document.getElementById('formSuccess').style.display = 'block';
+    var seconds = 5;
+    var cd = document.getElementById('countdown');
+    var timer = setInterval(function() {
+      seconds--;
+      cd.textContent = seconds;
+      if (seconds <= 0) { clearInterval(timer); window.location.href = './'; }
+    }, 1000);
   }
 </script>
 
