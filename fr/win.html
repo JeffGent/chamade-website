@@ -324,7 +324,10 @@
   if (window.location.hash === '#merci') {
     document.getElementById('giveawayForm').style.display = 'none';
     document.querySelector('.form-intro').style.display = 'none';
+    document.querySelector('.section-eyebrow').style.display = 'none';
+    document.querySelector('.form-section h2').style.display = 'none';
     document.getElementById('formSuccess').style.display = 'block';
+    document.getElementById('form').scrollIntoView({behavior:'instant', block:'start'});
     var seconds = 5;
     var cd = document.getElementById('countdown');
     var timer = setInterval(function() {
