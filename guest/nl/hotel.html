@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z6NFK4TC6M"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-Z6NFK4TC6M');</script>
+<meta charset="UTF-8">
+<link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Het hotel - Chamade Hotel Gent</title>
+<meta name="description" content="Praktische info over je verblijf bij Hotel Chamade: huisregels, check-out, minibar, bagage en wasserij.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://www.chamade.be/guest/nl/hotel.html">
+<link rel="alternate" hreflang="nl" href="https://www.chamade.be/guest/nl/hotel.html">
+<link rel="alternate" hreflang="fr" href="https://www.chamade.be/guest/fr/hotel.html">
+<link rel="alternate" hreflang="en" href="https://www.chamade.be/guest/en/hotel.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+@font-face{font-family:'Dahlia';src:url('../../fonts/dahlia.woff2') format('woff2');font-display:swap}
+:root{
+  --cream:#faf7f2;--cream-warm:#f5efe6;--sand:#ede4d6;--sand-warm:#e6dace;
+  --green:#3a5240;--green-dark:#2a3d2f;--green-light:#4d6b55;
+  --terra:#b8604a;--terra-light:#c4785a;--blush:#d9927e;
+  --rose:#e8b4a0;--rose-pale:#f2d5c8;
+  --text:#1e2820;--text-mid:#5a5248;--text-light:#8a7d74;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);-webkit-font-smoothing:antialiased}
+
+.top-bar{background:var(--green);padding:18px 40px;display:flex;align-items:center;justify-content:space-between}
+.top-bar a{text-decoration:none}
+.top-logo{font-family:Dahlia,serif;font-size:22px;letter-spacing:0.07em;color:var(--cream);text-transform:uppercase}
+.top-langs{display:flex;gap:8px;align-items:center}
+.top-langs a{font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(250,247,242,0.5);text-decoration:none;transition:color 0.2s}
+.top-langs a.active{color:var(--terra)}
+.top-langs a:hover{color:var(--cream)}
+.top-sep{width:1px;height:10px;background:rgba(250,247,242,0.2)}
+
+/* ── page layout ── */
+.page-wrap{max-width:720px;margin:0 auto;padding:48px 32px 80px}
+.page-back{display:inline-flex;align-items:center;gap:6px;font-size:13px;color:var(--text-mid);text-decoration:none;transition:color 0.2s;margin-bottom:28px}
+.page-back:hover{color:var(--terra)}
+.page-title{font-family:Dahlia,serif;font-size:clamp(1.8rem,5vw,2.6rem);color:var(--green);margin-bottom:8px}
+.page-intro{font-size:0.95rem;color:var(--text-mid);font-weight:300;line-height:1.7;margin-bottom:40px}
+
+/* ── accordion ── */
+.accordion{display:flex;flex-direction:column;gap:8px}
+.accordion-item{background:var(--cream-warm);border-radius:10px;overflow:hidden;border:1px solid var(--sand)}
+.accordion-trigger{width:100%;display:flex;align-items:center;justify-content:space-between;padding:20px 24px;background:none;border:none;cursor:pointer;font-family:'Jost',sans-serif;font-size:1rem;font-weight:500;color:var(--green);text-align:left;transition:background 0.2s}
+.accordion-trigger:hover{background:var(--sand)}
+.accordion-trigger svg{width:18px;height:18px;stroke:var(--text-light);stroke-width:2;fill:none;transition:transform 0.3s}
+.accordion-item.open .accordion-trigger svg{transform:rotate(180deg)}
+.accordion-panel{max-height:0;overflow:hidden;transition:max-height 0.35s ease}
+.accordion-item.open .accordion-panel{max-height:800px}
+.accordion-content{padding:0 24px 24px;font-size:0.9rem;color:var(--text-mid);font-weight:300;line-height:1.8}
+.accordion-content h3{font-family:Dahlia,serif;font-size:1rem;color:var(--green);margin:16px 0 6px;font-weight:400}
+.accordion-content h3:first-child{margin-top:0}
+.accordion-content ul{margin:8px 0 8px 20px}
+.accordion-content li{margin-bottom:4px}
+.accordion-content a{color:var(--terra);text-decoration:none}
+.accordion-content a:hover{text-decoration:underline}
+.accordion-content strong{font-weight:500;color:var(--text)}
+
+/* ── info box (highlight) ── */
+.info-box{background:var(--sand);border-radius:8px;padding:16px 20px;margin:12px 0;font-size:0.85rem;line-height:1.7}
+.info-box strong{color:var(--green)}
+
+/* ── price table ── */
+.price-table{width:100%;border-collapse:collapse;margin:12px 0}
+.price-table th{text-align:left;font-size:0.75rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-light);padding:8px 0;border-bottom:1px solid var(--sand-warm)}
+.price-table td{padding:8px 0;border-bottom:1px solid var(--sand);font-size:0.88rem}
+.price-table td:last-child{text-align:right;font-weight:500;color:var(--green)}
+
+/* ── footer ── */
+.guest-footer{text-align:center;padding:32px 24px;border-top:1px solid var(--sand);font-size:0.75rem;color:var(--text-light);font-weight:300;line-height:1.7}
+.guest-footer a{color:var(--terra);text-decoration:none}
+.guest-footer a:hover{text-decoration:underline}
+
+.wa-float{position:fixed;bottom:24px;right:24px;z-index:900;display:flex;align-items:center;gap:10px;background:#25D366;color:#fff;text-decoration:none;padding:12px 20px 12px 16px;border-radius:50px;box-shadow:0 4px 16px rgba(0,0,0,0.18);transition:all 0.3s;font-family:'Jost',sans-serif;font-size:13px;font-weight:500;letter-spacing:0.02em}
+.wa-float:hover{background:#1fba59;transform:translateY(-2px);box-shadow:0 6px 24px rgba(0,0,0,0.22)}
+.wa-float svg{flex-shrink:0}
+
+@media(max-width:600px){
+  .top-bar{padding:14px 20px}
+  .page-wrap{padding:36px 20px 60px}
+  .accordion-trigger{padding:16px 18px;font-size:0.95rem}
+  .accordion-content{padding:0 18px 20px}
+  .wa-float span{display:none}.wa-float{padding:14px}
+}
+</style>
+</head>
+<body>
+
+<div class="top-bar">
+  <a href="../../nl/" class="top-logo">Chamade</a>
+  <div class="top-langs">
+    <a href="hotel.html" hreflang="nl" class="active">NL</a><span class="top-sep"></span>
+    <a href="../fr/hotel.html" hreflang="fr">FR</a><span class="top-sep"></span>
+    <a href="../en/hotel.html" hreflang="en">EN</a>
+  </div>
+</div>
+
+<div class="page-wrap">
+  <a href="./" class="page-back"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="15 18 9 12 15 6"/></svg> Terug</a>
+
+  <h1 class="page-title">Het hotel</h1>
+  <p class="page-intro">Alles wat je moet weten voor een zorgeloos verblijf.</p>
+
+  <picture>
+    <source srcset="../../images/Chamade-2405-11.webp" type="image/webp">
+    <img src="../../images/Chamade-2405-11.jpg" alt="Kamer bij Chamade Hotel" style="width:100%;border-radius:12px;margin-bottom:32px;aspect-ratio:4/3;object-fit:cover" loading="lazy">
+  </picture>
+
+  <div class="accordion">
+
+    <!-- Check-out -->
+    <div class="accordion-item">
+      <button class="accordion-trigger" aria-expanded="false">
+        Check-out
+        <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="accordion-panel">
+        <div class="accordion-content">
+          <p>Check-out is mogelijk tot <strong>11:00 uur</strong>. Heb je wat meer tijd nodig? Laat het ons weten aan de receptie, we bekijken graag de mogelijkheden.</p>
+          <p>Vergeet niet even langs de receptie te passeren zodat we samen je rekening kunnen afronden.</p>
+          <div class="info-box">
+            <strong>Vroeg vertrek?</strong> Als je voor 7u (doordeweeks) of 8u (weekend) vertrekt, laat dit dan de avond voordien weten. We zorgen ervoor dat alles klaarstaat.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Huisregels -->
+    <div class="accordion-item">
+      <button class="accordion-trigger" aria-expanded="false">
+        Huisregels
+        <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="accordion-panel">
+        <div class="accordion-content">
+          <p>Een fijne sfeer begint bij een paar eenvoudige afspraken.</p>
+          <ul>
+            <li><strong>Niet roken:</strong> Roken is niet toegestaan in het hotel, ook niet op de kamers. Bij de nachtingang vind je een asbak. Bij overtreding wordt een reinigingskost van €150 aangerekend.</li>
+            <li><strong>Nachtrust:</strong> We vragen stilte tussen 22:00 en 08:00 uur, zowel op de kamer als in de gangen.</li>
+            <li><strong>Geregistreerde gasten:</strong> Enkel ingeschreven gasten hebben toegang tot de kamers. Dit is voor ieders veiligheid.</li>
+            <li><strong>Maximale bezetting:</strong> Elke kamer heeft een maximumaantal personen op basis van de grootte en veiligheidsregels.</li>
+            <li><strong>Brandveiligheid:</strong> Alle kamers zijn uitgerust met rookmelders. Open vuur, zoals kaarsen, is niet toegestaan.</li>
+            <li><strong>Huisdieren:</strong> Huisdieren zijn helaas niet toegestaan in ons hotel.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Minibar & Honesty Bar -->
+    <div class="accordion-item">
+      <button class="accordion-trigger" aria-expanded="false">
+        Minibar &amp; Honesty Bar
+        <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="accordion-panel">
+        <div class="accordion-content">
+          <p>Op het gelijkvloers vind je onze honesty bar, <strong>koffie, thee en water zijn gratis</strong>. Schenk jezelf gerust in tijdens de receptie-uren.</p>
+          <p>Onze Deluxe kamers beschikken over een minibar met gratis koffie en thee.</p>
+
+          <h3>Drankkaart</h3>
+          <table class="price-table">
+            <thead><tr><th>Drank</th><th>Prijs</th></tr></thead>
+            <tbody>
+              <tr><td>Ice-tea</td><td>€3</td></tr>
+              <tr><td>Ritchie</td><td>€4</td></tr>
+              <tr><td>Tonic</td><td>€4</td></tr>
+              <tr><td>Gruut</td><td>€4</td></tr>
+              <tr><td>Halve Gare</td><td>€4</td></tr>
+              <tr><td>Artevelde</td><td>€4</td></tr>
+              <tr><td>Schuimwijn</td><td>€15</td></tr>
+              <tr><td>Chardonnay</td><td>€12</td></tr>
+            </tbody>
+          </table>
+          <p>We werken op vertrouwen. Geef je verbruik door bij check-out.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bagage -->
+    <div class="accordion-item">
+      <button class="accordion-trigger" aria-expanded="false">
+        Bagage
+        <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="accordion-panel">
+        <div class="accordion-content">
+          <p>Vroeg aangekomen of laat vertrek? Geen probleem, we bewaren je bagage <strong>gratis</strong> aan de receptie, zowel voor als na je verblijf. Vraag ernaar bij het inchecken of uitchecken.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Duurzaamheid -->
+    <div class="accordion-item">
+      <button class="accordion-trigger" aria-expanded="false">
+        Duurzaamheid
+        <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="accordion-panel">
+        <div class="accordion-content">
+          <p>Bij Chamade gaat gastvrijheid hand in hand met respect voor mens en milieu.</p>
+          <ul>
+            <li><strong>Lokaal:</strong> Onze kaas en melk komen via <em>vanier.gent</em>, een lokaal boerenplatform. Confituur en chocopasta van Callas, om de hoek.</li>
+            <li><strong>Eerlijk:</strong> Onze koffie draagt het Fair Trade-label. Eieren komen uitsluitend van scharrelkippen.</li>
+            <li><strong>Bewust:</strong> We kiezen leveranciers op basis van ecologische criteria. Fruit is seizoensgebonden en regionaal. Wat van buiten de EU komt, reist per schip, niet per vliegtuig.</li>
+            <li><strong>Zorgzaam:</strong> Ons team werkt in ergonomische en veilige omstandigheden, met regelmatige opleidingen.</li>
+          </ul>
+          <p>Benieuwd naar de cijfers? Bekijk ons <a href="../../nl/co2.html">CO₂-rapport 2024</a>.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Wasserij -->
+    <div class="accordion-item">
+      <button class="accordion-trigger" aria-expanded="false">
+        Wasserij
+        <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="accordion-panel">
+        <div class="accordion-content">
+          <p>Op twee minuten wandelen vind je een wassalon aan de <strong>Koningin Elisabethlaan 120</strong>. Je kan er betalen met cash of kaart.</p>
+          <p>Liever strijken op de kamer? Vraag een strijkijzer en strijkplank aan de receptie.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="guest-footer">
+  Chamade Hotel Gent · Koningin Elisabethlaan 3, 9000 Gent<br>
+  <a href="tel:+3292201515">+32 9 220 15 15</a> · <a href="mailto:info@chamade.be">info@chamade.be</a>
+</div>
+
+<a href="https://wa.me/32470183581?text=Hallo%2C%20ik%20heb%20een%20vraag%20over%20mijn%20verblijf%20bij%20Chamade" class="wa-float" target="_blank" rel="noopener" aria-label="Chat op WhatsApp">
+  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  <span>Chat met ons</span>
+</a>
+
+<script>
+document.querySelectorAll('.accordion-trigger').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    var item=btn.closest('.accordion-item');
+    var open=item.classList.toggle('open');
+    btn.setAttribute('aria-expanded',open);
+  });
+});
+</script>
+
+</body>
+</html>
