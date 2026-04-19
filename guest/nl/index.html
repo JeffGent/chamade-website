@@ -15,67 +15,12 @@
 <link rel="alternate" hreflang="en" href="https://www.chamade.be/guest/en/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
-<style>
-@font-face{font-family:'Dahlia';src:url('../../fonts/dahlia.woff2') format('woff2');font-display:swap}
-:root{
-  --cream:#faf7f2;--cream-warm:#f5efe6;--sand:#ede4d6;--sand-warm:#e6dace;
-  --green:#3a5240;--green-dark:#2a3d2f;--green-light:#4d6b55;
-  --terra:#b8604a;--terra-light:#c4785a;--blush:#d9927e;
-  --rose:#e8b4a0;--rose-pale:#f2d5c8;
-  --text:#1e2820;--text-mid:#5a5248;--text-light:#8a7d74;
-}
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);-webkit-font-smoothing:antialiased}
-
-/* ── top bar ── */
-.top-bar{background:var(--green);padding:18px 40px;display:flex;align-items:center;justify-content:space-between}
-.top-bar a{text-decoration:none}
-.top-logo{font-family:Dahlia,serif;font-size:22px;letter-spacing:0.07em;color:var(--cream);text-transform:uppercase}
-.top-langs{display:flex;gap:8px;align-items:center}
-.top-langs a{font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(250,247,242,0.5);text-decoration:none;transition:color 0.2s}
-.top-langs a.active{color:var(--terra)}
-.top-langs a:hover{color:var(--cream)}
-.top-sep{width:1px;height:10px;background:rgba(250,247,242,0.2)}
-
-/* ── main content ── */
-.guest-wrap{padding:88px 48px}
-.section-label{font-size:9px;font-weight:500;letter-spacing:0.38em;text-transform:uppercase;color:var(--terra);display:block;margin-bottom:16px}
-.section-title{font-family:'Dahlia',serif;font-size:clamp(38px,5.5vw,70px);color:var(--green);line-height:1.0}
-.section-sub{font-size:15px;font-weight:300;color:var(--text-mid);line-height:1.72;margin-top:16px;max-width:520px}
-
-/* ── tips grid (same as homepage ghent section) ── */
-.tips-grid{margin-top:56px;display:grid;grid-template-columns:repeat(3,1fr);gap:36px}
-.tip{border-top:2px solid var(--rose-pale);padding-top:24px;text-decoration:none;display:block;transition:border-color 0.3s}
-.tip:hover{border-color:var(--terra)}
-.tip-cat{font-size:9px;font-weight:500;letter-spacing:0.34em;text-transform:uppercase;color:var(--terra);margin-bottom:10px}
-.tip h3{font-family:'Dahlia',serif;font-size:21px;color:var(--green);margin-bottom:8px}
-.tip p{font-size:15px;font-weight:300;color:var(--text-mid);line-height:1.72}
-.tip .tip-arrow{font-size:13px;color:var(--terra);margin-top:12px;display:inline-block;transition:transform 0.2s}
-.tip:hover .tip-arrow{transform:translateX(4px)}
-
-/* ── footer ── */
-.guest-footer{text-align:center;padding:32px 48px;border-top:1px solid var(--sand);font-size:12px;color:var(--text-light);font-weight:300;line-height:1.85}
-.guest-footer a{color:var(--terra);text-decoration:none}
-.guest-footer a:hover{text-decoration:underline}
-
-/* ── whatsapp float ── */
-.wa-float{position:fixed;bottom:24px;right:24px;z-index:900;display:flex;align-items:center;gap:10px;background:#25D366;color:#fff;text-decoration:none;padding:12px 20px 12px 16px;border-radius:50px;box-shadow:0 4px 16px rgba(0,0,0,0.18);transition:all 0.3s;font-family:'Jost',sans-serif;font-size:13px;font-weight:500;letter-spacing:0.02em}
-.wa-float:hover{background:#1fba59;transform:translateY(-2px);box-shadow:0 6px 24px rgba(0,0,0,0.22)}
-.wa-float svg{flex-shrink:0}
-
-/* ── responsive ── */
-@media(max-width:768px){
-  .guest-wrap{padding:56px 32px}
-  .tips-grid{grid-template-columns:1fr 1fr;gap:28px}
-}
-@media(max-width:600px){
-  .top-bar{padding:14px 20px}
-  .guest-wrap{padding:48px 20px}
-  .tips-grid{grid-template-columns:1fr;gap:24px}
-  .wa-float span{display:none}.wa-float{padding:14px}
-  .guest-footer{padding:28px 20px}
-}
-</style>
+<link rel="stylesheet" href="../css/guest.css">
+<link rel="manifest" href="../manifest.json">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="#3a5240">
+<link rel="apple-touch-icon" href="../../favicon.svg">
 </head>
 <body>
 
@@ -110,9 +55,9 @@ body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);-we
     </a>
 
     <a href="stad.html" class="tip">
-      <p class="tip-cat">Tips van het hotel</p>
+      <p class="tip-cat">Ontdek als een local</p>
       <h3>Ontdek Gent</h3>
-      <p>Hotspots, restaurants, fietsverhuur, citycards &amp; meer.</p>
+      <p>Wandelroutes, hotspots, restaurants &amp; een interactieve kaart.</p>
       <span class="tip-arrow">&rarr;</span>
     </a>
 
@@ -151,5 +96,6 @@ body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);-we
   <span>Chat met ons</span>
 </a>
 
+<script>if('serviceWorker' in navigator)navigator.serviceWorker.register('../sw.js');</script>
 </body>
 </html>

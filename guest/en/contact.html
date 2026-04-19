@@ -15,63 +15,12 @@
 <link rel="alternate" hreflang="en" href="https://www.chamade.be/guest/en/contact.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
-<style>
-@font-face{font-family:'Dahlia';src:url('../../fonts/dahlia.woff2') format('woff2');font-display:swap}
-:root{
-  --cream:#faf7f2;--cream-warm:#f5efe6;--sand:#ede4d6;--sand-warm:#e6dace;
-  --green:#3a5240;--green-dark:#2a3d2f;--green-light:#4d6b55;
-  --terra:#b8604a;--terra-light:#c4785a;--blush:#d9927e;
-  --rose:#e8b4a0;--rose-pale:#f2d5c8;
-  --text:#1e2820;--text-mid:#5a5248;--text-light:#8a7d74;
-}
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);-webkit-font-smoothing:antialiased}
-
-.top-bar{background:var(--green);padding:18px 40px;display:flex;align-items:center;justify-content:space-between}
-.top-bar a{text-decoration:none}
-.top-logo{font-family:Dahlia,serif;font-size:22px;letter-spacing:0.07em;color:var(--cream);text-transform:uppercase}
-.top-langs{display:flex;gap:8px;align-items:center}
-.top-langs a{font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(250,247,242,0.5);text-decoration:none;transition:color 0.2s}
-.top-langs a.active{color:var(--terra)}
-.top-langs a:hover{color:var(--cream)}
-.top-sep{width:1px;height:10px;background:rgba(250,247,242,0.2)}
-
-.page-wrap{max-width:720px;margin:0 auto;padding:48px 32px 80px}
-.page-back{display:inline-flex;align-items:center;gap:6px;font-size:13px;color:var(--text-mid);text-decoration:none;transition:color 0.2s;margin-bottom:28px}
-.page-back:hover{color:var(--terra)}
-.page-title{font-family:Dahlia,serif;font-size:clamp(1.8rem,5vw,2.6rem);color:var(--green);margin-bottom:8px}
-.page-intro{font-size:0.95rem;color:var(--text-mid);font-weight:300;line-height:1.7;margin-bottom:40px}
-
-/* ── contact cards ── */
-.contact-grid{display:flex;flex-direction:column;gap:16px}
-.contact-card{background:var(--cream-warm);border-radius:10px;padding:24px;border:1px solid var(--sand)}
-.contact-card h2{font-family:Dahlia,serif;font-size:1.1rem;color:var(--green);margin-bottom:8px;font-weight:400}
-.contact-card p{font-size:0.9rem;color:var(--text-mid);font-weight:300;line-height:1.8;margin-bottom:8px}
-.contact-card a{color:var(--terra);text-decoration:none}
-.contact-card a:hover{text-decoration:underline}
-.contact-card strong{font-weight:500;color:var(--text)}
-
-.contact-btn{display:inline-flex;align-items:center;gap:8px;padding:12px 24px;border-radius:8px;text-decoration:none;font-size:0.9rem;font-weight:500;transition:all 0.2s;margin-top:8px}
-.contact-btn--whatsapp{background:#25D366;color:#fff}
-.contact-btn--whatsapp:hover{background:#1fba59;color:#fff;text-decoration:none}
-.contact-btn--phone{background:var(--green);color:var(--cream)}
-.contact-btn--phone:hover{background:var(--green-dark);color:var(--cream);text-decoration:none}
-
-.hours-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:16px 0}
-.hours-card{background:var(--sand);border-radius:8px;padding:14px 18px;text-align:center}
-.hours-label{font-size:0.75rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-light);margin-bottom:4px}
-.hours-time{font-family:Dahlia,serif;font-size:1.2rem;color:var(--green)}
-
-.guest-footer{text-align:center;padding:32px 24px;border-top:1px solid var(--sand);font-size:0.75rem;color:var(--text-light);font-weight:300;line-height:1.7}
-.guest-footer a{color:var(--terra);text-decoration:none}
-.guest-footer a:hover{text-decoration:underline}
-
-@media(max-width:600px){
-  .top-bar{padding:14px 20px}
-  .page-wrap{padding:36px 20px 60px}
-  .hours-grid{grid-template-columns:1fr}
-}
-</style>
+<link rel="stylesheet" href="../css/guest.css">
+<link rel="manifest" href="../manifest.json">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="#3a5240">
+<link rel="apple-touch-icon" href="../../favicon.svg">
 </head>
 <body>
 
@@ -132,5 +81,6 @@ body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);-we
   <a href="tel:+3292201515">+32 9 220 15 15</a> · <a href="mailto:info@chamade.be">info@chamade.be</a>
 </div>
 
+<script>if('serviceWorker' in navigator)navigator.serviceWorker.register('../sw.js');</script>
 </body>
 </html>

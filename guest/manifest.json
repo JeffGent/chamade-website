@@ -1,0 +1,19 @@
+{
+  "name": "Chamade Hotel Ghent",
+  "short_name": "Chamade",
+  "description": "Your guide to Ghent — walks, tips & more",
+  "start_url": "/guest/",
+  "scope": "/guest/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#3a5240",
+  "background_color": "#faf7f2",
+  "icons": [
+    {
+      "src": "../favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
