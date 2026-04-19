@@ -18,14 +18,6 @@
 <link rel="stylesheet" href="../css/guest.css">
 <link href="https://api.mapbox.com/mapbox-gl-js/v3.12.0/mapbox-gl.css" rel="stylesheet">
 <style>
-.locate-btn{display:inline-flex;align-items:center;gap:8px;padding:10px 20px;border-radius:8px;border:1px solid var(--sand);background:var(--cream-warm);color:var(--green);font-family:'Jost',sans-serif;font-size:0.85rem;font-weight:500;cursor:pointer;transition:all 0.2s;margin-bottom:16px}
-.locate-btn:hover{border-color:var(--terra);color:var(--terra)}
-.locate-btn.active{background:var(--green);color:var(--cream);border-color:var(--green)}
-.locate-btn svg{width:16px;height:16px}
-.gps-pulse{width:18px;height:18px;border-radius:50%;background:rgba(66,133,244,0.25);display:flex;align-items:center;justify-content:center}
-.gps-pulse::after{content:'';width:10px;height:10px;border-radius:50%;background:#4285f4;border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,0.3)}
-@keyframes pulse{0%{transform:scale(1);opacity:1}100%{transform:scale(2.5);opacity:0}}
-.gps-pulse.tracking{animation:pulse 2s ease-out infinite}
 .section-heading{font-family:Dahlia,serif;font-size:1.3rem;color:var(--green);margin:40px 0 16px;font-weight:400}
 .section-heading:first-of-type{margin-top:32px}
 </style>
@@ -52,10 +44,6 @@
   <h1 class="page-title">Ontdek Gent</h1>
   <p class="page-intro">Een stad vol verhalen, verborgen parels en onvergetelijke plekjes. Ontdek onze wandelroutes, bekijk onze tips, en volg mee op de kaart.</p>
 
-  <button class="locate-btn" id="locateBtn">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v4m0 12v4m10-10h-4M6 12H2"/></svg>
-    Volg mijn locatie
-  </button>
 
   <div id="map" class="map-container"></div>
 
@@ -397,11 +385,13 @@ var map = new mapboxgl.Map({
 });
 map.addControl(new mapboxgl.AttributionControl({ compact: true }));
 map.addControl(new mapboxgl.NavigationControl({ showCompass: false }), 'top-right');
+map.addControl(new mapboxgl.GeolocateControl({
+  positionOptions: { enableHighAccuracy: true },
+  trackUserLocation: true,
+  showUserHeading: true
+}), 'top-right');
 
 var markers = [];
-var gpsMarker = null;
-var watchId = null;
-var tracking = false;
 
 function clearMap() {
   markers.forEach(function(m) { m.remove(); });
@@ -514,44 +504,6 @@ function flyToPlace(card) {
     }
   });
 }
-
-/* ── GPS tracking ── */
-function updateGpsMarker(lng, lat) {
-  if (gpsMarker) { gpsMarker.setLngLat([lng, lat]); }
-  else {
-    var el = document.createElement('div');
-    el.className = 'gps-pulse tracking';
-    gpsMarker = new mapboxgl.Marker({ element: el }).setLngLat([lng, lat]).addTo(map);
-  }
-}
-
-var locateBtn = document.getElementById('locateBtn');
-locateBtn.addEventListener('click', function() {
-  if (tracking) {
-    navigator.geolocation.clearWatch(watchId); watchId = null; tracking = false;
-    locateBtn.classList.remove('active');
-    locateBtn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v4m0 12v4m10-10h-4M6 12H2"/></svg> Volg mijn locatie';
-    if (gpsMarker) { gpsMarker.remove(); gpsMarker = null; }
-    return;
-  }
-  if (!navigator.geolocation) { locateBtn.textContent = 'GPS niet ondersteund'; return; }
-  tracking = true;
-  locateBtn.classList.add('active');
-  locateBtn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v4m0 12v4m10-10h-4M6 12H2"/></svg> Stop tracking';
-  watchId = navigator.geolocation.watchPosition(
-    function(pos) {
-      var first = !gpsMarker;
-      updateGpsMarker(pos.coords.longitude, pos.coords.latitude);
-      if (first) map.flyTo({ center: [pos.coords.longitude, pos.coords.latitude], zoom: 15, duration: 1000 });
-    },
-    function(err) {
-      tracking = false; locateBtn.classList.remove('active');
-      locateBtn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v4m0 12v4m10-10h-4M6 12H2"/></svg> Volg mijn locatie';
-      if (err.code === 1) locateBtn.textContent = 'Locatie geweigerd';
-    },
-    { enableHighAccuracy: true, maximumAge: 5000 }
-  );
-});
 
 /* ── Event listeners ── */
 map.on('load', function() { showWalk('riverside'); });
