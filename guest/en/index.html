@@ -39,11 +39,8 @@
   <p class="section-sub">So glad you're here. Everything you need to make your stay as pleasant as possible, all in one place.</p>
 
   <div class="weather" id="weather" style="display:none">
-    <div class="weather-icon" id="weather-icon"></div>
-    <div class="weather-info">
-      <div class="weather-temp" id="weather-temp"></div>
-      <div class="weather-tip" id="weather-tip"></div>
-    </div>
+    <span class="weather-icon" id="weather-icon"></span>
+    <span class="weather-temp" id="weather-temp"></span>
   </div>
 
   <div class="tips-grid">
@@ -93,16 +90,16 @@
   </div>
 
   <div class="review-section">
-    <h2 class="review-title">How was your stay?</h2>
-    <p class="review-sub">Your feedback means the world to us.</p>
+    <h2 class="review-title">Enjoying your stay?</h2>
+    <p class="review-sub">We'd love it if you left us a review.</p>
     <div class="review-buttons">
       <a href="https://search.google.com/local/writereview?placeid=ChIJD1Dkj19xw0cR46Fzb_YNnXk" class="review-btn review-btn--google" target="_blank" rel="noopener">
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-        Loved it — leave a review
+        Write a review
       </a>
       <a href="https://wa.me/32470183581?text=Hello%2C%20I%20wanted%20to%20share%20some%20feedback%20about%20my%20stay%20at%20Chamade" class="review-btn review-btn--feedback" target="_blank" rel="noopener">
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-        Something wasn't right
+        Something not right? Let us know
       </a>
     </div>
   </div>
@@ -122,26 +119,13 @@
 <script>
 if('serviceWorker' in navigator)navigator.serviceWorker.register('../sw.js');
 (function(){
-  var tips={
-    sun:['Walk through Citadelpark','Stroll along the Graslei','Perfect day for a boat tour on the canals'],
-    cloud:['Visit the Design Museum or SMAK','Explore the Saint Bavo Cathedral','Browse the vintage shops in the Serpentstraat'],
-    rain:['Warm up in a café on the Graslei','Visit SMAK or the Design Museum','Explore the covered Groentenmarkt'],
-    snow:['Warm up with hot chocolate at a cosy café','Visit the Museum of Fine Arts','Explore the covered Sint-Pietersabdij'],
-    storm:['Stay cosy inside — perfect reading weather','Visit the STAM city museum','Enjoy a Belgian beer tasting indoors']
-  };
-  var icons={sun:'\u2600\uFE0F',cloud:'\u26C5',rain:'\uD83C\uDF27\uFE0F',snow:'\u2744\uFE0F',storm:'\u26A1'};
-  function weatherType(code){
-    if(code<=1)return'sun';if(code<=3)return'cloud';if(code<=48)return'cloud';
-    if(code<=67)return'rain';if(code<=77)return'snow';if(code<=82)return'rain';return'storm';
-  }
+  var icons={0:'\u2600\uFE0F',1:'\u2600\uFE0F',2:'\u26C5',3:'\u2601\uFE0F',45:'\uD83C\uDF2B\uFE0F',48:'\uD83C\uDF2B\uFE0F',51:'\uD83C\uDF27\uFE0F',53:'\uD83C\uDF27\uFE0F',55:'\uD83C\uDF27\uFE0F',61:'\uD83C\uDF27\uFE0F',63:'\uD83C\uDF27\uFE0F',65:'\uD83C\uDF27\uFE0F',71:'\u2744\uFE0F',73:'\u2744\uFE0F',75:'\u2744\uFE0F',80:'\uD83C\uDF26\uFE0F',81:'\uD83C\uDF26\uFE0F',82:'\uD83C\uDF26\uFE0F',95:'\u26A1',96:'\u26A1',99:'\u26A1'};
+  function getIcon(code){return icons[code]||'\u2600\uFE0F'}
   fetch('https://api.open-meteo.com/v1/forecast?latitude=51.05&longitude=3.72&current=temperature_2m,weather_code&timezone=Europe/Brussels')
     .then(function(r){return r.json()})
     .then(function(d){
-      var t=weatherType(d.current.weather_code);
-      var arr=tips[t];
-      document.getElementById('weather-icon').textContent=icons[t];
+      document.getElementById('weather-icon').textContent=getIcon(d.current.weather_code);
       document.getElementById('weather-temp').textContent=Math.round(d.current.temperature_2m)+'°C in Ghent';
-      document.getElementById('weather-tip').textContent=arr[Math.floor(Math.random()*arr.length)];
       document.getElementById('weather').style.display='';
     }).catch(function(){});
 })();

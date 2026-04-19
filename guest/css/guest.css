@@ -144,9 +144,7 @@ body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);-we
 /* ── weather widget ── */
 .weather{display:inline-flex;align-items:center;gap:10px;background:var(--cream-warm);border:1px solid var(--sand);border-radius:50px;padding:8px 16px 8px 12px;margin-bottom:40px}
 .weather-icon{font-size:1.1rem;line-height:1}
-.weather-info{display:flex;align-items:baseline;gap:8px}
 .weather-temp{font-size:0.85rem;font-weight:500;color:var(--green)}
-.weather-tip{font-size:0.82rem;color:var(--text-mid);font-weight:300}
 
 /* ── review section ── */
 .review-section{margin-top:64px;text-align:center;padding-top:48px;border-top:1px solid var(--sand)}
