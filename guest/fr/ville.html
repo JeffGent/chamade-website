@@ -539,7 +539,11 @@ locateBtn.addEventListener('click', function() {
   locateBtn.classList.add('active');
   locateBtn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v4m0 12v4m10-10h-4M6 12H2"/></svg> Arrêter le suivi';
   watchId = navigator.geolocation.watchPosition(
-    function(pos) { updateGpsMarker(pos.coords.longitude, pos.coords.latitude); },
+    function(pos) {
+      var first = !gpsMarker;
+      updateGpsMarker(pos.coords.longitude, pos.coords.latitude);
+      if (first) map.flyTo({ center: [pos.coords.longitude, pos.coords.latitude], zoom: 15, duration: 1000 });
+    },
     function(err) {
       tracking = false; locateBtn.classList.remove('active');
       locateBtn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v4m0 12v4m10-10h-4M6 12H2"/></svg> Suivre ma position';
