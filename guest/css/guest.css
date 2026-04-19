@@ -141,11 +141,6 @@ body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);-we
 .walk-btn{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:0.82rem;color:var(--terra);font-weight:500;text-decoration:none;transition:gap 0.2s}
 .walk-btn:hover{gap:10px}
 
-/* ── weather widget ── */
-.weather{display:inline-flex;align-items:center;gap:10px;background:var(--cream-warm);border:1px solid var(--sand);border-radius:50px;padding:8px 16px 8px 12px;margin-bottom:40px}
-.weather-icon{font-size:1.1rem;line-height:1}
-.weather-temp{font-size:0.85rem;font-weight:500;color:var(--green)}
-
 /* ── review section ── */
 .review-section{margin-top:64px;text-align:center;padding-top:48px;border-top:1px solid var(--sand)}
 .review-title{font-family:Dahlia,serif;font-size:clamp(1.4rem,3vw,1.8rem);color:var(--green);margin-bottom:8px}
@@ -183,7 +178,6 @@ body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);-we
   .hours-grid{grid-template-columns:1fr}
   .place-card{flex-direction:column;align-items:flex-start;gap:6px}
   .map-container{height:300px;border-radius:8px}
-  .weather{flex-wrap:wrap}
   .review-buttons{flex-direction:column;align-items:stretch}
   .review-btn{justify-content:center}
   .wa-float span{display:none}.wa-float{padding:14px}

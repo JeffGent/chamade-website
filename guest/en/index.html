@@ -38,11 +38,6 @@
   <h1 class="section-title">Make Yourself<br>At Home</h1>
   <p class="section-sub">So glad you're here. Everything you need to make your stay as pleasant as possible, all in one place.</p>
 
-  <div class="weather" id="weather" style="display:none">
-    <span class="weather-icon" id="weather-icon"></span>
-    <span class="weather-temp" id="weather-temp"></span>
-  </div>
-
   <div class="tips-grid">
 
     <a href="hotel.html" class="tip">
@@ -118,17 +113,6 @@
 
 <script>
 if('serviceWorker' in navigator)navigator.serviceWorker.register('../sw.js');
-(function(){
-  var icons={0:'\u2600\uFE0F',1:'\u2600\uFE0F',2:'\u26C5',3:'\u2601\uFE0F',45:'\uD83C\uDF2B\uFE0F',48:'\uD83C\uDF2B\uFE0F',51:'\uD83C\uDF27\uFE0F',53:'\uD83C\uDF27\uFE0F',55:'\uD83C\uDF27\uFE0F',61:'\uD83C\uDF27\uFE0F',63:'\uD83C\uDF27\uFE0F',65:'\uD83C\uDF27\uFE0F',71:'\u2744\uFE0F',73:'\u2744\uFE0F',75:'\u2744\uFE0F',80:'\uD83C\uDF26\uFE0F',81:'\uD83C\uDF26\uFE0F',82:'\uD83C\uDF26\uFE0F',95:'\u26A1',96:'\u26A1',99:'\u26A1'};
-  function getIcon(code){return icons[code]||'\u2600\uFE0F'}
-  fetch('https://api.open-meteo.com/v1/forecast?latitude=51.05&longitude=3.72&current=temperature_2m,weather_code&timezone=Europe/Brussels')
-    .then(function(r){return r.json()})
-    .then(function(d){
-      document.getElementById('weather-icon').textContent=getIcon(d.current.weather_code);
-      document.getElementById('weather-temp').textContent=Math.round(d.current.temperature_2m)+'°C in Ghent';
-      document.getElementById('weather').style.display='';
-    }).catch(function(){});
-})();
 </script>
 </body>
 </html>
