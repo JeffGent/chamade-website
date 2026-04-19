@@ -141,6 +141,25 @@ body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);-we
 .walk-btn{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:0.82rem;color:var(--terra);font-weight:500;text-decoration:none;transition:gap 0.2s}
 .walk-btn:hover{gap:10px}
 
+/* ── weather widget ── */
+.weather{display:flex;align-items:center;gap:14px;background:var(--cream-warm);border:1px solid var(--sand);border-radius:10px;padding:16px 20px;margin-bottom:48px}
+.weather-icon{font-size:2rem;line-height:1}
+.weather-info{flex:1}
+.weather-temp{font-family:Dahlia,serif;font-size:1.2rem;color:var(--green)}
+.weather-tip{font-size:0.85rem;color:var(--text-mid);font-weight:300;margin-top:2px}
+
+/* ── review section ── */
+.review-section{margin-top:64px;text-align:center;padding-top:48px;border-top:1px solid var(--sand)}
+.review-title{font-family:Dahlia,serif;font-size:clamp(1.4rem,3vw,1.8rem);color:var(--green);margin-bottom:8px}
+.review-sub{font-size:0.9rem;color:var(--text-mid);font-weight:300;margin-bottom:28px}
+.review-buttons{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.review-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 28px;border-radius:10px;text-decoration:none;font-size:0.95rem;font-weight:500;transition:all 0.2s}
+.review-btn--google{background:var(--green);color:var(--cream)}
+.review-btn--google:hover{background:var(--green-dark);color:var(--cream);text-decoration:none;transform:translateY(-2px);box-shadow:0 4px 16px rgba(58,82,64,0.25)}
+.review-btn--feedback{background:var(--cream-warm);color:var(--text);border:1px solid var(--sand-warm)}
+.review-btn--feedback:hover{border-color:var(--terra);color:var(--terra);text-decoration:none;transform:translateY(-2px);box-shadow:0 4px 16px rgba(0,0,0,0.08)}
+.review-btn svg{flex-shrink:0}
+
 /* ── footer ── */
 .guest-footer{text-align:center;padding:32px 24px;border-top:1px solid var(--sand);font-size:0.75rem;color:var(--text-light);font-weight:300;line-height:1.7}
 .guest-footer a{color:var(--terra);text-decoration:none}
@@ -166,6 +185,9 @@ body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);-we
   .hours-grid{grid-template-columns:1fr}
   .place-card{flex-direction:column;align-items:flex-start;gap:6px}
   .map-container{height:300px;border-radius:8px}
+  .weather{flex-direction:column;text-align:center;gap:8px}
+  .review-buttons{flex-direction:column;align-items:stretch}
+  .review-btn{justify-content:center}
   .wa-float span{display:none}.wa-float{padding:14px}
   .guest-footer{padding:28px 20px}
 }
