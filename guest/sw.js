@@ -1,4 +1,4 @@
-var CACHE = 'chamade-guest-v1';
+var CACHE = 'chamade-guest-v2';
 var PRECACHE = [
   '/guest/css/guest.css',
   '/fonts/dahlia.woff2'
