@@ -1,0 +1,28 @@
+name: Sync THN llms.txt
+
+on:
+  schedule:
+    - cron: '0 7 1 * *'  # 1st of each month at 07:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch latest llms.txt from The Hotels Network
+        run: |
+          curl -fsS "https://thehotelsnetwork.com/static/thn-static-content/llms/01KQ7WCGGG2N63HY6P713Y972H/llms.txt" -o llms.txt
+
+      - name: Commit and push if changed
+        run: |
+          git diff --quiet llms.txt && exit 0
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add llms.txt
+          git commit -m "Sync llms.txt from The Hotels Network"
+          git push
