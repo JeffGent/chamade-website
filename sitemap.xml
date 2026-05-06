@@ -107,6 +107,36 @@
     <priority>0.4</priority>
   </url>
 
+  <!-- VSME rapport NL -->
+  <url>
+    <loc>https://www.chamade.be/nl/vsme.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.chamade.be/nl/vsme.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.chamade.be/en/vsme.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.chamade.be/fr/vsme.html" />
+  </url>
+
+  <!-- VSME rapport EN -->
+  <url>
+    <loc>https://www.chamade.be/en/vsme.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.chamade.be/nl/vsme.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.chamade.be/en/vsme.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.chamade.be/fr/vsme.html" />
+  </url>
+
+  <!-- VSME rapport FR -->
+  <url>
+    <loc>https://www.chamade.be/fr/vsme.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.chamade.be/nl/vsme.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.chamade.be/en/vsme.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.chamade.be/fr/vsme.html" />
+  </url>
+
   <!-- Floraliën Gent 2026 — NL -->
   <url>
     <loc>https://www.chamade.be/nl/floralien-2026.html</loc>
