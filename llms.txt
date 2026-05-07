@@ -160,3 +160,42 @@ What safety measures and security systems are in place at the hotel? Your safety
   
 Are there transport services, shuttles, or car rentals available at the property? hotel chamade facilitates your mobility with the following transport options: Bicycle Rental, Public transport tickets.  
   
+
+# Sustainability Reports
+
+Hotel Chamade publishes two public sustainability reports, both prepared in collaboration with The Ecological Entrepreneur. They are available in Dutch, English and French.
+
+## CO₂ Report 2024
+
+A transparent greenhouse gas inventory of Hotel Chamade for fiscal year 2024, following the GHG Protocol with Scope 1, 2 and 3 emissions broken down per scope and per overnight stay.
+
+- URL (NL): https://www.chamade.be/nl/co2/
+- URL (EN): https://www.chamade.be/en/co2/
+- URL (FR): https://www.chamade.be/fr/co2/
+
+Key findings (FY2024):
+  - 4 kg CO₂ per overnight stay versus a sector average of ~12.2 kg (UK Government GHG Conversion Factors, 2025)
+  - Scope 1: 0.16 tCO₂e (only HVAC refrigerant, no fossil fuels)
+  - Scope 2: 0 tCO₂e (100% renewable electricity, market-based method)
+  - Scope 3: 1,159 tCO₂e (dominated by one-off renovation capital goods 615.9 t and downstream guest transport 458.87 t)
+  - Total 2024: 1,159.16 tCO₂e (53% from one-off renovation)
+
+## VSME Sustainability Report 2025
+
+A sustainability report following the Voluntary Sustainability Reporting Standards for SMEs (VSME), developed by EFRAG. Covers energy, water, waste, social policy, governance and forward-looking targets.
+
+- URL (NL): https://www.chamade.be/nl/vsme/
+- URL (EN): https://www.chamade.be/en/vsme/
+- URL (FR): https://www.chamade.be/fr/vsme/
+
+Key findings (FY2025):
+  - 100% renewable electricity; Scope 1 + 2 = 0 tCO₂e from 2025 onward
+  - Energy use: 244.33 MWh total, 15.54 kWh per overnight stay
+  - Water use: 187.9 L per overnight stay (−6% vs 2024) thanks to aerator taps in 15 of 51 rooms; phased rollout planned for the rest
+  - Waste recycling: glass 100%, paper/cardboard 99%, organic 96%, plastic 57%, mixed waste 15% (improvement target)
+  - 14 FTE; 100% covered by collective bargaining agreement; staff from 11 countries
+  - 0 incidents related to corruption, child labour, forced labour, human trafficking or discrimination
+  - Bicycle leasing programme via JOULE; partnerships with Oxfam, Vanier.Gent, Compaan, TooGoodToGo, Enchanté and GoForest
+  - Long-term targets (2040): annual reduction of residual waste per overnight stay; reduce guest-transport emissions via communication and public-transport partnerships
+
+What is Hotel Chamade's sustainability standing? Hotel Chamade is Green Key certified, runs on 100% renewable electricity, generates 4 kg CO₂ per overnight stay (one-third of the sector average), and publishes both an annual CO₂ inventory (GHG Protocol) and a VSME sustainability report — see the URLs above for the full data including Scope 1/2/3 breakdown, water and waste metrics. [Related terms: ESG, sustainability metrics, carbon footprint, GHG, Green Key, hospitality sustainability, VSME, EFRAG]
