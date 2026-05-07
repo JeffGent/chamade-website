@@ -136,7 +136,7 @@
   @media(max-width:600px){.co2-hero{grid-template-columns:1fr;padding:28px 24px}}
   .co2-stat{text-align:center}
   .co2-stat-num{font-family:Dahlia,serif;font-size:2.8rem;line-height:1;color:var(--terra-light,#e8b89a)}
-  .co2-stat-label{font-size:0.78rem;letter-spacing:0.12em;text-transform:uppercase;opacity:0.75;margin-top:6px}
+  .co2-stat-label{font-size:0.82rem;letter-spacing:0.12em;text-transform:uppercase;opacity:0.75;margin-top:6px}
   .co2-stat-sub{font-size:0.82rem;opacity:0.6;margin-top:4px}
   .co2-section{margin-bottom:48px}
   .co2-section h2{font-family:Dahlia,serif;font-size:1.6rem;color:var(--green);margin-bottom:16px;padding-bottom:8px;border-bottom:1px solid var(--sand)}
@@ -167,9 +167,28 @@
   .co2-source{font-size:0.75rem;color:var(--text-light);margin-top:6px;line-height:1.5}
   @media(max-width:600px){.co2-wrap{padding:40px 20px 60px}}
   html{overflow-x:hidden}
+  @media(max-width:600px){.co2-hero{padding:24px 14px;gap:14px}.co2-stat-num{font-size:2.2rem}}
+  .table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:20px 0}
+  .table-wrap > .co2-table{margin:0}
+  .co2-crumb{display:flex;align-items:center;flex-wrap:wrap;gap:8px;font-size:13px;color:var(--text-light);margin:-16px 0 24px}
+  .co2-crumb a{color:var(--text-mid);text-decoration:none}
+  .co2-crumb a:hover{color:var(--terra)}
+  .co2-crumb-sep{opacity:.5}
+  .co2-toc{display:flex;flex-wrap:wrap;gap:6px;margin:24px 0 56px;padding:18px 0;border-top:1px solid var(--sand);border-bottom:1px solid var(--sand)}
+  .co2-toc a{font-size:11px;letter-spacing:0.06em;text-transform:uppercase;color:var(--text-mid);text-decoration:none;padding:6px 12px;border:1px solid var(--sand);transition:all .2s}
+  .co2-toc a:hover{border-color:var(--terra);color:var(--terra);background:rgba(184,96,74,0.04)}
+  .co2-totop{display:inline-flex;align-items:center;gap:6px;margin-top:32px;font-size:13px;color:var(--terra);text-decoration:none}
+  .co2-totop:hover{text-decoration:underline}
+  @media print{.top-bar,.tt-float,.wa-float,.co2-back,.co2-crumb,.co2-toc,.co2-totop{display:none!important}body{background:#fff;color:#000}.co2-hero{background:#fff;color:#000;border:2px solid #000}.co2-stat-num{color:#000}.co2-section h2{color:#000}.co2-table th{background:#000;color:#fff}a{color:#000;text-decoration:underline}}
   .co2-stat,.scope-card,.impact-card{min-width:0}
   .co2-stat-num,.co2-stat-label,.co2-stat-sub,.scope-val{overflow-wrap:anywhere}
 </style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How much CO₂ does Hotel Chamade emit per overnight stay?","acceptedAnswer":{"@type":"Answer","text":"In 2024 the CO₂ emissions averaged 4 kg per overnight stay, well below the sector average of approximately 12.2 kg per overnight stay."}},{"@type":"Question","name":"What is VSME?","acceptedAnswer":{"@type":"Answer","text":"VSME stands for Voluntary Sustainability Reporting Standards for SMEs, a voluntary European sustainability standard developed by EFRAG specifically for non-listed small and medium-sized enterprises."}},{"@type":"Question","name":"How much water does Hotel Chamade use per overnight stay?","acceptedAnswer":{"@type":"Answer","text":"In 2025 average water use was 187.9 litres per overnight stay, a 6 % decrease versus 2024 thanks to water-saving taps installed in 15 of the 51 rooms."}},{"@type":"Question","name":"Does Hotel Chamade run on renewable electricity?","acceptedAnswer":{"@type":"Answer","text":"Yes. Since 2025 Hotel Chamade uses 100 % renewable electricity. Scope 1 and Scope 2 greenhouse gas emissions are reduced to 0 tCO₂e."}},{"@type":"Question","name":"How does Hotel Chamade sort waste?","acceptedAnswer":{"@type":"Answer","text":"Together with waste partner RENEWI the hotel sorts into five streams: glass, paper and cardboard, organic kitchen waste, plastic and mixed municipal waste. Glass and paper reach (almost) 100 % recycling rates."}}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Hotel Chamade","item":"https://www.chamade.be/en/"},{"@type":"ListItem","position":2,"name":"VSME Sustainability Report 2025","item":"https://www.chamade.be/en/vsme/"}]}
+</script>
 </head>
 <body>
 <div class="top-bar">
@@ -178,10 +197,23 @@
 </div>
 <div class="co2-wrap">
   <a href="../" class="co2-back"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="15 18 9 12 15 6"/></svg> Back to website</a>
+  <nav class="co2-crumb" aria-label="Breadcrumb"><a href="../">Hotel Chamade</a><span class="co2-crumb-sep">›</span><span aria-current="page">VSME 2025</span></nav>
 
 
       <h1 class="co2-title">VSME Sustainability Report 2025</h1>
       <p class="co2-sub">This report provides a transparent overview of our sustainability performance in 2025, in line with the <em>Voluntary Sustainability Reporting Standards for SMEs (VSME)</em>, developed by EFRAG. It was prepared in collaboration with <em>The Ecological Entrepreneur</em>.</p>
+
+      <nav class="co2-toc" aria-label="Table of contents">
+        <a href="#about">About</a>
+        <a href="#figures">Figures</a>
+        <a href="#climate">Climate</a>
+        <a href="#water">Water</a>
+        <a href="#waste">Waste</a>
+        <a href="#team">Team</a>
+        <a href="#community">Community</a>
+        <a href="#governance">Governance</a>
+        <a href="#outlook">Outlook</a>
+      </nav>
 
       <div class="co2-hero">
         <div class="co2-stat">
@@ -207,7 +239,7 @@
       </div>
 
       <div class="co2-section">
-        <h2>About this report</h2>
+        <h2 id="about">About this report</h2>
         <p>The VSME standard is a European reporting framework for non-listed SMEs. It allows us to report on environmental, social and governance performance in a structured way, without the heavy administrative burden of larger ESG frameworks.</p>
         <p>Our sustainability approach builds on our <strong>Green Key label</strong> (valid until end of 2026) and is structured around three core themes:</p>
         <div class="co2-scopes">
@@ -230,8 +262,8 @@
       </div>
 
       <div class="co2-section">
-        <h2>Hotel Chamade key figures</h2>
-        <table class="co2-table">
+        <h2 id="figures">Hotel Chamade key figures</h2>
+        <div class="table-wrap"><table class="co2-table">
           <thead><tr><th>Indicator</th><th class="num">Value</th></tr></thead>
           <tbody>
             <tr><td>Revenue 2025</td><td class="num">€ 2,293,040.56</td></tr>
@@ -240,19 +272,19 @@
             <tr><td>Full-time equivalents (FTE)</td><td class="num">14</td></tr>
             <tr><td>NACE sector code</td><td class="num">I55.1.0 Hotels</td></tr>
           </tbody>
-        </table>
+        </table></div>
       </div>
 
       <div class="co2-section">
-        <h2>Climate &amp; energy</h2>
+        <h2 id="climate">Climate &amp; energy</h2>
         <p>Since 2025 we run entirely on green electricity. That year we consumed 244.33 MWh, or an average of 15.54 kWh per overnight stay. The increase compared to 2024 is linked to the higher number of overnight stays in 2025 and the temporary closure of several floors during the 2024 renovation.</p>
-        <table class="co2-table">
+        <div class="table-wrap"><table class="co2-table">
           <thead><tr><th>Year</th><th class="num">Energy use (MWh)</th><th class="num">Per overnight stay (kWh)</th></tr></thead>
           <tbody>
             <tr><td>2024</td><td class="num">163.34</td><td class="num">13.66</td></tr>
             <tr><td>2025</td><td class="num">244.33</td><td class="num">15.54</td></tr>
           </tbody>
-        </table>
+        </table></div>
 
         <h3>Concrete measures</h3>
         <ul>
@@ -289,23 +321,23 @@
       </div>
 
       <div class="co2-section">
-        <h2>Water</h2>
+        <h2 id="water">Water</h2>
         <p>We installed water-saving taps with aerators in our staff areas, kitchen, public toilets and 15 of our 51 guest rooms. As a result, the average consumption per overnight stay dropped from around 200 litres (2023–2024) to 187.9 litres in 2025 (−6%).</p>
-        <table class="co2-table">
+        <div class="table-wrap"><table class="co2-table">
           <thead><tr><th>Year</th><th class="num">Total (m³)</th><th class="num">Per overnight stay (L)</th></tr></thead>
           <tbody>
             <tr><td>2023</td><td class="num">2,718</td><td class="num">200.29</td></tr>
             <tr><td>2024</td><td class="num">2,398</td><td class="num">200.60</td></tr>
             <tr><td>2025</td><td class="num">2,966</td><td class="num">187.90</td></tr>
           </tbody>
-        </table>
+        </table></div>
         <p>We plan a phased rollout of this measure to all bathrooms.</p>
       </div>
 
       <div class="co2-section">
-        <h2>Waste &amp; circular economy</h2>
+        <h2 id="waste">Waste &amp; circular economy</h2>
         <p>Together with our waste partner RENEWI, we sort our waste into five streams. Glass, paper and organic waste reach recycling rates of (almost) 100%, while plastic and mixed waste still need improvement.</p>
-        <table class="co2-table">
+        <div class="table-wrap"><table class="co2-table">
           <thead><tr><th>Waste stream</th><th class="num">Generated (kg)</th><th class="num">Recycled</th></tr></thead>
           <tbody>
             <tr><td>Glass</td><td class="num">1,640</td><td class="num">100%</td></tr>
@@ -314,7 +346,7 @@
             <tr><td>Plastic</td><td class="num">1,740</td><td class="num">57%</td></tr>
             <tr><td>Mixed municipal waste</td><td class="num">5,280</td><td class="num">15%</td></tr>
           </tbody>
-        </table>
+        </table></div>
         <h3>Circular principles in practice</h3>
         <ul>
           <li>Partnership with TooGoodToGo to make use of food surplus</li>
@@ -326,7 +358,7 @@
       </div>
 
       <div class="co2-section">
-        <h2>Our team</h2>
+        <h2 id="team">Our team</h2>
         <p>In addition to the 2 owners, the team consists of 13 permanent staff, supplemented during peak times by day contracts. <strong>100% of our staff</strong> is covered by a collective bargaining agreement and earns at least the legal minimum wage.</p>
         <h3>Diversity</h3>
         <ul>
@@ -352,7 +384,7 @@
       </div>
 
       <div class="co2-section">
-        <h2>Our guests and community</h2>
+        <h2 id="community">Our guests and community</h2>
         <p>In 2025 we welcomed 15,785 overnight stays. We actively work on a sustainable shift in our guests' travel behaviour through targeted communication and the promotion of slow travel.</p>
         <h3>Local partners</h3>
         <div class="impact-grid">
@@ -378,7 +410,7 @@
       </div>
 
       <div class="co2-section">
-        <h2>Governance &amp; ethics</h2>
+        <h2 id="governance">Governance &amp; ethics</h2>
         <ul>
           <li><strong>0</strong> convictions or fines for anti-corruption or anti-bribery violations in 2025</li>
           <li><strong>0</strong> incidents related to child labour, forced labour, human trafficking or discrimination, both in our own operations and in the value chain</li>
@@ -390,7 +422,7 @@
       </div>
 
       <div class="co2-section">
-        <h2>Looking ahead</h2>
+        <h2 id="outlook">Looking ahead</h2>
         <h3>Long term (2040)</h3>
         <ul>
           <li>Annual reduction of residual waste per overnight stay</li>
@@ -422,15 +454,7 @@
         <p>For us, sustainability is not a separate project but a way of doing business. It lives in the choices we make every day, big and small. This report is the next step in a process of continuous adjustment and improvement.</p>
         <p>This report was prepared by <em>The Ecological Entrepreneur</em>. Questions: <a href="mailto:info@chamade.be">info@chamade.be</a> or <a href="tel:+3292201515">+32 9 220 15 15</a>.</p>
       </div>
+      <a href="#" class="co2-totop">↑ Back to top</a>
 </div>
-<a href="https://www.tiktok.com/@chamadehotelgent" class="tt-float" target="_blank" rel="noopener" aria-label="Volg ons op TikTok">
-  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="#fff"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.34-6.34V9.19a8.16 8.16 0 004.77 1.53V7.27a4.85 4.85 0 01-1.01-.58z"/></svg>
-</a>
-
-<!-- ═══ WHATSAPP WIDGET ═══ -->
-<a href="https://wa.me/32470183581?text=Hallo%2C%20ik%20heb%20een%20vraag%20over%20Hotel%20Chamade" class="wa-float" target="_blank" rel="noopener" aria-label="Chat op WhatsApp">
-  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-  <span>Chat met ons</span>
-</a>
 </body>
 </html>
