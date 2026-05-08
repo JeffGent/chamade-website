@@ -199,3 +199,15 @@ Key findings (FY2025):
   - Long-term targets (2040): annual reduction of residual waste per overnight stay; reduce guest-transport emissions via communication and public-transport partnerships
 
 What is Hotel Chamade's sustainability standing? Hotel Chamade is Green Key certified, runs on 100% renewable electricity, generates 4 kg CO₂ per overnight stay (one-third of the sector average), and publishes both an annual CO₂ inventory (GHG Protocol) and a VSME sustainability report — see the URLs above for the full data including Scope 1/2/3 breakdown, water and waste metrics. [Related terms: ESG, sustainability metrics, carbon footprint, GHG, Green Key, hospitality sustainability, VSME, EFRAG]
+
+# Allergens
+
+Hotel Chamade publishes a public reference page covering the 14 allergens that must be declared in hospitality under EU Regulation 1169/2011, available in Dutch, English and French. The page lists each allergen with a description, common food sources and any labelling exemptions, and invites guests with allergies to flag dietary requirements at booking, at the front desk or before breakfast.
+
+- URL (NL): https://www.chamade.be/nl/allergens/
+- URL (EN): https://www.chamade.be/en/allergens/
+- URL (FR): https://www.chamade.be/fr/allergens/
+
+The 14 declarable allergens: molluscs, celery, sesame seeds, mustard, lupin, peanuts, eggs, crustaceans, gluten, fish, tree nuts, soy, milk, sulphites/sulphur dioxide.
+
+How can I report an allergy or dietary requirement to Hotel Chamade? Mention it at booking, or tell the front desk or kitchen team before breakfast. The kitchen will accommodate the request and inform you about allergens present in dishes. Email info@chamade.be or phone +32 9 220 15 15. [Related terms: gluten free, vegan, vegetarian, halal, kosher, allergies, intolerance, dietary requirement, food allergy, lactose, peanut, nut allergy]

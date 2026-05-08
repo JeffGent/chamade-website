@@ -137,6 +137,36 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.chamade.be/fr/vsme/" />
   </url>
 
+  <!-- Allergens NL -->
+  <url>
+    <loc>https://www.chamade.be/nl/allergens/</loc>
+    <lastmod>2026-05-08</lastmod>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.chamade.be/nl/allergens/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.chamade.be/en/allergens/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.chamade.be/fr/allergens/" />
+  </url>
+
+  <!-- Allergens EN -->
+  <url>
+    <loc>https://www.chamade.be/en/allergens/</loc>
+    <lastmod>2026-05-08</lastmod>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.chamade.be/nl/allergens/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.chamade.be/en/allergens/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.chamade.be/fr/allergens/" />
+  </url>
+
+  <!-- Allergens FR -->
+  <url>
+    <loc>https://www.chamade.be/fr/allergens/</loc>
+    <lastmod>2026-05-08</lastmod>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.chamade.be/nl/allergens/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.chamade.be/en/allergens/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.chamade.be/fr/allergens/" />
+  </url>
+
   <!-- Floraliën Gent 2026 — NL -->
   <url>
     <loc>https://www.chamade.be/nl/floralien-2026.html</loc>
