@@ -8,8 +8,8 @@
 <meta charset="UTF-8">
 <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>De 14 allergenen — Hotel Chamade Gent</title>
-<meta name="description" content="Overzicht van de 14 wettelijk te vermelden allergenen volgens de EU-verordening 1169/2011. Heb je een allergie? Laat het ons weten bij je reservatie of voor het ontbijt.">
+<title>Allergenen — Hotel Chamade Gent</title>
+<meta name="description" content="Allergeneninformatie voor het ontbijt en de takeaway van Hotel Chamade. Per product een overzicht van de aanwezige allergenen, plus uitleg bij de 14 wettelijke allergenen.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://www.chamade.be/nl/allergens/">
 <link rel="alternate" hreflang="nl" href="https://www.chamade.be/nl/allergens/">
@@ -17,8 +17,8 @@
 <link rel="alternate" hreflang="fr" href="https://www.chamade.be/fr/allergens/">
 <link rel="alternate" hreflang="x-default" href="https://www.chamade.be/nl/allergens/">
 <meta property="og:type" content="article">
-<meta property="og:title" content="De 14 allergenen — Hotel Chamade Gent">
-<meta property="og:description" content="Overzicht van de 14 wettelijk te vermelden allergenen. Heb je een allergie? Laat het ons weten bij je reservatie of voor het ontbijt.">
+<meta property="og:title" content="Allergenen — Hotel Chamade Gent">
+<meta property="og:description" content="Allergeneninformatie voor het ontbijt en de takeaway van Hotel Chamade.">
 <meta property="og:url" content="https://www.chamade.be/nl/allergens/">
 <meta property="og:locale" content="nl_BE">
 <meta property="og:locale:alternate" content="en_US">
@@ -46,34 +46,55 @@
   .all-crumb-sep{opacity:.5}
 
   .all-title{font-family:Dahlia,serif;font-size:clamp(2rem,5vw,3rem);color:var(--green);margin-bottom:8px;line-height:1.15}
-  .all-sub{font-size:0.95rem;color:var(--text-mid);margin-bottom:40px;line-height:1.7;max-width:680px}
+  .all-sub{font-size:0.95rem;color:var(--text-mid);margin-bottom:32px;line-height:1.7;max-width:680px}
 
-  .all-hero{background:var(--green);color:var(--cream);border-radius:4px;padding:32px 36px;margin-bottom:48px;display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center}
-  .all-hero-num{font-family:Dahlia,serif;font-size:5rem;line-height:1;color:var(--rose)}
-  .all-hero-text{font-size:0.95rem;line-height:1.65;opacity:0.92}
-  .all-hero-text strong{color:var(--rose);font-weight:500}
-  @media(max-width:600px){.all-hero{grid-template-columns:1fr;padding:24px 22px;gap:14px;text-align:center}.all-hero-num{font-size:3.6rem}}
+  /* Disclaimer box */
+  .disc{background:#fef9f6;border:1px solid var(--rose);border-left:4px solid var(--terra);border-radius:4px;padding:22px 26px;margin-bottom:28px}
+  .disc-title{font-family:Dahlia,serif;color:var(--terra);font-size:1.1rem;margin-bottom:12px;display:flex;align-items:center;gap:10px}
+  .disc-title::before{content:"!";display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;background:var(--terra);color:#fff;border-radius:50%;font-size:0.85rem;font-weight:700;font-family:Jost,sans-serif;flex-shrink:0}
+  .disc p{font-size:0.9rem;line-height:1.7;color:var(--text-mid);margin-bottom:10px}
+  .disc p:last-child{margin-bottom:0}
+  .disc strong{color:var(--green-dark);font-weight:500}
 
-  .all-cta{background:var(--cream-warm);border-left:3px solid var(--terra);padding:20px 24px;margin-bottom:56px;border-radius:0 2px 2px 0;font-size:0.92rem;line-height:1.7;color:var(--text-mid)}
-  .all-cta strong{color:var(--green);font-family:Dahlia,serif;font-size:1.05rem;display:block;margin-bottom:6px}
+  .all-cta{background:var(--cream-warm);border-left:3px solid var(--green);padding:20px 24px;margin-bottom:48px;border-radius:0 2px 2px 0;font-size:0.92rem;line-height:1.7;color:var(--text-mid)}
+  .all-cta strong{color:var(--green);font-family:Dahlia,serif;font-size:1.05rem;display:block;margin-bottom:6px;font-weight:400}
   .all-cta a{color:var(--terra);text-decoration:none;border-bottom:1px solid rgba(184,96,74,0.3);transition:border-color .2s}
   .all-cta a:hover{border-bottom-color:var(--terra)}
 
-  .all-section-title{font-family:Dahlia,serif;font-size:1.5rem;color:var(--green);margin-bottom:18px;padding-bottom:10px;border-bottom:1px solid var(--sand)}
+  .all-section-title{font-family:Dahlia,serif;font-size:1.6rem;color:var(--green);margin:0 0 8px;line-height:1.2}
+  .all-section-sub{font-size:0.88rem;color:var(--text-light);margin-bottom:28px}
 
-  .all-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-bottom:48px}
+  /* Product list */
+  .prod-cat{font-family:Dahlia,serif;font-size:1.25rem;color:var(--green-dark);margin:36px 0 4px;padding-bottom:8px;border-bottom:2px solid var(--green)}
+  .prod-cat:first-of-type{margin-top:0}
+  .prod-cat-note{font-size:0.82rem;color:var(--text-light);font-style:italic;margin-bottom:12px}
+  .prod-list{margin-bottom:24px}
+  .prod-row{display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:14px;padding:12px 0;border-bottom:1px solid var(--sand)}
+  .prod-row:last-child{border-bottom:none}
+  .prod-name{font-size:0.95rem;color:var(--text);flex:1 1 220px;min-width:0;line-height:1.45}
+  .prod-allergens{display:flex;flex-wrap:wrap;gap:5px;align-items:center}
+  .pill{display:inline-block;background:var(--sand);color:var(--green-dark);font-size:0.74rem;letter-spacing:0.03em;padding:3px 11px;border-radius:100px;font-weight:500;white-space:nowrap}
+  .pill-none{font-size:0.78rem;color:var(--text-light);font-style:italic;padding:3px 0}
+  @media(max-width:600px){
+    .prod-row{flex-direction:column;align-items:flex-start;gap:8px;padding:14px 0}
+  }
+
+  /* Reference section (14 allergens) */
+  .ref-intro{background:var(--green);color:var(--cream);border-radius:4px;padding:26px 30px;margin:56px 0 32px;display:grid;grid-template-columns:auto 1fr;gap:24px;align-items:center}
+  .ref-intro-num{font-family:Dahlia,serif;font-size:4rem;line-height:1;color:var(--rose)}
+  .ref-intro-text{font-size:0.92rem;line-height:1.65;opacity:0.92}
+  .ref-intro-text strong{color:var(--rose);font-weight:500}
+  @media(max-width:600px){.ref-intro{grid-template-columns:1fr;padding:22px;gap:12px;text-align:center}.ref-intro-num{font-size:3rem}}
+
+  .all-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-bottom:48px}
   @media(max-width:720px){.all-grid{grid-template-columns:1fr;gap:14px}}
 
-  .all-card{background:#fff;border:1px solid var(--sand);border-radius:3px;padding:22px 22px 20px;transition:border-color .2s,transform .2s;display:flex;flex-direction:column;min-width:0}
+  .all-card{background:#fff;border:1px solid var(--sand);border-radius:3px;padding:18px 20px 16px;transition:border-color .2s;display:flex;flex-direction:column;min-width:0}
   .all-card:hover{border-color:var(--terra)}
-  .all-card-head{display:flex;align-items:baseline;gap:14px;margin-bottom:12px}
-  .all-card-num{font-family:Dahlia,serif;font-size:1.6rem;color:var(--terra);line-height:1;flex-shrink:0;min-width:28px}
-  .all-card-name{font-family:Dahlia,serif;font-size:1.25rem;color:var(--green);line-height:1.2}
-  .all-card-desc{font-size:0.86rem;line-height:1.65;color:var(--text-mid);margin-bottom:12px}
-  .all-card-where-label{font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--terra);font-weight:500;margin-bottom:6px}
-  .all-card-where{font-size:0.84rem;line-height:1.65;color:var(--text-mid);margin-bottom:0}
-  .all-card-note{font-size:0.78rem;line-height:1.6;color:var(--text-light);margin-top:12px;padding-top:12px;border-top:1px dashed var(--sand);font-style:italic}
-  .all-card-note strong{font-style:normal;font-weight:500;color:var(--text-mid)}
+  .all-card-head{display:flex;align-items:baseline;gap:12px;margin-bottom:8px}
+  .all-card-num{font-family:Dahlia,serif;font-size:1.4rem;color:var(--terra);line-height:1;flex-shrink:0;min-width:24px}
+  .all-card-name{font-family:Dahlia,serif;font-size:1.1rem;color:var(--green);line-height:1.2}
+  .all-card-desc{font-size:0.83rem;line-height:1.6;color:var(--text-mid)}
 
   .all-foot{font-size:0.82rem;color:var(--text-light);line-height:1.7;margin-top:24px;border-top:1px solid var(--sand);padding-top:24px}
   .all-foot a{color:var(--terra);text-decoration:none}
@@ -85,12 +106,10 @@
   @media(max-width:600px){
     .top-bar{padding:14px 20px}
     .all-wrap{padding:40px 18px 60px}
-    .all-card{padding:18px 18px 16px}
-    .all-card-head{gap:10px;margin-bottom:10px}
-    .all-card-num{font-size:1.35rem;min-width:22px}
-    .all-card-name{font-size:1.1rem}
     .all-cta{padding:16px 18px}
-    .all-section-title{font-size:1.3rem}
+    .disc{padding:18px 20px}
+    .all-section-title{font-size:1.4rem}
+    .prod-cat{font-size:1.1rem}
   }
 
   .wa-float{position:fixed;bottom:24px;right:24px;z-index:900;display:flex;align-items:center;gap:10px;background:#25D366;color:#fff;text-decoration:none;padding:12px 20px 12px 16px;border-radius:50px;box-shadow:0 4px 16px rgba(0,0,0,0.18);transition:all 0.3s;font-family:'Jost',sans-serif;font-size:13px;font-weight:500;letter-spacing:0.02em}
@@ -101,14 +120,15 @@
   @media print{
     .top-bar,.wa-float,.all-crumb,.all-totop{display:none!important}
     body{background:#fff;color:#000}
-    .all-hero{background:#fff;color:#000;border:2px solid #000}
-    .all-hero-num,.all-card-num,.all-card-name,.all-section-title{color:#000}
-    .all-card{break-inside:avoid;border:1px solid #000}
+    .ref-intro{background:#fff;color:#000;border:2px solid #000}
+    .ref-intro-num,.all-card-num,.all-card-name,.all-section-title,.prod-cat,.disc-title{color:#000}
+    .all-card,.disc{break-inside:avoid;border:1px solid #000}
+    .pill{background:#eee;color:#000}
     a{color:#000;text-decoration:underline}
   }
 </style>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Welke allergenen moeten in België vermeld worden?","acceptedAnswer":{"@type":"Answer","text":"De Europese verordening 1169/2011 verplicht horeca en voedingsbedrijven om 14 allergenen duidelijk te vermelden: weekdieren, selderij, sesamzaad, mosterd, lupine, aardnoten, eieren, schaaldieren, gluten, vis, noten, soja, melk en sulfiet/zwaveldioxide."}},{"@type":"Question","name":"Hoe geef ik mijn allergie door aan Hotel Chamade?","acceptedAnswer":{"@type":"Answer","text":"Vermeld je allergie of dieetvereiste bij de reservatie, of laat het ons weten aan de balie of voor het ontbijt. Onze keuken houdt ermee rekening en informeert je over de aanwezige allergenen in onze gerechten."}}]}
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Welke allergenen zitten in het ontbijt van Hotel Chamade?","acceptedAnswer":{"@type":"Answer","text":"Per product geven we de aanwezige allergenen weer op deze pagina. De samenstelling van leveranciersproducten kan wijzigen, dus controleer altijd het etiket of vraag onze receptie voor de meest actuele info."}},{"@type":"Question","name":"Hoe geef ik mijn allergie door aan Hotel Chamade?","acceptedAnswer":{"@type":"Answer","text":"Vermeld je allergie of dieetvereiste bij de reservatie, of laat het ons weten aan de receptie of voor het ontbijt. Onze keuken houdt ermee rekening en informeert je over de aanwezige allergenen."}}]}
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Hotel Chamade","item":"https://www.chamade.be/nl/"},{"@type":"ListItem","position":2,"name":"Allergenen","item":"https://www.chamade.be/nl/allergens/"}]}
@@ -123,123 +143,195 @@
 <div class="all-wrap">
   <nav class="all-crumb" aria-label="Kruimelpad"><a href="../">Hotel Chamade</a><span class="all-crumb-sep">›</span><span aria-current="page">Allergenen</span></nav>
 
-  <h1 class="all-title">De 14 allergenen</h1>
-  <p class="all-sub">Een transparant overzicht van de 14 allergenen die volgens de Europese verordening <em>1169/2011</em> verplicht vermeld moeten worden in de horeca. Wij stellen deze info ter beschikking zodat je met een gerust hart kan ontbijten of verblijven bij ons.</p>
+  <h1 class="all-title">Allergenen</h1>
+  <p class="all-sub">Op deze pagina vind je per product van ons ontbijt en onze takeaway welke wettelijke allergenen aanwezig kunnen zijn. Onderaan staat een korte uitleg bij elk van de 14 allergenen volgens de EU-verordening <em>1169/2011</em>.</p>
 
-  <div class="all-hero">
-    <div class="all-hero-num">14</div>
-    <div class="all-hero-text">Allergenen die wettelijk vermeld moeten worden in alle horeca-zaken in België &amp; de EU. Onze keuken werkt volgens deze regelgeving en het <strong>"Hier eet men veilig"</strong>-kader voor allergenenbeheer.</div>
+  <div class="disc">
+    <div class="disc-title">Belangrijk om te lezen</div>
+    <p><strong>De samenstelling van onze producten kan wijzigen.</strong> We werken met verschillende leveranciers en recepten kunnen aangepast worden. De info op deze pagina is een richtlijn, geen garantie.</p>
+    <p><strong>Sporen van allergenen zijn nooit volledig uit te sluiten.</strong> In onze keuken worden gluten, noten, melk, ei, soja en sesam dagelijks gebruikt. Door gedeeld materiaal en gedeelde werkruimtes kunnen sporen van deze allergenen in elk gerecht voorkomen.</p>
+    <p>Heb je een ernstige allergie? <strong>Spreek ons aan vóór je eet</strong>, dan kunnen we je gericht informeren over de specifieke leveranciersfiche van het product dat je wil consumeren.</p>
   </div>
 
   <div class="all-cta">
     <strong>Heb je een allergie of dieet?</strong>
-    Laat het ons weten bij je reservatie, of vermeld het aan de receptie of voor het ontbijt. Wij voorzien graag een aangepast alternatief. Mailen kan naar <a href="mailto:info@chamade.be">info@chamade.be</a> · bellen op <a href="tel:+3292201515">+32 9 220 15 15</a>.
+    Laat het ons weten bij je reservatie, of vermeld het aan de receptie of voor het ontbijt. Mailen kan naar <a href="mailto:info@chamade.be">info@chamade.be</a> · bellen op <a href="tel:+3292201515">+32 9 220 15 15</a>.
   </div>
 
-  <h2 class="all-section-title">Overzicht</h2>
+  <h2 class="all-section-title">Onze producten</h2>
+  <p class="all-section-sub">Per categorie. De allergenen-labels zijn gebaseerd op standaardrecepten van onze leveranciers.</p>
+
+  <h3 class="prod-cat">Brood</h3>
+  <div class="prod-list">
+    <div class="prod-row"><div class="prod-name">Brood wit</div><div class="prod-allergens"><span class="pill">Gluten</span></div></div>
+    <div class="prod-row"><div class="prod-name">Brood volkoren met granen</div><div class="prod-allergens"><span class="pill">Gluten</span><span class="pill">Sesam</span></div></div>
+    <div class="prod-row"><div class="prod-name">Glutenvrij brood met rozijnen en noten</div><div class="prod-allergens"><span class="pill">Noten (walnoot en/of hazelnoot)</span></div></div>
+    <div class="prod-row"><div class="prod-name">Maïsbrood</div><div class="prod-allergens"><span class="pill">Gluten</span></div></div>
+    <div class="prod-row"><div class="prod-name">Bio Pistolet wit (desem)</div><div class="prod-allergens"><span class="pill">Gluten</span></div></div>
+    <div class="prod-row"><div class="prod-name">Bio Pistolet bruin (desem)</div><div class="prod-allergens"><span class="pill">Gluten</span></div></div>
+    <div class="prod-row"><div class="prod-name">Bio Pistolet zwart (desem)</div><div class="prod-allergens"><span class="pill">Gluten</span></div></div>
+    <div class="prod-row"><div class="prod-name">Bio Bagel met zaden</div><div class="prod-allergens"><span class="pill">Gluten</span><span class="pill">Sesam</span></div></div>
+  </div>
+
+  <h3 class="prod-cat">Banketbakkerij</h3>
+  <div class="prod-list">
+    <div class="prod-row"><div class="prod-name">Roomboter croissant</div><div class="prod-allergens"><span class="pill">Gluten</span><span class="pill">Melk</span><span class="pill">Ei</span></div></div>
+    <div class="prod-row"><div class="prod-name">Chocoladebroodje</div><div class="prod-allergens"><span class="pill">Gluten</span><span class="pill">Melk</span><span class="pill">Ei</span><span class="pill">Soja</span></div></div>
+    <div class="prod-row"><div class="prod-name">Cremekoek</div><div class="prod-allergens"><span class="pill">Gluten</span><span class="pill">Melk</span><span class="pill">Ei</span></div></div>
+    <div class="prod-row"><div class="prod-name">Rondsuisse</div><div class="prod-allergens"><span class="pill">Gluten</span><span class="pill">Melk</span><span class="pill">Ei</span></div></div>
+    <div class="prod-row"><div class="prod-name">Pecannotenkoek</div><div class="prod-allergens"><span class="pill">Gluten</span><span class="pill">Melk</span><span class="pill">Ei</span><span class="pill">Noten (pecan)</span></div></div>
+    <div class="prod-row"><div class="prod-name">Appelroomkoek</div><div class="prod-allergens"><span class="pill">Gluten</span><span class="pill">Melk</span><span class="pill">Ei</span></div></div>
+    <div class="prod-row"><div class="prod-name">Kaneelkoek</div><div class="prod-allergens"><span class="pill">Gluten</span><span class="pill">Melk</span><span class="pill">Ei</span></div></div>
+    <div class="prod-row"><div class="prod-name">Frambozenkoek</div><div class="prod-allergens"><span class="pill">Gluten</span><span class="pill">Melk</span><span class="pill">Ei</span></div></div>
+    <div class="prod-row"><div class="prod-name">Palmier frangipane</div><div class="prod-allergens"><span class="pill">Gluten</span><span class="pill">Melk</span><span class="pill">Ei</span><span class="pill">Noten (amandel)</span></div></div>
+    <div class="prod-row"><div class="prod-name">Appelcake</div><div class="prod-allergens"><span class="pill">Gluten</span><span class="pill">Melk</span><span class="pill">Ei</span></div></div>
+    <div class="prod-row"><div class="prod-name">Lemoncake</div><div class="prod-allergens"><span class="pill">Gluten</span><span class="pill">Melk</span><span class="pill">Ei</span></div></div>
+    <div class="prod-row"><div class="prod-name">Chocoladecake</div><div class="prod-allergens"><span class="pill">Gluten</span><span class="pill">Melk</span><span class="pill">Ei</span><span class="pill">Soja</span></div></div>
+    <div class="prod-row"><div class="prod-name">Wafel</div><div class="prod-allergens"><span class="pill">Gluten</span><span class="pill">Melk</span><span class="pill">Ei</span></div></div>
+    <div class="prod-row"><div class="prod-name">Muffin chocolade</div><div class="prod-allergens"><span class="pill">Gluten</span><span class="pill">Melk</span><span class="pill">Ei</span><span class="pill">Soja</span></div></div>
+    <div class="prod-row"><div class="prod-name">Muffin natuur</div><div class="prod-allergens"><span class="pill">Gluten</span><span class="pill">Melk</span><span class="pill">Ei</span></div></div>
+    <div class="prod-row"><div class="prod-name">Muffin kaneel</div><div class="prod-allergens"><span class="pill">Gluten</span><span class="pill">Melk</span><span class="pill">Ei</span></div></div>
+    <div class="prod-row"><div class="prod-name">Donut</div><div class="prod-allergens"><span class="pill">Gluten</span><span class="pill">Melk</span><span class="pill">Ei</span><span class="pill">Soja</span></div></div>
+    <div class="prod-row"><div class="prod-name">Briochebrood met suikerparels</div><div class="prod-allergens"><span class="pill">Gluten</span><span class="pill">Melk</span><span class="pill">Ei</span></div></div>
+  </div>
+
+  <h3 class="prod-cat">Granola, ontbijtgranen &amp; koekjes</h3>
+  <div class="prod-list">
+    <div class="prod-row"><div class="prod-name">Granola basic</div><div class="prod-allergens"><span class="pill">Gluten (haver)</span><span class="pill">Noten</span></div></div>
+    <div class="prod-row"><div class="prod-name">Granola crumbling coconut</div><div class="prod-allergens"><span class="pill">Gluten (haver)</span><span class="pill">Noten</span></div></div>
+    <div class="prod-row"><div class="prod-name">Granola pure chocolade</div><div class="prod-allergens"><span class="pill">Gluten (haver)</span><span class="pill">Noten</span><span class="pill">Soja</span><span class="pill">Melk</span></div></div>
+    <div class="prod-row"><div class="prod-name">Granola aardbei/mango</div><div class="prod-allergens"><span class="pill">Gluten (haver)</span><span class="pill">Noten</span></div></div>
+    <div class="prod-row"><div class="prod-name">Havermout</div><div class="prod-allergens"><span class="pill">Gluten (haver)</span></div></div>
+    <div class="prod-row"><div class="prod-name">Corn Flakes</div><div class="prod-allergens"><span class="pill">Gluten (gerstmout)</span></div></div>
+    <div class="prod-row"><div class="prod-name">Choco Pops</div><div class="prod-allergens"><span class="pill">Gluten</span><span class="pill">Soja</span></div></div>
+    <div class="prod-row"><div class="prod-name">Biscuit speculoos</div><div class="prod-allergens"><span class="pill">Gluten</span><span class="pill">Soja</span></div></div>
+    <div class="prod-row"><div class="prod-name">Biscuit roomboter</div><div class="prod-allergens"><span class="pill">Gluten</span><span class="pill">Melk</span><span class="pill">Ei</span></div></div>
+    <div class="prod-row"><div class="prod-name">Biscuit amandel</div><div class="prod-allergens"><span class="pill">Gluten</span><span class="pill">Melk</span><span class="pill">Ei</span><span class="pill">Noten (amandel)</span></div></div>
+  </div>
+
+  <h3 class="prod-cat">Zuivel &amp; eieren</h3>
+  <div class="prod-list">
+    <div class="prod-row"><div class="prod-name">Melk</div><div class="prod-allergens"><span class="pill">Melk</span></div></div>
+    <div class="prod-row"><div class="prod-name">Boter</div><div class="prod-allergens"><span class="pill">Melk</span></div></div>
+    <div class="prod-row"><div class="prod-name">Gekookte eieren</div><div class="prod-allergens"><span class="pill">Ei</span></div></div>
+    <div class="prod-row"><div class="prod-name">Roerei (met boter)</div><div class="prod-allergens"><span class="pill">Ei</span><span class="pill">Melk</span></div></div>
+  </div>
+
+  <h3 class="prod-cat">Kazen</h3>
+  <div class="prod-list">
+    <div class="prod-row"><div class="prod-name">Gouda</div><div class="prod-allergens"><span class="pill">Melk</span></div></div>
+    <div class="prod-row"><div class="prod-name">Brugge</div><div class="prod-allergens"><span class="pill">Melk</span></div></div>
+    <div class="prod-row"><div class="prod-name">Brie</div><div class="prod-allergens"><span class="pill">Melk</span></div></div>
+    <div class="prod-row"><div class="prod-name">Schapenkaas</div><div class="prod-allergens"><span class="pill">Melk</span></div></div>
+  </div>
+
+  <h3 class="prod-cat">Charcuterie</h3>
+  <p class="prod-cat-note">Vleeswaren bevatten vaak bewaarmiddelen zoals sulfiet of nitriet. Voor de exacte samenstelling per leverancier kan je de receptie aanspreken.</p>
+  <div class="prod-list">
+    <div class="prod-row"><div class="prod-name">Gekookte ham</div><div class="prod-allergens"><span class="pill">Sulfiet</span></div></div>
+    <div class="prod-row"><div class="prod-name">Kipfilet (gerookt)</div><div class="prod-allergens"><span class="pill">Sulfiet</span></div></div>
+    <div class="prod-row"><div class="prod-name">Salami</div><div class="prod-allergens"><span class="pill">Sulfiet</span><span class="pill">Melk</span><span class="pill">Mosterd</span></div></div>
+    <div class="prod-row"><div class="prod-name">Filet saxe</div><div class="prod-allergens"><span class="pill">Sulfiet</span></div></div>
+    <div class="prod-row"><div class="prod-name">Bacon</div><div class="prod-allergens"><span class="pill">Sulfiet</span></div></div>
+    <div class="prod-row"><div class="prod-name">Serrano ham</div><div class="prod-allergens"><span class="pill">Sulfiet</span></div></div>
+  </div>
+
+  <h3 class="prod-cat">Noten, zaden &amp; fruit</h3>
+  <div class="prod-list">
+    <div class="prod-row"><div class="prod-name">Notenmix (zonder pistache)</div><div class="prod-allergens"><span class="pill">Noten (amandel, hazelnoot, walnoot, cashew, pecan)</span></div></div>
+    <div class="prod-row"><div class="prod-name">Zonnebloempitten</div><div class="prod-allergens"><span class="pill-none">Geen wettelijke allergenen</span></div></div>
+    <div class="prod-row"><div class="prod-name">Chiazaad</div><div class="prod-allergens"><span class="pill-none">Geen wettelijke allergenen</span></div></div>
+    <div class="prod-row"><div class="prod-name">Dadels</div><div class="prod-allergens"><span class="pill-none">Geen wettelijke allergenen</span></div></div>
+  </div>
+
+  <h3 class="prod-cat">Dranken &amp; diversen</h3>
+  <div class="prod-list">
+    <div class="prod-row"><div class="prod-name">Koffie</div><div class="prod-allergens"><span class="pill-none">Geen wettelijke allergenen</span></div></div>
+    <div class="prod-row"><div class="prod-name">Honing</div><div class="prod-allergens"><span class="pill-none">Geen wettelijke allergenen</span></div></div>
+    <div class="prod-row"><div class="prod-name">Appelsap</div><div class="prod-allergens"><span class="pill-none">Geen wettelijke allergenen</span></div></div>
+    <div class="prod-row"><div class="prod-name">Sinaasappelsap</div><div class="prod-allergens"><span class="pill-none">Geen wettelijke allergenen</span></div></div>
+    <div class="prod-row"><div class="prod-name">Multivitaminesap</div><div class="prod-allergens"><span class="pill-none">Geen wettelijke allergenen</span></div></div>
+    <div class="prod-row"><div class="prod-name">Olijfolie</div><div class="prod-allergens"><span class="pill-none">Geen wettelijke allergenen</span></div></div>
+  </div>
+
+  <div class="ref-intro">
+    <div class="ref-intro-num">14</div>
+    <div class="ref-intro-text">Allergenen die wettelijk vermeld moeten worden in alle horeca-zaken in België &amp; de EU. Onze keuken werkt volgens deze regelgeving en het <strong>"Hier eet men veilig"</strong>-kader voor allergenenbeheer. Hieronder een korte beschrijving van elk.</div>
+  </div>
+
+  <h2 class="all-section-title">De 14 wettelijke allergenen</h2>
+  <p class="all-section-sub">Volgens EU-verordening 1169/2011.</p>
 
   <div class="all-grid">
 
     <article class="all-card">
-      <div class="all-card-head"><div class="all-card-num">01</div><div class="all-card-name">Weekdieren</div></div>
-      <p class="all-card-desc">Schelpdieren (mosselen, oesters, Sint-Jakobsschelpen, scheermessen, …), inktvissen en slakken (escargots, alikruiken, wulken, kokkels), inclusief afgeleide producten.</p>
-      <div class="all-card-where-label">Vaak in</div>
-      <p class="all-card-where">Bouillabaisse, calamari, frutti di mare, paella, pulpo, tapas, …</p>
-    </article>
-
-    <article class="all-card">
-      <div class="all-card-head"><div class="all-card-num">02</div><div class="all-card-name">Selderij</div></div>
-      <p class="all-card-desc">Bleekselder, bladselder, knolselder en selderijzaad, evenals producten op basis van selderij (aroma's).</p>
-      <div class="all-card-where-label">Vaak in</div>
-      <p class="all-card-where">Bouillon, kant-en-klare gerechten, marinades, kaas met kruiden, salades, kruidenmengelingen, kruidenboter, selderijzout, soep, soepgroenten, stoofschotels, vleeswaren, …</p>
-    </article>
-
-    <article class="all-card">
-      <div class="all-card-head"><div class="all-card-num">03</div><div class="all-card-name">Sesamzaad</div></div>
-      <p class="all-card-desc">Sesamzaad (<em>Sesamum indicum</em>) en producten op basis van sesamzaad (zoals sesamolie). Allergie voor sesam neemt toe naarmate sesam meer in onze voeding wordt gebruikt.</p>
-      <div class="all-card-where-label">Vaak in</div>
-      <p class="all-card-where">Falafel, hummus, energierepen, brood, gomashio, specerijenmix, oosterse gerechten, tahini, crackers, …</p>
-    </article>
-
-    <article class="all-card">
-      <div class="all-card-head"><div class="all-card-num">04</div><div class="all-card-name">Mosterd</div></div>
-      <p class="all-card-desc">Witte/gele mosterd (<em>Sinapsis alba</em>), bruine/oriëntaalse mosterd (<em>Brassica juncea</em>), zwarte mosterd (<em>Brassica nigra</em>) en producten op basis van mosterd (mosterdpasta, mosterdolie, …).</p>
-      <div class="all-card-where-label">Vaak in</div>
-      <p class="all-card-where">Azijn, chutney, groenten op zuur, kaas, ketchup, marinade, mayonaise, piccalilly, saus, slasaus, specerijenmix, worst, …</p>
-    </article>
-
-    <article class="all-card">
-      <div class="all-card-head"><div class="all-card-num">05</div><div class="all-card-name">Lupine</div></div>
-      <p class="all-card-desc">Rijk aan eiwit en fytosterolen — vergelijkbaar met soja en vaak gebruikt als sojavervanger. Mensen met een aardnootallergie reageren vaak ook op lupine.</p>
-      <div class="all-card-where-label">Vaak in</div>
-      <p class="all-card-where">Bakkerijproducten (brood, banket, biscuits), pasta, vleesvervangers, gepaneerde producten, …</p>
-    </article>
-
-    <article class="all-card">
-      <div class="all-card-head"><div class="all-card-num">06</div><div class="all-card-name">Aardnoten</div></div>
-      <p class="all-card-desc">Pinda's, apennoot, grondnoot of olienoot (eigenlijk peulvruchten, geen noten) en producten op basis van aardnoten (arachideolie, eiwithydrolysaat, …). Eén van de sterkste allergenen — kan levensbedreigende anafylactische reacties veroorzaken.</p>
-      <div class="all-card-where-label">Vaak in</div>
-      <p class="all-card-where">Borrelnootjes, chili con carne, ontbijtgranen, pindakaas, sambal, saté, sauzen, seroendeng, …</p>
-    </article>
-
-    <article class="all-card">
-      <div class="all-card-head"><div class="all-card-num">07</div><div class="all-card-name">Eieren</div></div>
-      <p class="all-card-desc">Eieren van alle gekweekte vogels (kip, kwartel, gans, …), inclusief eipoeder, lysozyme (E1105) en albumine. Allergie voor ei is — samen met melk en pinda — de meest voorkomende in de westerse wereld.</p>
-      <div class="all-card-where-label">Vaak in</div>
-      <p class="all-card-where">Aardappelpuree, advocaat, batter, biscuits, bouillons, donuts, mayonaise, pasta, paté, quiche, schuimpjes, surimi, bewerkte vleeswaren, …</p>
-    </article>
-
-    <article class="all-card">
-      <div class="all-card-head"><div class="all-card-num">08</div><div class="all-card-name">Schaaldieren</div></div>
-      <p class="all-card-desc">Gesegmenteerd lichaam met harde schaal of schil — gamba's, garnalen, krab, kreeft, scampi, … Het verantwoordelijke eiwit (tropomyosine) zit ook in mosselen en oesters: 75% kans op kruisreactie.</p>
-      <div class="all-card-where-label">Vaak in</div>
-      <p class="all-card-where">Bouillabaisse, kroepoek, sambal, surimi, sushi, …</p>
-    </article>
-
-    <article class="all-card">
-      <div class="all-card-head"><div class="all-card-num">09</div><div class="all-card-name">Gluten</div></div>
+      <div class="all-card-head"><div class="all-card-num">01</div><div class="all-card-name">Gluten</div></div>
       <p class="all-card-desc">Komt voor in tarwe (incl. spelt en khorasantarwe), rogge, gerst, haver, hybride soorten en producten op basis van glutenbevattende granen.</p>
-      <div class="all-card-where-label">Vaak in</div>
-      <p class="all-card-where">Deegwaren, brood, paneermeel, ontbijtgranen, biscuits, …</p>
-      <p class="all-card-note"><strong>Uitzonderingen:</strong> glucosestroop op basis van tarwe (incl. dextrose), maltodextrinen op basis van tarwe, granen voor de vervaardiging van alcoholhoudende destillaten (gin, wodka, whisky).</p>
     </article>
 
     <article class="all-card">
-      <div class="all-card-head"><div class="all-card-num">10</div><div class="all-card-name">Vis</div></div>
-      <p class="all-card-desc">Het verantwoordelijke eiwit is parvalbumine, dat in de meeste vissoorten voorkomt. Hoge concentraties histamine (vooral in ingeblikte tonijn) kunnen ook reacties uitlokken.</p>
-      <div class="all-card-where-label">Vaak in</div>
-      <p class="all-card-where">Visgelatine, kaviaar, vitamine A (retinol), vitamine D (calciferol), surimi (vaak met witvis), aspic, worcestershiresaus, kibbeling, rolmops, sushi, … Opgelet bij E626–E635 (soms uit sardines).</p>
-      <p class="all-card-note"><strong>Uitzondering:</strong> visgelatine of vislijm als drager voor vitamines/smaakstoffen of als klaringsmiddel in bier, cider en wijn — geen etiketteringsplicht.</p>
+      <div class="all-card-head"><div class="all-card-num">02</div><div class="all-card-name">Schaaldieren</div></div>
+      <p class="all-card-desc">Gamba's, garnalen, krab, kreeft, scampi, … Het eiwit tropomyosine zit ook in mosselen en oesters, dus 75% kans op kruisreactie met weekdieren.</p>
     </article>
 
     <article class="all-card">
-      <div class="all-card-head"><div class="all-card-num">11</div><div class="all-card-name">Noten</div></div>
-      <p class="all-card-desc">Boomvruchten met harde schil: amandelen, hazelnoten, walnoten, cashewnoten, pecannoten, paranoten, pistachenoten, macadamianoten en producten op basis van noten. Kokosnoot, nootmuskaat, pinda en pijnboompitten behoren niet tot de noten.</p>
-      <div class="all-card-where-label">Vaak in</div>
-      <p class="all-card-where">Candybars, chocoladepasta (hazelnoot), crackers, curry's en sambal (macadamia), marsepein (amandel), muesli, nougat, vegetarische vleesvervangers, worcestershiresaus, …</p>
+      <div class="all-card-head"><div class="all-card-num">03</div><div class="all-card-name">Eieren</div></div>
+      <p class="all-card-desc">Eieren van alle gekweekte vogels (kip, kwartel, gans), inclusief eipoeder, lysozyme (E1105) en albumine. Samen met melk en pinda één van de meest voorkomende allergieën.</p>
     </article>
 
     <article class="all-card">
-      <div class="all-card-head"><div class="all-card-num">12</div><div class="all-card-name">Soja</div></div>
-      <p class="all-card-desc">Peulvrucht (<em>Glycine max</em>) waarvan de boontjes verwerkt worden tot olie, lecithine (E322) of meel en allerlei afgeleide producten.</p>
-      <div class="all-card-where-label">Vaak in</div>
-      <p class="all-card-where">Bouillonblokjes, chocolades, ijs, mayonaise, ontbijtgranen, seitan, snacks, tofu, vleesvervangers, worst, …</p>
-      <p class="all-card-note"><strong>Uitzonderingen:</strong> volledig geraffineerde sojaolie en -vet (incl. E479b), natuurlijke gemengde tocoferolen (E306), fytosterolen en plantenstanolesters van plantaardige soja-oliën.</p>
+      <div class="all-card-head"><div class="all-card-num">04</div><div class="all-card-name">Vis</div></div>
+      <p class="all-card-desc">Het eiwit parvalbumine komt in de meeste vissoorten voor. Visgelatine als drager voor vitamines of als klaringsmiddel in bier en wijn is wettelijk vrijgesteld.</p>
     </article>
 
     <article class="all-card">
-      <div class="all-card-head"><div class="all-card-num">13</div><div class="all-card-name">Melk</div></div>
-      <p class="all-card-desc">Melk en producten op basis van melk, inclusief lactose. Niet enkel koemelk, maar ook geiten-, schapen- en paardenmelk. Producten met de benaming "kaas", "room", "boter" of "yoghurt" worden voldoende duidelijk geacht.</p>
-      <div class="all-card-where-label">Vaak in</div>
-      <p class="all-card-where">Aardappelpuree, bak- en braadproducten, bouillon, brood, chocolade, kaas, mayonaise, ontbijtproducten, pasta, ragout, roux, slagroom, vleeswaren, weipoeder, mozzarella, …</p>
-      <p class="all-card-note"><strong>Uitzonderingen:</strong> wei voor de vervaardiging van alcoholhoudende destillaten en lactitol (zoetstof E966, bereid uit lactose).</p>
+      <div class="all-card-head"><div class="all-card-num">05</div><div class="all-card-name">Aardnoten</div></div>
+      <p class="all-card-desc">Pinda's en producten op basis van aardnoten (arachideolie, eiwithydrolysaat). Eigenlijk peulvruchten, geen noten. Eén van de sterkste allergenen.</p>
     </article>
 
     <article class="all-card">
-      <div class="all-card-head"><div class="all-card-num">14</div><div class="all-card-name">Sulfiet &amp; zwaveldioxide</div></div>
-      <p class="all-card-desc">Vermelding verplicht bij concentraties van meer dan <strong>10 mg/kg of 10 mg/l</strong>, uitgedrukt als totaalgehalte SO₂. Komt natuurlijk voor (champignons, druiven), maar ook als levensmiddeladditief (E220–E228), vooral als conserveermiddel.</p>
-      <div class="all-card-where-label">Vaak in</div>
-      <p class="all-card-where">Aardappelproducten, aroma's, additieven, brandy, gedroogd fruit/groenten, gekonfijte vruchten, gelatine, glucosestroop, biscuits, likeuren, paté, schaaldieren, wijn, worst, tomatenpuree, blikproducten, bier op vat, …</p>
+      <div class="all-card-head"><div class="all-card-num">06</div><div class="all-card-name">Soja</div></div>
+      <p class="all-card-desc">Peulvrucht (<em>Glycine max</em>) verwerkt tot olie, lecithine (E322) of meel en afgeleide producten. Vaak in chocolade, gebak en kant-en-klare producten.</p>
+    </article>
+
+    <article class="all-card">
+      <div class="all-card-head"><div class="all-card-num">07</div><div class="all-card-name">Melk</div></div>
+      <p class="all-card-desc">Melk en producten op basis van melk, inclusief lactose. Niet enkel koemelk, ook geiten-, schapen- en paardenmelk. Kaas, room, boter en yoghurt vallen hieronder.</p>
+    </article>
+
+    <article class="all-card">
+      <div class="all-card-head"><div class="all-card-num">08</div><div class="all-card-name">Noten</div></div>
+      <p class="all-card-desc">Boomvruchten met harde schil: amandelen, hazelnoten, walnoten, cashewnoten, pecannoten, paranoten, pistachenoten en macadamianoten. Kokosnoot en pijnboompitten vallen er niet onder.</p>
+    </article>
+
+    <article class="all-card">
+      <div class="all-card-head"><div class="all-card-num">09</div><div class="all-card-name">Selderij</div></div>
+      <p class="all-card-desc">Bleekselder, bladselder, knolselder en selderijzaad, evenals producten op basis van selderij (aroma's, bouillons, kruidenmengelingen).</p>
+    </article>
+
+    <article class="all-card">
+      <div class="all-card-head"><div class="all-card-num">10</div><div class="all-card-name">Mosterd</div></div>
+      <p class="all-card-desc">Witte, bruine en zwarte mosterd en producten op basis van mosterd (mosterdpasta, mosterdolie, marinade, chutney, saus).</p>
+    </article>
+
+    <article class="all-card">
+      <div class="all-card-head"><div class="all-card-num">11</div><div class="all-card-name">Sesamzaad</div></div>
+      <p class="all-card-desc">Sesamzaad (<em>Sesamum indicum</em>) en producten op basis van sesamzaad (sesamolie, tahini). Vaak in brood, crackers en oosterse gerechten.</p>
+    </article>
+
+    <article class="all-card">
+      <div class="all-card-head"><div class="all-card-num">12</div><div class="all-card-name">Sulfiet &amp; zwaveldioxide</div></div>
+      <p class="all-card-desc">Vermelding verplicht bij concentraties &gt; 10 mg/kg of 10 mg/l (totaalgehalte SO₂). Vooral in wijn, gedroogd fruit, vleeswaren en als conserveermiddel (E220–E228).</p>
+    </article>
+
+    <article class="all-card">
+      <div class="all-card-head"><div class="all-card-num">13</div><div class="all-card-name">Lupine</div></div>
+      <p class="all-card-desc">Peulvrucht die vaak als sojavervanger wordt gebruikt. Mensen met een aardnootallergie reageren vaak ook op lupine. Komt voor in brood, banket, pasta en vleesvervangers.</p>
+    </article>
+
+    <article class="all-card">
+      <div class="all-card-head"><div class="all-card-num">14</div><div class="all-card-name">Weekdieren</div></div>
+      <p class="all-card-desc">Schelpdieren (mosselen, oesters, Sint-Jakobsschelpen, inktvissen) en slakken (escargots, alikruiken, wulken, kokkels), inclusief afgeleide producten.</p>
     </article>
 
   </div>

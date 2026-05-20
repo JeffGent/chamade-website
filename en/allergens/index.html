@@ -8,8 +8,8 @@
 <meta charset="UTF-8">
 <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The 14 allergens — Hotel Chamade Ghent</title>
-<meta name="description" content="Overview of the 14 allergens that must be declared under EU Regulation 1169/2011. Have an allergy? Let us know when you book or before breakfast.">
+<title>Allergens — Hotel Chamade Ghent</title>
+<meta name="description" content="Allergen information for the breakfast and takeaway at Hotel Chamade. A per-product overview of the allergens present, plus a brief explanation of the 14 legally declared allergens.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://www.chamade.be/en/allergens/">
 <link rel="alternate" hreflang="nl" href="https://www.chamade.be/nl/allergens/">
@@ -17,8 +17,8 @@
 <link rel="alternate" hreflang="fr" href="https://www.chamade.be/fr/allergens/">
 <link rel="alternate" hreflang="x-default" href="https://www.chamade.be/nl/allergens/">
 <meta property="og:type" content="article">
-<meta property="og:title" content="The 14 allergens — Hotel Chamade Ghent">
-<meta property="og:description" content="Overview of the 14 allergens that must be declared under EU regulation. Have an allergy? Let us know when you book or before breakfast.">
+<meta property="og:title" content="Allergens — Hotel Chamade Ghent">
+<meta property="og:description" content="Allergen information for the breakfast and takeaway at Hotel Chamade.">
 <meta property="og:url" content="https://www.chamade.be/en/allergens/">
 <meta property="og:locale" content="en_US">
 <meta property="og:locale:alternate" content="nl_BE">
@@ -46,34 +46,52 @@
   .all-crumb-sep{opacity:.5}
 
   .all-title{font-family:Dahlia,serif;font-size:clamp(2rem,5vw,3rem);color:var(--green);margin-bottom:8px;line-height:1.15}
-  .all-sub{font-size:0.95rem;color:var(--text-mid);margin-bottom:40px;line-height:1.7;max-width:680px}
+  .all-sub{font-size:0.95rem;color:var(--text-mid);margin-bottom:32px;line-height:1.7;max-width:680px}
 
-  .all-hero{background:var(--green);color:var(--cream);border-radius:4px;padding:32px 36px;margin-bottom:48px;display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center}
-  .all-hero-num{font-family:Dahlia,serif;font-size:5rem;line-height:1;color:var(--rose)}
-  .all-hero-text{font-size:0.95rem;line-height:1.65;opacity:0.92}
-  .all-hero-text strong{color:var(--rose);font-weight:500}
-  @media(max-width:600px){.all-hero{grid-template-columns:1fr;padding:24px 22px;gap:14px;text-align:center}.all-hero-num{font-size:3.6rem}}
+  .disc{background:#fef9f6;border:1px solid var(--rose);border-left:4px solid var(--terra);border-radius:4px;padding:22px 26px;margin-bottom:28px}
+  .disc-title{font-family:Dahlia,serif;color:var(--terra);font-size:1.1rem;margin-bottom:12px;display:flex;align-items:center;gap:10px}
+  .disc-title::before{content:"!";display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;background:var(--terra);color:#fff;border-radius:50%;font-size:0.85rem;font-weight:700;font-family:Jost,sans-serif;flex-shrink:0}
+  .disc p{font-size:0.9rem;line-height:1.7;color:var(--text-mid);margin-bottom:10px}
+  .disc p:last-child{margin-bottom:0}
+  .disc strong{color:var(--green-dark);font-weight:500}
 
-  .all-cta{background:var(--cream-warm);border-left:3px solid var(--terra);padding:20px 24px;margin-bottom:56px;border-radius:0 2px 2px 0;font-size:0.92rem;line-height:1.7;color:var(--text-mid)}
-  .all-cta strong{color:var(--green);font-family:Dahlia,serif;font-size:1.05rem;display:block;margin-bottom:6px}
+  .all-cta{background:var(--cream-warm);border-left:3px solid var(--green);padding:20px 24px;margin-bottom:48px;border-radius:0 2px 2px 0;font-size:0.92rem;line-height:1.7;color:var(--text-mid)}
+  .all-cta strong{color:var(--green);font-family:Dahlia,serif;font-size:1.05rem;display:block;margin-bottom:6px;font-weight:400}
   .all-cta a{color:var(--terra);text-decoration:none;border-bottom:1px solid rgba(184,96,74,0.3);transition:border-color .2s}
   .all-cta a:hover{border-bottom-color:var(--terra)}
 
-  .all-section-title{font-family:Dahlia,serif;font-size:1.5rem;color:var(--green);margin-bottom:18px;padding-bottom:10px;border-bottom:1px solid var(--sand)}
+  .all-section-title{font-family:Dahlia,serif;font-size:1.6rem;color:var(--green);margin:0 0 8px;line-height:1.2}
+  .all-section-sub{font-size:0.88rem;color:var(--text-light);margin-bottom:28px}
 
-  .all-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-bottom:48px}
+  .prod-cat{font-family:Dahlia,serif;font-size:1.25rem;color:var(--green-dark);margin:36px 0 4px;padding-bottom:8px;border-bottom:2px solid var(--green)}
+  .prod-cat:first-of-type{margin-top:0}
+  .prod-cat-note{font-size:0.82rem;color:var(--text-light);font-style:italic;margin-bottom:12px}
+  .prod-list{margin-bottom:24px}
+  .prod-row{display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:14px;padding:12px 0;border-bottom:1px solid var(--sand)}
+  .prod-row:last-child{border-bottom:none}
+  .prod-name{font-size:0.95rem;color:var(--text);flex:1 1 220px;min-width:0;line-height:1.45}
+  .prod-allergens{display:flex;flex-wrap:wrap;gap:5px;align-items:center}
+  .pill{display:inline-block;background:var(--sand);color:var(--green-dark);font-size:0.74rem;letter-spacing:0.03em;padding:3px 11px;border-radius:100px;font-weight:500;white-space:nowrap}
+  .pill-none{font-size:0.78rem;color:var(--text-light);font-style:italic;padding:3px 0}
+  @media(max-width:600px){
+    .prod-row{flex-direction:column;align-items:flex-start;gap:8px;padding:14px 0}
+  }
+
+  .ref-intro{background:var(--green);color:var(--cream);border-radius:4px;padding:26px 30px;margin:56px 0 32px;display:grid;grid-template-columns:auto 1fr;gap:24px;align-items:center}
+  .ref-intro-num{font-family:Dahlia,serif;font-size:4rem;line-height:1;color:var(--rose)}
+  .ref-intro-text{font-size:0.92rem;line-height:1.65;opacity:0.92}
+  .ref-intro-text strong{color:var(--rose);font-weight:500}
+  @media(max-width:600px){.ref-intro{grid-template-columns:1fr;padding:22px;gap:12px;text-align:center}.ref-intro-num{font-size:3rem}}
+
+  .all-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-bottom:48px}
   @media(max-width:720px){.all-grid{grid-template-columns:1fr;gap:14px}}
 
-  .all-card{background:#fff;border:1px solid var(--sand);border-radius:3px;padding:22px 22px 20px;transition:border-color .2s,transform .2s;display:flex;flex-direction:column;min-width:0}
+  .all-card{background:#fff;border:1px solid var(--sand);border-radius:3px;padding:18px 20px 16px;transition:border-color .2s;display:flex;flex-direction:column;min-width:0}
   .all-card:hover{border-color:var(--terra)}
-  .all-card-head{display:flex;align-items:baseline;gap:14px;margin-bottom:12px}
-  .all-card-num{font-family:Dahlia,serif;font-size:1.6rem;color:var(--terra);line-height:1;flex-shrink:0;min-width:28px}
-  .all-card-name{font-family:Dahlia,serif;font-size:1.25rem;color:var(--green);line-height:1.2}
-  .all-card-desc{font-size:0.86rem;line-height:1.65;color:var(--text-mid);margin-bottom:12px}
-  .all-card-where-label{font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--terra);font-weight:500;margin-bottom:6px}
-  .all-card-where{font-size:0.84rem;line-height:1.65;color:var(--text-mid);margin-bottom:0}
-  .all-card-note{font-size:0.78rem;line-height:1.6;color:var(--text-light);margin-top:12px;padding-top:12px;border-top:1px dashed var(--sand);font-style:italic}
-  .all-card-note strong{font-style:normal;font-weight:500;color:var(--text-mid)}
+  .all-card-head{display:flex;align-items:baseline;gap:12px;margin-bottom:8px}
+  .all-card-num{font-family:Dahlia,serif;font-size:1.4rem;color:var(--terra);line-height:1;flex-shrink:0;min-width:24px}
+  .all-card-name{font-family:Dahlia,serif;font-size:1.1rem;color:var(--green);line-height:1.2}
+  .all-card-desc{font-size:0.83rem;line-height:1.6;color:var(--text-mid)}
 
   .all-foot{font-size:0.82rem;color:var(--text-light);line-height:1.7;margin-top:24px;border-top:1px solid var(--sand);padding-top:24px}
   .all-foot a{color:var(--terra);text-decoration:none}
@@ -85,12 +103,10 @@
   @media(max-width:600px){
     .top-bar{padding:14px 20px}
     .all-wrap{padding:40px 18px 60px}
-    .all-card{padding:18px 18px 16px}
-    .all-card-head{gap:10px;margin-bottom:10px}
-    .all-card-num{font-size:1.35rem;min-width:22px}
-    .all-card-name{font-size:1.1rem}
     .all-cta{padding:16px 18px}
-    .all-section-title{font-size:1.3rem}
+    .disc{padding:18px 20px}
+    .all-section-title{font-size:1.4rem}
+    .prod-cat{font-size:1.1rem}
   }
 
   .wa-float{position:fixed;bottom:24px;right:24px;z-index:900;display:flex;align-items:center;gap:10px;background:#25D366;color:#fff;text-decoration:none;padding:12px 20px 12px 16px;border-radius:50px;box-shadow:0 4px 16px rgba(0,0,0,0.18);transition:all 0.3s;font-family:'Jost',sans-serif;font-size:13px;font-weight:500;letter-spacing:0.02em}
@@ -101,14 +117,15 @@
   @media print{
     .top-bar,.wa-float,.all-crumb,.all-totop{display:none!important}
     body{background:#fff;color:#000}
-    .all-hero{background:#fff;color:#000;border:2px solid #000}
-    .all-hero-num,.all-card-num,.all-card-name,.all-section-title{color:#000}
-    .all-card{break-inside:avoid;border:1px solid #000}
+    .ref-intro{background:#fff;color:#000;border:2px solid #000}
+    .ref-intro-num,.all-card-num,.all-card-name,.all-section-title,.prod-cat,.disc-title{color:#000}
+    .all-card,.disc{break-inside:avoid;border:1px solid #000}
+    .pill{background:#eee;color:#000}
     a{color:#000;text-decoration:underline}
   }
 </style>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Which allergens must be declared in Belgium?","acceptedAnswer":{"@type":"Answer","text":"EU Regulation 1169/2011 requires hospitality and food businesses to clearly disclose 14 allergens: molluscs, celery, sesame seeds, mustard, lupin, peanuts, eggs, crustaceans, gluten, fish, nuts, soy, milk and sulphites/sulphur dioxide."}},{"@type":"Question","name":"How do I let Hotel Chamade know about my allergy?","acceptedAnswer":{"@type":"Answer","text":"Mention your allergy or dietary requirement when you book, or let us know at the front desk or before breakfast. Our kitchen will accommodate you and inform you about the allergens present in our dishes."}}]}
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Which allergens are present in the Hotel Chamade breakfast?","acceptedAnswer":{"@type":"Answer","text":"We list the allergens per product on this page. Supplier recipes can change, so always check the label or ask our front desk for the most up-to-date information."}},{"@type":"Question","name":"How do I let Hotel Chamade know about my allergy?","acceptedAnswer":{"@type":"Answer","text":"Mention your allergy or dietary requirement when you book, or let us know at the front desk or before breakfast. Our kitchen will accommodate you and inform you about the allergens present in our dishes."}}]}
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Hotel Chamade","item":"https://www.chamade.be/en/"},{"@type":"ListItem","position":2,"name":"Allergens","item":"https://www.chamade.be/en/allergens/"}]}
@@ -123,129 +140,201 @@
 <div class="all-wrap">
   <nav class="all-crumb" aria-label="Breadcrumb"><a href="../">Hotel Chamade</a><span class="all-crumb-sep">›</span><span aria-current="page">Allergens</span></nav>
 
-  <h1 class="all-title">The 14 allergens</h1>
-  <p class="all-sub">A transparent overview of the 14 allergens that must be declared in hospitality under European Regulation <em>1169/2011</em>. We share this information so you can dine and stay with us with peace of mind.</p>
+  <h1 class="all-title">Allergens</h1>
+  <p class="all-sub">This page lists, per product, which legal allergens may be present in our breakfast and takeaway items. At the bottom you'll find a short description of each of the 14 allergens under EU regulation <em>1169/2011</em>.</p>
 
-  <div class="all-hero">
-    <div class="all-hero-num">14</div>
-    <div class="all-hero-text">Allergens that all hospitality businesses in Belgium &amp; the EU are legally required to declare. Our kitchen follows this regulation and the Belgian <strong>"Hier eet men veilig"</strong> (Safe to Eat Here) framework for allergen management.</div>
+  <div class="disc">
+    <div class="disc-title">Important to read</div>
+    <p><strong>The composition of our products can change.</strong> We work with several suppliers and recipes can be updated. The information on this page is a guideline, not a guarantee.</p>
+    <p><strong>Traces of allergens cannot be fully excluded.</strong> Gluten, nuts, milk, egg, soy and sesame are used in our kitchen daily. Through shared equipment and shared workspaces, traces of these allergens may be present in every dish.</p>
+    <p>Do you have a serious allergy? <strong>Speak to us before you eat</strong> so we can give you specific supplier information about the product you wish to consume.</p>
   </div>
 
   <div class="all-cta">
-    <strong>Allergy or special diet?</strong>
-    Let us know when you book, or tell us at the front desk or before breakfast. We're happy to provide a suitable alternative. Email <a href="mailto:info@chamade.be">info@chamade.be</a> · phone <a href="tel:+3292201515">+32 9 220 15 15</a>.
+    <strong>Do you have an allergy or special diet?</strong>
+    Let us know when you book, or mention it at the front desk or before breakfast. Email <a href="mailto:info@chamade.be">info@chamade.be</a> or call <a href="tel:+3292201515">+32 9 220 15 15</a>.
   </div>
 
-  <h2 class="all-section-title">Overview</h2>
+  <h2 class="all-section-title">Our products</h2>
+  <p class="all-section-sub">By category. Allergen labels are based on the standard recipes of our suppliers.</p>
+
+  <h3 class="prod-cat">Bread</h3>
+  <div class="prod-list">
+    <div class="prod-row"><div class="prod-name">White bread</div><div class="prod-allergens"><span class="pill">Gluten</span></div></div>
+    <div class="prod-row"><div class="prod-name">Wholegrain multigrain bread</div><div class="prod-allergens"><span class="pill">Gluten</span><span class="pill">Sesame</span></div></div>
+    <div class="prod-row"><div class="prod-name">Gluten-free bread with raisins and nuts</div><div class="prod-allergens"><span class="pill">Tree nuts (walnut and/or hazelnut)</span></div></div>
+    <div class="prod-row"><div class="prod-name">Corn bread</div><div class="prod-allergens"><span class="pill">Gluten</span></div></div>
+    <div class="prod-row"><div class="prod-name">Bio sourdough pistolet — white</div><div class="prod-allergens"><span class="pill">Gluten</span></div></div>
+    <div class="prod-row"><div class="prod-name">Bio sourdough pistolet — brown</div><div class="prod-allergens"><span class="pill">Gluten</span></div></div>
+    <div class="prod-row"><div class="prod-name">Bio sourdough pistolet — dark</div><div class="prod-allergens"><span class="pill">Gluten</span></div></div>
+    <div class="prod-row"><div class="prod-name">Bio seeded bagel</div><div class="prod-allergens"><span class="pill">Gluten</span><span class="pill">Sesame</span></div></div>
+  </div>
+
+  <h3 class="prod-cat">Pastries</h3>
+  <div class="prod-list">
+    <div class="prod-row"><div class="prod-name">Butter croissant</div><div class="prod-allergens"><span class="pill">Gluten</span><span class="pill">Milk</span><span class="pill">Egg</span></div></div>
+    <div class="prod-row"><div class="prod-name">Pain au chocolat</div><div class="prod-allergens"><span class="pill">Gluten</span><span class="pill">Milk</span><span class="pill">Egg</span><span class="pill">Soy</span></div></div>
+    <div class="prod-row"><div class="prod-name">Cream pastry</div><div class="prod-allergens"><span class="pill">Gluten</span><span class="pill">Milk</span><span class="pill">Egg</span></div></div>
+    <div class="prod-row"><div class="prod-name">Suisse roll</div><div class="prod-allergens"><span class="pill">Gluten</span><span class="pill">Milk</span><span class="pill">Egg</span></div></div>
+    <div class="prod-row"><div class="prod-name">Pecan pastry</div><div class="prod-allergens"><span class="pill">Gluten</span><span class="pill">Milk</span><span class="pill">Egg</span><span class="pill">Tree nuts (pecan)</span></div></div>
+    <div class="prod-row"><div class="prod-name">Apple cream pastry</div><div class="prod-allergens"><span class="pill">Gluten</span><span class="pill">Milk</span><span class="pill">Egg</span></div></div>
+    <div class="prod-row"><div class="prod-name">Cinnamon roll</div><div class="prod-allergens"><span class="pill">Gluten</span><span class="pill">Milk</span><span class="pill">Egg</span></div></div>
+    <div class="prod-row"><div class="prod-name">Raspberry pastry</div><div class="prod-allergens"><span class="pill">Gluten</span><span class="pill">Milk</span><span class="pill">Egg</span></div></div>
+    <div class="prod-row"><div class="prod-name">Palmier frangipane</div><div class="prod-allergens"><span class="pill">Gluten</span><span class="pill">Milk</span><span class="pill">Egg</span><span class="pill">Tree nuts (almond)</span></div></div>
+    <div class="prod-row"><div class="prod-name">Apple cake</div><div class="prod-allergens"><span class="pill">Gluten</span><span class="pill">Milk</span><span class="pill">Egg</span></div></div>
+    <div class="prod-row"><div class="prod-name">Lemon cake</div><div class="prod-allergens"><span class="pill">Gluten</span><span class="pill">Milk</span><span class="pill">Egg</span></div></div>
+    <div class="prod-row"><div class="prod-name">Chocolate cake</div><div class="prod-allergens"><span class="pill">Gluten</span><span class="pill">Milk</span><span class="pill">Egg</span><span class="pill">Soy</span></div></div>
+    <div class="prod-row"><div class="prod-name">Waffle</div><div class="prod-allergens"><span class="pill">Gluten</span><span class="pill">Milk</span><span class="pill">Egg</span></div></div>
+    <div class="prod-row"><div class="prod-name">Chocolate muffin</div><div class="prod-allergens"><span class="pill">Gluten</span><span class="pill">Milk</span><span class="pill">Egg</span><span class="pill">Soy</span></div></div>
+    <div class="prod-row"><div class="prod-name">Plain muffin</div><div class="prod-allergens"><span class="pill">Gluten</span><span class="pill">Milk</span><span class="pill">Egg</span></div></div>
+    <div class="prod-row"><div class="prod-name">Cinnamon muffin</div><div class="prod-allergens"><span class="pill">Gluten</span><span class="pill">Milk</span><span class="pill">Egg</span></div></div>
+    <div class="prod-row"><div class="prod-name">Donut</div><div class="prod-allergens"><span class="pill">Gluten</span><span class="pill">Milk</span><span class="pill">Egg</span><span class="pill">Soy</span></div></div>
+    <div class="prod-row"><div class="prod-name">Brioche with sugar pearls</div><div class="prod-allergens"><span class="pill">Gluten</span><span class="pill">Milk</span><span class="pill">Egg</span></div></div>
+  </div>
+
+  <h3 class="prod-cat">Granola, cereals &amp; biscuits</h3>
+  <div class="prod-list">
+    <div class="prod-row"><div class="prod-name">Granola basic</div><div class="prod-allergens"><span class="pill">Gluten (oats)</span><span class="pill">Tree nuts</span></div></div>
+    <div class="prod-row"><div class="prod-name">Granola crumbling coconut</div><div class="prod-allergens"><span class="pill">Gluten (oats)</span><span class="pill">Tree nuts</span></div></div>
+    <div class="prod-row"><div class="prod-name">Granola dark chocolate</div><div class="prod-allergens"><span class="pill">Gluten (oats)</span><span class="pill">Tree nuts</span><span class="pill">Soy</span><span class="pill">Milk</span></div></div>
+    <div class="prod-row"><div class="prod-name">Granola strawberry/mango</div><div class="prod-allergens"><span class="pill">Gluten (oats)</span><span class="pill">Tree nuts</span></div></div>
+    <div class="prod-row"><div class="prod-name">Oatmeal</div><div class="prod-allergens"><span class="pill">Gluten (oats)</span></div></div>
+    <div class="prod-row"><div class="prod-name">Corn Flakes</div><div class="prod-allergens"><span class="pill">Gluten (barley malt)</span></div></div>
+    <div class="prod-row"><div class="prod-name">Choco Pops</div><div class="prod-allergens"><span class="pill">Gluten</span><span class="pill">Soy</span></div></div>
+    <div class="prod-row"><div class="prod-name">Speculoos biscuit</div><div class="prod-allergens"><span class="pill">Gluten</span><span class="pill">Soy</span></div></div>
+    <div class="prod-row"><div class="prod-name">Butter biscuit</div><div class="prod-allergens"><span class="pill">Gluten</span><span class="pill">Milk</span><span class="pill">Egg</span></div></div>
+    <div class="prod-row"><div class="prod-name">Almond biscuit</div><div class="prod-allergens"><span class="pill">Gluten</span><span class="pill">Milk</span><span class="pill">Egg</span><span class="pill">Tree nuts (almond)</span></div></div>
+  </div>
+
+  <h3 class="prod-cat">Dairy &amp; eggs</h3>
+  <div class="prod-list">
+    <div class="prod-row"><div class="prod-name">Milk</div><div class="prod-allergens"><span class="pill">Milk</span></div></div>
+    <div class="prod-row"><div class="prod-name">Butter</div><div class="prod-allergens"><span class="pill">Milk</span></div></div>
+    <div class="prod-row"><div class="prod-name">Boiled eggs</div><div class="prod-allergens"><span class="pill">Egg</span></div></div>
+    <div class="prod-row"><div class="prod-name">Scrambled eggs (with butter)</div><div class="prod-allergens"><span class="pill">Egg</span><span class="pill">Milk</span></div></div>
+  </div>
+
+  <h3 class="prod-cat">Cheeses</h3>
+  <div class="prod-list">
+    <div class="prod-row"><div class="prod-name">Gouda</div><div class="prod-allergens"><span class="pill">Milk</span></div></div>
+    <div class="prod-row"><div class="prod-name">Brugge cheese</div><div class="prod-allergens"><span class="pill">Milk</span></div></div>
+    <div class="prod-row"><div class="prod-name">Brie</div><div class="prod-allergens"><span class="pill">Milk</span></div></div>
+    <div class="prod-row"><div class="prod-name">Sheep's cheese</div><div class="prod-allergens"><span class="pill">Milk</span></div></div>
+  </div>
+
+  <h3 class="prod-cat">Charcuterie</h3>
+  <p class="prod-cat-note">Cured meats often contain preservatives such as sulphites or nitrites. For the exact composition per supplier, please ask at the front desk.</p>
+  <div class="prod-list">
+    <div class="prod-row"><div class="prod-name">Cooked ham</div><div class="prod-allergens"><span class="pill">Sulphites</span></div></div>
+    <div class="prod-row"><div class="prod-name">Smoked chicken breast</div><div class="prod-allergens"><span class="pill">Sulphites</span></div></div>
+    <div class="prod-row"><div class="prod-name">Salami</div><div class="prod-allergens"><span class="pill">Sulphites</span><span class="pill">Milk</span><span class="pill">Mustard</span></div></div>
+    <div class="prod-row"><div class="prod-name">Filet saxe</div><div class="prod-allergens"><span class="pill">Sulphites</span></div></div>
+    <div class="prod-row"><div class="prod-name">Bacon</div><div class="prod-allergens"><span class="pill">Sulphites</span></div></div>
+    <div class="prod-row"><div class="prod-name">Serrano ham</div><div class="prod-allergens"><span class="pill">Sulphites</span></div></div>
+  </div>
+
+  <h3 class="prod-cat">Nuts, seeds &amp; fruit</h3>
+  <div class="prod-list">
+    <div class="prod-row"><div class="prod-name">Nut mix (no pistachio)</div><div class="prod-allergens"><span class="pill">Tree nuts (almond, hazelnut, walnut, cashew, pecan)</span></div></div>
+    <div class="prod-row"><div class="prod-name">Sunflower seeds</div><div class="prod-allergens"><span class="pill-none">No legal allergens</span></div></div>
+    <div class="prod-row"><div class="prod-name">Chia seeds</div><div class="prod-allergens"><span class="pill-none">No legal allergens</span></div></div>
+    <div class="prod-row"><div class="prod-name">Dates</div><div class="prod-allergens"><span class="pill-none">No legal allergens</span></div></div>
+  </div>
+
+  <h3 class="prod-cat">Drinks &amp; other</h3>
+  <div class="prod-list">
+    <div class="prod-row"><div class="prod-name">Coffee</div><div class="prod-allergens"><span class="pill-none">No legal allergens</span></div></div>
+    <div class="prod-row"><div class="prod-name">Honey</div><div class="prod-allergens"><span class="pill-none">No legal allergens</span></div></div>
+    <div class="prod-row"><div class="prod-name">Apple juice</div><div class="prod-allergens"><span class="pill-none">No legal allergens</span></div></div>
+    <div class="prod-row"><div class="prod-name">Orange juice</div><div class="prod-allergens"><span class="pill-none">No legal allergens</span></div></div>
+    <div class="prod-row"><div class="prod-name">Multivitamin juice</div><div class="prod-allergens"><span class="pill-none">No legal allergens</span></div></div>
+    <div class="prod-row"><div class="prod-name">Olive oil</div><div class="prod-allergens"><span class="pill-none">No legal allergens</span></div></div>
+  </div>
+
+  <div class="ref-intro">
+    <div class="ref-intro-num">14</div>
+    <div class="ref-intro-text">Allergens that must be declared in all hospitality businesses in Belgium &amp; the EU. Our kitchen works under this regulation and the <strong>"Hier eet men veilig"</strong> framework for allergen management. Below is a brief description of each.</div>
+  </div>
+
+  <h2 class="all-section-title">The 14 legal allergens</h2>
+  <p class="all-section-sub">Under EU Regulation 1169/2011.</p>
 
   <div class="all-grid">
 
     <article class="all-card">
-      <div class="all-card-head"><div class="all-card-num">01</div><div class="all-card-name">Molluscs</div></div>
-      <p class="all-card-desc">Shellfish (mussels, oysters, scallops, razor clams, …), squid and snails (escargots, periwinkles, whelks, cockles), including derivatives.</p>
-      <div class="all-card-where-label">Often in</div>
-      <p class="all-card-where">Bouillabaisse, calamari, frutti di mare, paella, pulpo, tapas, …</p>
-    </article>
-
-    <article class="all-card">
-      <div class="all-card-head"><div class="all-card-num">02</div><div class="all-card-name">Celery</div></div>
-      <p class="all-card-desc">Stalk celery, leaf celery, celeriac and celery seed, as well as products based on celery (such as flavourings).</p>
-      <div class="all-card-where-label">Often in</div>
-      <p class="all-card-where">Stock, ready meals, marinades, herbed cheese, salads, spice blends, herb butter, celery salt, soups, soup vegetables, stews, deli meats, …</p>
-    </article>
-
-    <article class="all-card">
-      <div class="all-card-head"><div class="all-card-num">03</div><div class="all-card-name">Sesame seeds</div></div>
-      <p class="all-card-desc">Sesame seeds (<em>Sesamum indicum</em>) and sesame-based products (such as sesame oil). Sesame allergy is increasing as sesame becomes more widely used in our diets.</p>
-      <div class="all-card-where-label">Often in</div>
-      <p class="all-card-where">Falafel, hummus, energy bars, bread, gomashio, spice blends, Asian dishes, tahini, crackers, …</p>
-    </article>
-
-    <article class="all-card">
-      <div class="all-card-head"><div class="all-card-num">04</div><div class="all-card-name">Mustard</div></div>
-      <p class="all-card-desc">White/yellow mustard (<em>Sinapsis alba</em>), brown/oriental mustard (<em>Brassica juncea</em>), black mustard (<em>Brassica nigra</em>) and mustard-based products (mustard paste, mustard oil, …).</p>
-      <div class="all-card-where-label">Often in</div>
-      <p class="all-card-where">Vinegar, chutney, pickled vegetables, cheese, ketchup, marinade, mayonnaise, piccalilli, sauces, salad dressings, spice blends, sausages, …</p>
-    </article>
-
-    <article class="all-card">
-      <div class="all-card-head"><div class="all-card-num">05</div><div class="all-card-name">Lupin</div></div>
-      <p class="all-card-desc">Rich in protein and phytosterols — comparable to soy and often used as a soy substitute. People with a peanut allergy frequently react to lupin too.</p>
-      <div class="all-card-where-label">Often in</div>
-      <p class="all-card-where">Bakery products (bread, pastries, biscuits), pasta, meat substitutes, breaded products, …</p>
-    </article>
-
-    <article class="all-card">
-      <div class="all-card-head"><div class="all-card-num">06</div><div class="all-card-name">Peanuts</div></div>
-      <p class="all-card-desc">Peanuts (actually a legume, not a nut) and peanut-based products (peanut oil, protein hydrolysate, …). One of the strongest known allergens — can trigger life-threatening anaphylactic reactions.</p>
-      <div class="all-card-where-label">Often in</div>
-      <p class="all-card-where">Bar snacks, chili con carne, breakfast cereals, peanut butter, sambal, satay, sauces, seroendeng, …</p>
-    </article>
-
-    <article class="all-card">
-      <div class="all-card-head"><div class="all-card-num">07</div><div class="all-card-name">Eggs</div></div>
-      <p class="all-card-desc">Eggs from all farmed birds (chicken, quail, goose, …), including egg powder, lysozyme (E1105) and albumin. Egg allergy — together with milk and peanut — is the most common in the Western world.</p>
-      <div class="all-card-where-label">Often in</div>
-      <p class="all-card-where">Mashed potato, eggnog, batter, biscuits, broths, donuts, mayonnaise, pasta, pâté, quiche, meringues, surimi, processed deli meats, …</p>
-    </article>
-
-    <article class="all-card">
-      <div class="all-card-head"><div class="all-card-num">08</div><div class="all-card-name">Crustaceans</div></div>
-      <p class="all-card-desc">Segmented body with a hard shell — gambas, prawns, crab, lobster, scampi, … The responsible protein (tropomyosin) is also found in mussels and oysters: 75% chance of cross-reaction.</p>
-      <div class="all-card-where-label">Often in</div>
-      <p class="all-card-where">Bouillabaisse, prawn crackers, sambal, surimi, sushi, …</p>
-    </article>
-
-    <article class="all-card">
-      <div class="all-card-head"><div class="all-card-num">09</div><div class="all-card-name">Gluten</div></div>
+      <div class="all-card-head"><div class="all-card-num">01</div><div class="all-card-name">Gluten</div></div>
       <p class="all-card-desc">Found in wheat (incl. spelt and khorasan wheat), rye, barley, oats, hybrid varieties and products based on gluten-containing cereals.</p>
-      <div class="all-card-where-label">Often in</div>
-      <p class="all-card-where">Pasta, bread, breadcrumbs, breakfast cereals, biscuits, …</p>
-      <p class="all-card-note"><strong>Exemptions:</strong> wheat-based glucose syrup (incl. dextrose), wheat-based maltodextrins, cereals used to make alcoholic distillates (gin, vodka, whisky).</p>
     </article>
 
     <article class="all-card">
-      <div class="all-card-head"><div class="all-card-num">10</div><div class="all-card-name">Fish</div></div>
-      <p class="all-card-desc">The responsible protein is parvalbumin, present in most fish species. High histamine levels (especially in canned tuna) can also trigger reactions.</p>
-      <div class="all-card-where-label">Often in</div>
-      <p class="all-card-where">Fish gelatine, caviar, vitamin A (retinol), vitamin D (calciferol), surimi (often white fish), aspic, Worcestershire sauce, kibbeling, rollmops, sushi, … Note: E626–E635 may be derived from sardines.</p>
-      <p class="all-card-note"><strong>Exemption:</strong> fish gelatine or isinglass used as a carrier for vitamins/flavourings, or as a fining agent in beer, cider and wine — no labelling required.</p>
+      <div class="all-card-head"><div class="all-card-num">02</div><div class="all-card-name">Crustaceans</div></div>
+      <p class="all-card-desc">Prawns, shrimp, crab, lobster, scampi, etc. The protein tropomyosin is also present in mussels and oysters, so there's a 75% chance of cross-reaction with molluscs.</p>
     </article>
 
     <article class="all-card">
-      <div class="all-card-head"><div class="all-card-num">11</div><div class="all-card-name">Tree nuts</div></div>
-      <p class="all-card-desc">Hard-shelled tree fruits: almonds, hazelnuts, walnuts, cashews, pecans, Brazil nuts, pistachios, macadamia nuts, and nut-based products. Coconut, nutmeg, peanut and pine nuts are not classed as nuts.</p>
-      <div class="all-card-where-label">Often in</div>
-      <p class="all-card-where">Candy bars, chocolate spread (hazelnut), crackers, curries and sambal (macadamia), marzipan (almond), muesli, nougat, vegetarian meat substitutes, Worcestershire sauce, …</p>
+      <div class="all-card-head"><div class="all-card-num">03</div><div class="all-card-name">Eggs</div></div>
+      <p class="all-card-desc">Eggs from any farmed bird (hen, quail, goose), including egg powder, lysozyme (E1105) and albumin. Together with milk and peanut, one of the most common allergies.</p>
     </article>
 
     <article class="all-card">
-      <div class="all-card-head"><div class="all-card-num">12</div><div class="all-card-name">Soy</div></div>
-      <p class="all-card-desc">Legume (<em>Glycine max</em>) whose beans are processed into oil, lecithin (E322) or flour, and a wide range of derivatives.</p>
-      <div class="all-card-where-label">Often in</div>
-      <p class="all-card-where">Stock cubes, chocolate, ice cream, mayonnaise, breakfast cereals, seitan, snacks, tofu, meat substitutes, sausages, …</p>
-      <p class="all-card-note"><strong>Exemptions:</strong> fully refined soybean oil and fat (incl. E479b), natural mixed tocopherols (E306), phytosterols and plant stanol esters from vegetable soy oils.</p>
+      <div class="all-card-head"><div class="all-card-num">04</div><div class="all-card-name">Fish</div></div>
+      <p class="all-card-desc">The protein parvalbumin is present in most fish species. Fish gelatin used as a carrier for vitamins or as a clarifying agent in beer and wine is legally exempt.</p>
     </article>
 
     <article class="all-card">
-      <div class="all-card-head"><div class="all-card-num">13</div><div class="all-card-name">Milk</div></div>
-      <p class="all-card-desc">Milk and milk-based products, including lactose. Not just cow's milk but also goat, sheep and mare milk. Products labelled "cheese", "cream", "butter" or "yoghurt" are considered self-evident.</p>
-      <div class="all-card-where-label">Often in</div>
-      <p class="all-card-where">Mashed potato, baking and frying products, broth, bread, chocolate, cheese, mayonnaise, breakfast products, pasta, ragout, roux, whipped cream, deli meats, whey powder, mozzarella, …</p>
-      <p class="all-card-note"><strong>Exemptions:</strong> whey used to make alcoholic distillates and lactitol (sweetener E966, derived from lactose).</p>
+      <div class="all-card-head"><div class="all-card-num">05</div><div class="all-card-name">Peanuts</div></div>
+      <p class="all-card-desc">Peanuts and products based on peanuts (arachis oil, protein hydrolysate). Technically legumes, not nuts. One of the most potent allergens.</p>
     </article>
 
     <article class="all-card">
-      <div class="all-card-head"><div class="all-card-num">14</div><div class="all-card-name">Sulphites &amp; sulphur dioxide</div></div>
-      <p class="all-card-desc">Disclosure required at concentrations above <strong>10 mg/kg or 10 mg/l</strong>, expressed as total SO₂. Occurs naturally (mushrooms, grapes) but also as a food additive (E220–E228), mainly used as a preservative.</p>
-      <div class="all-card-where-label">Often in</div>
-      <p class="all-card-where">Potato products, flavourings, additives, brandy, dried fruit/vegetables, candied fruits, gelatine, glucose syrup, biscuits, liqueurs, pâté, crustaceans, wine, sausages, tomato purée, canned products, draught beer, …</p>
+      <div class="all-card-head"><div class="all-card-num">06</div><div class="all-card-name">Soy</div></div>
+      <p class="all-card-desc">Legume (<em>Glycine max</em>) processed into oil, lecithin (E322) or flour and various derived products. Often in chocolate, baked goods and ready-made meals.</p>
+    </article>
+
+    <article class="all-card">
+      <div class="all-card-head"><div class="all-card-num">07</div><div class="all-card-name">Milk</div></div>
+      <p class="all-card-desc">Milk and milk-based products, including lactose. Not only cow's milk, but also goat's, sheep's and horse's milk. Cheese, cream, butter and yoghurt fall under this category.</p>
+    </article>
+
+    <article class="all-card">
+      <div class="all-card-head"><div class="all-card-num">08</div><div class="all-card-name">Tree nuts</div></div>
+      <p class="all-card-desc">Hard-shelled tree fruits: almonds, hazelnuts, walnuts, cashews, pecans, Brazil nuts, pistachios and macadamia nuts. Coconut and pine nuts are not included.</p>
+    </article>
+
+    <article class="all-card">
+      <div class="all-card-head"><div class="all-card-num">09</div><div class="all-card-name">Celery</div></div>
+      <p class="all-card-desc">Pale celery, leaf celery, celeriac and celery seed, as well as products based on celery (flavourings, bouillon, spice mixes).</p>
+    </article>
+
+    <article class="all-card">
+      <div class="all-card-head"><div class="all-card-num">10</div><div class="all-card-name">Mustard</div></div>
+      <p class="all-card-desc">White, brown and black mustard and products based on mustard (mustard paste, mustard oil, marinade, chutney, sauce).</p>
+    </article>
+
+    <article class="all-card">
+      <div class="all-card-head"><div class="all-card-num">11</div><div class="all-card-name">Sesame</div></div>
+      <p class="all-card-desc">Sesame seed (<em>Sesamum indicum</em>) and products based on sesame (sesame oil, tahini). Often in bread, crackers and Asian dishes.</p>
+    </article>
+
+    <article class="all-card">
+      <div class="all-card-head"><div class="all-card-num">12</div><div class="all-card-name">Sulphites &amp; sulphur dioxide</div></div>
+      <p class="all-card-desc">Declaration required at concentrations &gt; 10 mg/kg or 10 mg/l (total SO₂). Mainly in wine, dried fruit, cured meats and as a preservative (E220–E228).</p>
+    </article>
+
+    <article class="all-card">
+      <div class="all-card-head"><div class="all-card-num">13</div><div class="all-card-name">Lupin</div></div>
+      <p class="all-card-desc">Legume often used as a soy substitute. People with a peanut allergy often also react to lupin. Found in bread, pastries, pasta and meat substitutes.</p>
+    </article>
+
+    <article class="all-card">
+      <div class="all-card-head"><div class="all-card-num">14</div><div class="all-card-name">Molluscs</div></div>
+      <p class="all-card-desc">Shellfish (mussels, oysters, scallops, squid) and snails (escargots, periwinkles, whelks, cockles), including derived products.</p>
     </article>
 
   </div>
 
   <div class="all-foot">
-    <p>The information on this page is based on EU Regulation 1169/2011 and the guidance of the <em>"Hier eet men veilig"</em> (Safe to Eat Here) label (<a href="https://amnorman.be" target="_blank" rel="noopener">Am Norman</a>). For questions about specific dishes or allergens at our breakfast: <a href="mailto:info@chamade.be">info@chamade.be</a> · <a href="tel:+3292201515">+32 9 220 15 15</a>.</p>
+    <p>The information on this page is based on EU Regulation 1169/2011 and on the guidance of the <em>"Hier eet men veilig"</em> label (<a href="https://amnorman.be" target="_blank" rel="noopener">Am Norman</a>). For questions about specific dishes or allergens at our breakfast: <a href="mailto:info@chamade.be">info@chamade.be</a> · <a href="tel:+3292201515">+32 9 220 15 15</a>.</p>
   </div>
 
   <a href="#" class="all-totop">↑ Back to top</a>
