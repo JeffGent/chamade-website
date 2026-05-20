@@ -5,12 +5,11 @@
 <link rel="icon" type="image/svg+xml" href="../favicon.svg">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Interne procedure allergenen — Hotel Chamade</title>
-<meta name="description" content="Invulbare interne procedure allergenenbeheer voor Hotel Chamade. Vul de velden in en bewaar de pagina als PDF voor FAVV-controle.">
-<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Interne procedure voor allergenenbeheer bij Hotel Chamade Gent, conform KB 17 juli 2014 en VO (EU) 1169/2011. Voor te leggen bij een FAVV-inspectie.">
 <style>
   @font-face{font-family:'Dahlia';src:url('../fonts/dahlia.woff2') format('woff2');font-display:swap}
   *{margin:0;padding:0;box-sizing:border-box}
-  :root{--cream:#faf7f2;--cream-warm:#f5efe6;--sand:#ede4d6;--green:#3a5240;--green-dark:#2a3d2f;--terra:#b8604a;--rose:#e8b4a0;--text:#1e2820;--text-mid:#5a5248;--text-light:#8a7d74;--field:#fff8ef;--field-border:#d9a98f}
+  :root{--cream:#faf7f2;--cream-warm:#f5efe6;--sand:#ede4d6;--green:#3a5240;--green-dark:#2a3d2f;--terra:#b8604a;--rose:#e8b4a0;--text:#1e2820;--text-mid:#5a5248;--text-light:#8a7d74}
   html{overflow-x:hidden;scroll-behavior:smooth}
   body{font-family:Jost,sans-serif;background:var(--cream);color:var(--text);line-height:1.6}
 
@@ -25,16 +24,14 @@
   .proc-crumb a:hover{color:var(--terra)}
   .proc-crumb-sep{opacity:.5}
 
-  .proc-actions{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:28px;padding:14px 16px;background:#fff;border:1px solid var(--sand);border-radius:4px;position:sticky;top:0;z-index:10}
-  .proc-btn{display:inline-flex;align-items:center;gap:8px;background:var(--terra);color:#fff;border:none;padding:10px 18px;border-radius:4px;font-family:inherit;font-size:0.88rem;font-weight:500;letter-spacing:0.02em;cursor:pointer;transition:background .15s}
+  .proc-actions{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:28px;padding:14px 16px;background:#fff;border:1px solid var(--sand);border-radius:4px}
+  .proc-btn{display:inline-flex;align-items:center;gap:8px;background:var(--terra);color:#fff;border:none;padding:10px 18px;border-radius:4px;font-family:inherit;font-size:0.88rem;font-weight:500;letter-spacing:0.02em;cursor:pointer;text-decoration:none;transition:background .15s}
   .proc-btn:hover{background:#a4543e}
-  .proc-btn.secondary{background:transparent;color:var(--text-mid);border:1px solid var(--sand)}
-  .proc-btn.secondary:hover{background:var(--cream-warm);color:var(--text)}
-  .save-indicator{font-size:0.78rem;color:var(--text-light);margin-left:auto;display:flex;align-items:center;gap:6px}
-  .save-indicator::before{content:"";display:inline-block;width:7px;height:7px;background:#5cb85c;border-radius:50%;animation:pulse 2s infinite}
-  @keyframes pulse{0%,100%{opacity:1}50%{opacity:0.4}}
+  .proc-meta{font-size:0.78rem;color:var(--text-light);margin-left:auto;font-style:italic}
 
   .proc-title{font-family:Dahlia,serif;font-size:clamp(1.7rem,4vw,2.4rem);color:var(--green);line-height:1.2;margin-bottom:8px}
+  .versie-badge{display:inline-flex;align-items:center;gap:8px;background:var(--green);color:var(--cream);padding:5px 14px;border-radius:100px;font-size:0.74rem;letter-spacing:0.08em;text-transform:uppercase;font-weight:500;margin-bottom:18px}
+  .versie-badge .sep{opacity:0.5}
   .proc-sub{font-size:0.92rem;color:var(--text-mid);margin-bottom:32px;line-height:1.65}
   .proc-sub strong{color:var(--green-dark);font-weight:500}
 
@@ -44,35 +41,15 @@
   .proc-wrap p strong{color:var(--green-dark);font-weight:500}
   .proc-wrap ul{margin:8px 0 14px 22px;padding:0}
   .proc-wrap li{font-size:0.92rem;color:var(--text-mid);margin-bottom:6px;line-height:1.7}
+  .proc-wrap li strong{color:var(--green-dark);font-weight:500}
   .proc-wrap a{color:var(--terra);text-decoration:none;border-bottom:1px solid rgba(184,96,74,0.3)}
   .proc-wrap a:hover{border-bottom-color:var(--terra)}
 
   table.proc-tbl{width:100%;border-collapse:collapse;margin:12px 0 18px;font-size:0.9rem}
   table.proc-tbl th,table.proc-tbl td{padding:10px 12px;text-align:left;border-bottom:1px solid var(--sand);vertical-align:top}
-  table.proc-tbl th{font-weight:500;color:var(--green-dark);background:var(--cream-warm);font-size:0.82rem;letter-spacing:0.04em;text-transform:uppercase}
+  table.proc-tbl th{font-weight:500;color:var(--green-dark);background:var(--cream-warm);font-size:0.78rem;letter-spacing:0.04em;text-transform:uppercase}
   table.proc-tbl td:first-child{width:38%;color:var(--text-mid);font-weight:500}
-  table.proc-tbl.opl td:first-child{width:auto}
-
-  /* Fillable inputs */
-  input[data-field]{
-    border:none;
-    border-bottom:1.5px dashed var(--field-border);
-    background:var(--field);
-    padding:5px 10px;
-    font-family:inherit;
-    font-size:0.92rem;
-    color:var(--text);
-    width:100%;
-    min-width:120px;
-    border-radius:2px;
-    transition:background .15s,border-color .15s;
-  }
-  input[data-field]:hover{background:#fff}
-  input[data-field]:focus{background:#fff;outline:2px solid var(--terra);outline-offset:1px;border-bottom-color:transparent}
-  input[type="date"][data-field]{font-family:inherit;color:var(--text)}
-  input[data-field]::placeholder{color:#c9a78f;font-style:italic}
-
-  .inline-field{display:inline-block;min-width:200px;max-width:100%}
+  table.proc-tbl.opl td:first-child{width:auto;color:var(--text);font-weight:400}
 
   .src{margin-top:48px;padding-top:24px;border-top:1px solid var(--sand);font-size:0.78rem;color:var(--text-light);line-height:1.7}
   .src ul{margin:8px 0 0 22px}
@@ -83,19 +60,20 @@
     .proc-wrap{padding:32px 18px 60px}
     .proc-actions{padding:12px;flex-direction:column;align-items:stretch}
     .proc-btn{justify-content:center;width:100%}
-    .save-indicator{margin-left:0;justify-content:center}
+    .proc-meta{margin-left:0;text-align:center}
     table.proc-tbl td:first-child{width:auto}
     table.proc-tbl.opl{font-size:0.82rem}
-    table.proc-tbl.opl th,table.proc-tbl.opl td{padding:6px 4px}
+    table.proc-tbl.opl th,table.proc-tbl.opl td{padding:8px 6px}
   }
 
-  /* Print stylesheet */
+  /* Print stylesheet (used by the headless Chrome PDF export) */
   @media print{
     @page{margin:18mm 16mm}
     html,body{background:#fff;color:#000;font-size:10.5pt}
     .top-bar,.proc-crumb,.proc-actions,.no-print{display:none!important}
     .proc-wrap{max-width:100%;padding:0;margin:0}
     .proc-title{color:#000;font-size:1.7rem;margin-bottom:6px}
+    .versie-badge{background:#000;color:#fff;font-size:8pt}
     .proc-sub{color:#333;margin-bottom:20px}
     h2.sec{color:#000;border-bottom:1.5px solid #000;page-break-after:avoid;margin-top:22px}
     h3.subsec{color:#000;page-break-after:avoid}
@@ -105,18 +83,8 @@
     table.proc-tbl tr{page-break-inside:avoid}
     table.proc-tbl th{background:#eee;color:#000}
     table.proc-tbl td:first-child{color:#000}
-    input[data-field]{
-      border:none;
-      border-bottom:1px solid #000;
-      background:transparent;
-      color:#000;
-      padding:1px 2px;
-      box-shadow:none;
-      outline:none;
-    }
-    input[type="date"][data-field]::-webkit-calendar-picker-indicator{display:none}
     .src{color:#555}
-    a{color:#000;text-decoration:none}
+    a{color:#000;text-decoration:none;border:none!important}
   }
 </style>
 </head>
@@ -134,15 +102,15 @@
   </nav>
 
   <div class="proc-actions no-print">
-    <button class="proc-btn" type="button" onclick="window.print()" aria-label="Bewaar als PDF">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
-      Bewaar als PDF
-    </button>
-    <button class="proc-btn secondary" type="button" onclick="resetForm()" aria-label="Velden wissen">Velden wissen</button>
-    <span class="save-indicator">Velden worden automatisch lokaal bewaard</span>
+    <a class="proc-btn" href="Hotel-Chamade-Allergenen-Procedure-v1.0.pdf" download aria-label="Download als PDF">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      Download PDF
+    </a>
+    <span class="proc-meta">Officiële versie, gecommit in git voor traceerbaarheid</span>
   </div>
 
   <h1 class="proc-title">Interne procedure allergenen</h1>
+  <div class="versie-badge"><span>Versie 1.0</span><span class="sep">·</span><span>20 mei 2026</span></div>
   <p class="proc-sub">
     Verplicht aanwezig op de plaats van verkoop wanneer allergeneninformatie mondeling wordt meegedeeld.<br>
     Gebaseerd op <strong>KB 17 juli 2014</strong> (art. 4) en <strong>VO (EU) 1169/2011</strong> (bijlage II). Voor te leggen bij een FAVV-inspectie.
@@ -154,7 +122,7 @@
     <tr><td>Adres</td><td>Koningin Elisabethlaan 3, 9000 Gent</td></tr>
     <tr><td>BTW-nummer</td><td>BE0841405912</td></tr>
     <tr><td>FAVV-nummer</td><td>2.313.157.317</td></tr>
-    <tr><td>Versie</td><td><input type="date" data-field="versie"></td></tr>
+    <tr><td>Versie</td><td>1.0 — 20 mei 2026</td></tr>
     <tr><td>Goedgekeurd door</td><td>Jeffrey Van Vooren, zaakvoerder</td></tr>
   </table>
 
@@ -171,8 +139,8 @@
   <h3 class="subsec">3.1 Eigen bereidingen</h3>
   <p>Bij Chamade beperkt eigen bereiding zich tot: roerei (boter + ei), bagels en sandwiches (samenstelling van aangekochte producten), eventueel takeaway-ontbijtpakketten.</p>
   <table class="proc-tbl">
-    <tr><td>Verantwoordelijke</td><td><input data-field="eigen_verant" placeholder="Bv. zaakvoerder of keukenverantwoordelijke"></td></tr>
-    <tr><td>Waar wordt het bijgehouden</td><td><input data-field="eigen_locatie" placeholder="Bv. dezelfde Allergenen-ordner"></td></tr>
+    <tr><td>Verantwoordelijke</td><td>de zaakvoerder</td></tr>
+    <tr><td>Bron van de samenstelling</td><td>Afgeleid uit de leveranciersinfo van de gebruikte grondstoffen, raadpleegbaar via <a href="https://www.chamade.be/nl/allergens/">chamade.be/nl/allergens/</a>.</td></tr>
   </table>
   <p>Voor bereidingen die uit aangekochte producten bestaan (bv. een sandwich), is de optelsom van de leveranciersfiches voldoende.</p>
 
@@ -188,7 +156,7 @@
   <h3 class="subsec">4.1 Wie geeft de info?</h3>
   <ul>
     <li><strong>Primair</strong>: alle medewerkers met klantcontact (receptie + ontbijt-personeel).</li>
-    <li><strong>Bij twijfel of ernstige allergie</strong>: doorverwijzen naar <input data-field="escalatie" class="inline-field" placeholder="Bv. de zaakvoerder en/of opgeleid personeelslid"></li>
+    <li><strong>Bij twijfel of ernstige allergie</strong>: doorverwijzen naar <strong>de zaakvoerder</strong>.</li>
   </ul>
 
   <h3 class="subsec">4.2 Werkwijze</h3>
@@ -203,7 +171,7 @@
   <ul>
     <li>De QR-pagina is altijd raadpleegbaar.</li>
     <li>Een telefonische vraag wordt doorverbonden naar de zaakvoerder, of doorverwezen naar <a href="mailto:info@chamade.be">info@chamade.be</a>.</li>
-    <li>Standaardantwoord bij twijfel: <em>"Ik wil u geen verkeerde info geven — één moment dat ik onze fiche raadpleeg."</em></li>
+    <li>Standaardantwoord bij twijfel: <em>"Ik wil u geen verkeerde info geven, één moment dat ik onze fiche raadpleeg."</em></li>
   </ul>
 
   <h2 class="sec">5. Opleiding en bewustwording personeel</h2>
@@ -220,34 +188,10 @@
     </thead>
     <tbody>
       <tr>
-        <td><input type="date" data-field="opl1_datum"></td>
-        <td><input data-field="opl1_naam" placeholder="Naam"></td>
-        <td><input data-field="opl1_titel" placeholder="Bv. Horeca Forma — Allergenen"></td>
-        <td><input data-field="opl1_bewijs" placeholder="Bv. attest in ordner"></td>
-      </tr>
-      <tr>
-        <td><input type="date" data-field="opl2_datum"></td>
-        <td><input data-field="opl2_naam" placeholder="Naam"></td>
-        <td><input data-field="opl2_titel" placeholder="Opleiding"></td>
-        <td><input data-field="opl2_bewijs" placeholder="Bewijs"></td>
-      </tr>
-      <tr>
-        <td><input type="date" data-field="opl3_datum"></td>
-        <td><input data-field="opl3_naam" placeholder="Naam"></td>
-        <td><input data-field="opl3_titel" placeholder="Opleiding"></td>
-        <td><input data-field="opl3_bewijs" placeholder="Bewijs"></td>
-      </tr>
-      <tr>
-        <td><input type="date" data-field="opl4_datum"></td>
-        <td><input data-field="opl4_naam" placeholder="Naam"></td>
-        <td><input data-field="opl4_titel" placeholder="Opleiding"></td>
-        <td><input data-field="opl4_bewijs" placeholder="Bewijs"></td>
-      </tr>
-      <tr>
-        <td><input type="date" data-field="opl5_datum"></td>
-        <td><input data-field="opl5_naam" placeholder="Naam"></td>
-        <td><input data-field="opl5_titel" placeholder="Opleiding"></td>
-        <td><input data-field="opl5_bewijs" placeholder="Bewijs"></td>
+        <td>29/04/2026</td>
+        <td>Maria Da Conceicao Da Costa Oliveira</td>
+        <td>De principes van de allergenenwetgeving — Horeca Forma Vlaanderen (6,5 lesuren)</td>
+        <td>Getuigschrift bewaard</td>
       </tr>
     </tbody>
   </table>
@@ -255,7 +199,7 @@
   <h2 class="sec">6. Bij een FAVV-controle</h2>
   <p>Te tonen bij een inspectie:</p>
   <ul>
-    <li>Deze procedure (op papier of digitaal raadpleegbaar)</li>
+    <li>Deze procedure (op papier of digitaal raadpleegbaar via de URL of de PDF-download)</li>
     <li>De allergenen-webpagina (toon via QR of de URL) — dit is onze primaire bron van allergeneninfo</li>
     <li>Bewijs van opleiding personeel (zie 5)</li>
     <li>Een blanco of ingevuld voorbeeld van hoe de QR-sticker op een takeaway-doosje wordt aangebracht</li>
@@ -267,34 +211,10 @@
       <li>KB van 17 juli 2014 tot vaststelling van de bepalingen inzake de mededeling van allergenen voor niet-voorverpakte levensmiddelen.</li>
       <li>Verordening (EU) nr. 1169/2011 — bijlage II (14 allergenen).</li>
       <li>VO (EU) 2021/382 — kruisbesmetting (in werking sinds 24/03/2021).</li>
-      <li>Horeca Forma cursus <em>"Infosessie allergenen"</em> (Am Norman).</li>
+      <li>Horeca Forma Vlaanderen — opleiding <em>"De principes van de allergenenwetgeving"</em>.</li>
     </ul>
   </div>
 </div>
-
-<script>
-  (function() {
-    var PREFIX = 'chamade-proc-';
-    var fields = document.querySelectorAll('[data-field]');
-
-    fields.forEach(function(f) {
-      var key = PREFIX + f.dataset.field;
-      var saved = localStorage.getItem(key);
-      if (saved !== null) f.value = saved;
-      f.addEventListener('input', function() {
-        localStorage.setItem(key, f.value);
-      });
-    });
-
-    window.resetForm = function() {
-      if (!confirm('Alle ingevulde velden wissen? Dit kan niet ongedaan worden gemaakt.')) return;
-      fields.forEach(function(f) {
-        f.value = '';
-        localStorage.removeItem(PREFIX + f.dataset.field);
-      });
-    };
-  })();
-</script>
 
 </body>
 </html>
