@@ -8,7 +8,7 @@ You can get information about the hotel's general description, location, ameniti
 ## Hotel General Description:  
 The hotel is located in Belgium.  
 	 - The hotel has a three-star rating.  
-	 - It is a small-sized hotel with 51 rooms.
+	 - It is a small-sized hotel with 45 rooms.  
   
 ## Hotel Extended Description:  
   
@@ -72,8 +72,8 @@ What are the points of interest near hotel chamade? The hotel is near to sports 
   
 Which languages are spoken by the staff at hotel chamade? The staff at hotel chamade speaks: The owner speaks English (UK), Dutch, and French.. [Related terms: multilingual staff, translators]  
   
-Does hotel chamade have any seasonal closures? No, the hotel is open year-round with no seasonal closures.. [Related terms: closed dates, off-season, winter closure, unavailable periods, seasonal availability]
-
+Does hotel chamade have any seasonal closures? Yes, some facilities are subject to seasonal closure: The hotel will be renovating from February 8, 2026, to March 15, 2026. During this period, the elevator will be affected. The hotel will make every effort to minimize noise and disturbance during the renovations.. [Related terms: closed dates, off-season, winter closure, unavailable periods, seasonal availability]  
+  
 Does hotel chamade follow sustainability practices? Yes, hotel chamade has the following sustainability policies in place: Hotel Chamade in Ghent, Belgium, is committed to sustainability through various practices. The hotel holds a Green Key certification, reflecting its dedication to sustainable hospitality. It collaborates with local suppliers, such as vanier.gent, to source products from Ghent farmers, reducing delivery distances and supporting the local economy. The hotel also uses fair-trade products and cradle-to-cradle items in its bathrooms, ensuring complete recyclability. In 2024, Hotel Chamade underwent a full renovation, installing a new, energy-efficient HVAC system, switching all lighting to LED, and adding extra building insulation. The hotel purchases 100% renewable electricity and operates an electric delivery van charged exclusively with green electricity. Water conservation measures include installing aerator taps in 15 bathrooms. Waste is sorted into five streams in partnership with RENEWI. Additionally, the hotel supports reforestation projects by planting trees in Peru and Madagascar through Go Forest.. [Related terms: eco-friendly, green hotel, environmental policy, recycling, carbon footprint]  
   
 Does hotel chamade have a garden or terrace? Yes, hotel chamade features a garden or terrace. Hotel Chamade offers a terrace where guests can relax.. [Related terms: courtyard, outdoor space, park, green area, patio]  
@@ -114,7 +114,7 @@ Are baby cribs available at hotel chamade? Yes, baby cribs are available. Hotel 
   
 Is there a desk in the room at hotel chamade? Yes, the rooms are equipped with a desk. Each guest room at Hotel Chamade is equipped with a desk, providing a convenient workspace for guests.. [Related terms: work space, writing table, office desk, workstation]  
   
-Do the rooms at hotel chamade have air conditioning? Yes, the rooms are air-conditioned. Hotel Chamade in Ghent, Belgium, offers air-conditioned guest rooms. The hotel provides 51 rooms, each equipped with air conditioning, complimentary Wi-Fi, and a multi-channel television. Additionally, the rooms feature tea and coffee making facilities, and spacious bathrooms.. [Related terms: AC, A/C, climate control, cooling, air con]  
+Do the rooms at hotel chamade have air conditioning? Yes, the rooms are air-conditioned. Hotel Chamade in Ghent, Belgium, offers air-conditioned guest rooms. The hotel provides 51 rooms, each equipped with air conditioning, complimentary Wi-Fi, and a multi-channel television. Additionally, the rooms feature tea and coffee making facilities, and spacious bathrooms with carpeted flooring.. [Related terms: AC, A/C, climate control, cooling, air con]  
   
 Is there a safe box in the room at hotel chamade? Yes, the room is equipped with a safe box. Guestrooms at Hotel Chamade in Ghent are equipped with safes for secure storage of valuables. Additional amenities include air conditioning, flat-screen televisions with satellite programming, complimentary wireless Internet access, minibars, desks, and bathrooms featuring bathtubs or showers, hair dryers, and complimentary toiletries.. [Related terms: in-room safe, room security box, valuables locker]  
   
@@ -148,13 +148,13 @@ Are there laundry services, housekeeping, or garment care available? To ensure a
   
 Are there any shared spaces, lounges, or public areas for guests to use? During your stay at hotel chamade, you have access to several common areas: Parking, Garden/Terraces, Shared lounge/TV Area.  
   
-What facilities, services, and general amenities are offered at the hotel? hotel chamade provides a wide range of guest services, including: Parking, Garden/Terraces, Shared lounge/TV Area, Fax/Photocopying, Early Check-In, Late Check-Out, Baggage Storage, Bicycle Rental, Public transport tickets, Bar, Packed lunches, Special Dietary Options, Daily Housekeeping, Laundry, Dry Cleaning, Security alarm, Smoke alarms, Fire extinguishers, Safety deposit box, Wi-Fi, TV, Baby Crib, Desk, Air conditioning, Safe Box, Walk-in shower, Balcony/Terrace, Hairdryer, Lounge area, Coffee/tea maker, Minibar, City view.  
+What facilities, services, and general amenities are offered at the hotel? hotel chamade provides a wide range of guest services, including: Parking, Garden/Terraces, Shared lounge/TV Area, Fax/Photocopying, Early Check-In, Late Check-Out, Baggage Storage, Bicycle Rental, Public transport tickets, Bar, Packed lunches, Special Dietary Options, Daily Housekeeping, Laundry, Dry Cleaning, Security alarm, Smoke alarms, Fire extinguishers, Safety deposit box, Wi-Fi, TV, Baby Crib, Desk, Air conditioning, Safe Box, Walk-in shower, Balcony/Terrace, Hairdryer, Lounge area, Coffee/tea maker, Minibar, City view, Describe the rooms of your property & characteristics.  
   
 What are the dining options, restaurants, or breakfast services available? Food and beverage offerings at hotel chamade include: Bar, Packed lunches, Special Dietary Options.  
   
 What services are provided by the reception or front desk? Our team at hotel chamade can assist you with several reception services: Early Check-In, Late Check-Out, Baggage Storage.  
   
-What are the room features and in-room amenities provided? The rooms at hotel chamade are equipped with various features: Wi-Fi, TV, Baby Crib, Desk, Air conditioning, Safe Box, Walk-in shower, Balcony/Terrace, Hairdryer, Lounge area, Coffee/tea maker, Minibar, City view.  
+What are the room features and in-room amenities provided? The rooms at hotel chamade are equipped with various features: Wi-Fi, TV, Baby Crib, Desk, Air conditioning, Safe Box, Walk-in shower, Balcony/Terrace, Hairdryer, Lounge area, Coffee/tea maker, Minibar, City view, Describe the rooms of your property & characteristics.  
   
 What safety measures and security systems are in place at the hotel? Your safety at hotel chamade is supported by several measures: Security alarm, Smoke alarms, Fire extinguishers, Safety deposit box.  
   
