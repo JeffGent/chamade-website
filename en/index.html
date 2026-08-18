@@ -179,6 +179,25 @@
     .lightbox-prev{left:24px}
     .lightbox-next{right:24px}
     .lightbox-caption{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);color:var(--cream);font-family:'Dahlia',serif;font-size:18px;text-align:center;opacity:0.8}
+    /* ═══ 360° TOUR ═══ */
+    .tour-btn{position:absolute;top:14px;right:14px;z-index:4;display:flex;align-items:center;gap:6px;background:rgba(250,247,242,0.92);color:var(--green-dark);border:none;cursor:pointer;font-family:'Jost',sans-serif;font-size:9px;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;padding:8px 12px;transition:background 0.3s,color 0.3s}
+    .tour-btn:hover{background:var(--terra);color:var(--cream)}
+    .hero .tour-btn{position:static;background:none;border:1px solid rgba(250,247,242,0.55);color:var(--cream);padding:14px 26px;font-size:10px;font-weight:500;letter-spacing:0.24em;gap:9px}
+    .hero .tour-btn:hover{background:var(--cream);border-color:var(--cream);color:var(--green-dark)}
+    .tour-overlay{position:fixed;inset:0;z-index:10000;background:rgba(20,32,22,0.96);display:none;align-items:center;justify-content:center;opacity:0;transition:opacity 0.3s}
+    .tour-overlay.active{display:flex;opacity:1}
+    .tour-overlay iframe{width:92vw;height:86vh;border:0;background:var(--green-dark);box-shadow:0 8px 40px rgba(0,0,0,0.4)}
+    .tour-close{position:absolute;top:24px;right:24px;background:none;border:none;color:var(--cream);cursor:pointer;opacity:0.6;transition:opacity 0.3s;padding:8px;z-index:2}
+    .tour-close:hover{opacity:1}
+    .tour-caption{position:absolute;top:28px;left:32px;color:var(--cream);font-family:'Dahlia',serif;font-size:18px;opacity:0.8;pointer-events:none}
+    @media(max-width:640px){
+      .tour-btn{font-size:8px;padding:7px 10px;letter-spacing:0.14em}
+      .hero .tour-btn{padding:12px 20px;font-size:9px;letter-spacing:0.18em}
+      .tour-overlay iframe{width:100vw;height:100vh;height:100dvh;box-shadow:none}
+      .tour-overlay::before{content:'';position:absolute;top:0;left:0;right:0;height:96px;background:linear-gradient(rgba(20,32,22,0.65),rgba(20,32,22,0));pointer-events:none;z-index:1}
+      .tour-close{top:12px;right:12px;opacity:0.95;z-index:3}
+      .tour-caption{top:22px;left:20px;font-size:16px;opacity:0.95;z-index:3}
+    }
 
     /* ═══ VIDEO (autoplay, portrait) ═══ */
     .video-section{background:var(--cream-warm);padding:88px 0;overflow:hidden}
@@ -480,6 +499,7 @@
     <div class="hero-actions">
       <a href="https://booking.roomraccoon.com/hotel-chamade/en/" class="btn-primary">Check availability</a>
       <a href="#rooms" class="btn-ghost">Our rooms &rarr;</a>
+      <button type="button" class="tour-btn" onclick="openTour('lobby')" aria-label="Open 360-degree tour"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16.466 7.5C15.643 4.237 13.952 2 12 2 9.239 2 7 6.477 7 12s2.239 10 5 10c.342 0 .677-.069 1-.2"/><path d="m15.194 13.707 3.814 1.86-1.86 3.814"/><path d="M19 15.57c-1.804.885-4.274 1.43-7 1.43-5.523 0-10-2.239-10-5s4.477-5 10-5c4.838 0 8.873 1.718 9.8 4"/></svg>360&deg; tour</button>
     </div>
   </div>
   <div class="scroll-ind" aria-hidden="true"><div class="scroll-line"></div><span>Scroll</span></div>
@@ -576,6 +596,7 @@
   <div class="rooms-grid">
     <article class="room-card" data-slide="0">
       <div class="room-slides"><picture><source srcset="../images/kamer-deluxe-1.webp" type="image/webp"><img src="../images/kamer-deluxe-1.jpg" alt="Deluxe Double" loading="lazy"></picture><picture><source srcset="../images/kamer-deluxe-2.webp" type="image/webp"><img src="../images/kamer-deluxe-2.jpg" alt="Deluxe Double" loading="lazy"></picture><picture><source srcset="../images/kamer-deluxe-3.webp" type="image/webp"><img src="../images/kamer-deluxe-3.jpg" alt="Deluxe Double" loading="lazy"></picture></div>
+      <button type="button" class="tour-btn" onclick="openTour('deluxe')" aria-label="Open 360-degree tour"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16.466 7.5C15.643 4.237 13.952 2 12 2 9.239 2 7 6.477 7 12s2.239 10 5 10c.342 0 .677-.069 1-.2"/><path d="m15.194 13.707 3.814 1.86-1.86 3.814"/><path d="M19 15.57c-1.804.885-4.274 1.43-7 1.43-5.523 0-10-2.239-10-5s4.477-5 10-5c4.838 0 8.873 1.718 9.8 4"/></svg>360&deg; tour</button>
       <button class="slide-arrow slide-prev" onclick="slideStep(this,-1)"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg></button><button class="slide-arrow slide-next" onclick="slideStep(this,1)"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></button>
       <div class="room-overlay">
         <span class="room-tag">Our largest room</span>
@@ -596,6 +617,7 @@
     </article>
     <article class="room-card" data-slide="0">
       <div class="room-slides"><picture><source srcset="../images/kamer-twin-1.webp" type="image/webp"><img src="../images/kamer-twin-1.jpg" alt="Comfort Twin" loading="lazy"></picture><picture><source srcset="../images/kamer-twin-2.webp" type="image/webp"><img src="../images/kamer-twin-2.jpg" alt="Comfort Twin" loading="lazy"></picture></div>
+      <button type="button" class="tour-btn" onclick="openTour('twin')" aria-label="Open 360-degree tour"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16.466 7.5C15.643 4.237 13.952 2 12 2 9.239 2 7 6.477 7 12s2.239 10 5 10c.342 0 .677-.069 1-.2"/><path d="m15.194 13.707 3.814 1.86-1.86 3.814"/><path d="M19 15.57c-1.804.885-4.274 1.43-7 1.43-5.523 0-10-2.239-10-5s4.477-5 10-5c4.838 0 8.873 1.718 9.8 4"/></svg>360&deg; tour</button>
       <button class="slide-arrow slide-prev" onclick="slideStep(this,-1)"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg></button><button class="slide-arrow slide-next" onclick="slideStep(this,1)"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></button>
       <div class="room-overlay">
         <span class="room-tag">Flexible &amp; comfortable</span>
@@ -654,6 +676,7 @@
 <section class="breakfast-wrap" id="breakfast">
   <div class="breakfast-img" data-slide="0">
     <div class="breakfast-slides"><picture><source srcset="../images/ontbijt-1.webp" type="image/webp"><img src="../images/ontbijt-1.jpg" alt="Ontbijt Hotel Chamade" loading="lazy"></picture><picture><source srcset="../images/ontbijt-2.webp" type="image/webp"><img src="../images/ontbijt-2.jpg" alt="Ontbijt Hotel Chamade" loading="lazy"></picture><picture><source srcset="../images/ontbijt-3.webp" type="image/webp"><img src="../images/ontbijt-3.jpg" alt="Ontbijt Hotel Chamade" loading="lazy"></picture><picture><source srcset="../images/ontbijt-4.webp" type="image/webp"><img src="../images/ontbijt-4.jpg" alt="Ontbijt Hotel Chamade" loading="lazy"></picture></div>
+    <button type="button" class="tour-btn" onclick="openTour('breakfast')" aria-label="Open 360-degree tour"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16.466 7.5C15.643 4.237 13.952 2 12 2 9.239 2 7 6.477 7 12s2.239 10 5 10c.342 0 .677-.069 1-.2"/><path d="m15.194 13.707 3.814 1.86-1.86 3.814"/><path d="M19 15.57c-1.804.885-4.274 1.43-7 1.43-5.523 0-10-2.239-10-5s4.477-5 10-5c4.838 0 8.873 1.718 9.8 4"/></svg>360&deg; tour</button>
     <button class="slide-arrow slide-prev" onclick="bfSlideStep(this,-1)" aria-label="Previous"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="15 18 9 12 15 6"/></svg></button>
     <button class="slide-arrow slide-next" onclick="bfSlideStep(this,1)" aria-label="Next"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="9 6 15 12 9 18"/></svg></button>
     <div class="slide-dots"><button class="slide-dot active" onclick="bfSlide(0)" aria-label="Photo 1"></button><button class="slide-dot" onclick="bfSlide(1)" aria-label="Photo 2"></button><button class="slide-dot" onclick="bfSlide(2)" aria-label="Photo 3"></button><button class="slide-dot" onclick="bfSlide(3)" aria-label="Photo 4"></button></div>
@@ -954,7 +977,7 @@
   var lbImages = [], lbIdx = 0;
   document.querySelectorAll('.room-card').forEach(function(card) {
     card.addEventListener('click', function(e) {
-      if (e.target.closest('.slide-arrow') || e.target.closest('.slide-dot')) return;
+      if (e.target.closest('.slide-arrow') || e.target.closest('.slide-dot') || e.target.closest('.tour-btn')) return;
       var imgs = card.querySelectorAll('.room-slides img');
       var name = card.querySelector('.room-name').textContent;
       lbImages = Array.from(imgs).map(function(img) { return { src: img.src, alt: name }; });
@@ -984,6 +1007,52 @@
     if (e.key === 'Escape') closeLightbox();
     if (e.key === 'ArrowLeft') lbStep(-1);
     if (e.key === 'ArrowRight') lbStep(1);
+  });
+</script>
+
+<!-- ═══ 360° TOUR OVERLAY ═══ -->
+<div class="tour-overlay" id="tour-overlay" aria-hidden="true">
+  <button class="tour-close" onclick="closeTour()" aria-label="Close"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button>
+  <div class="tour-caption" id="tour-caption"></div>
+  <iframe id="tour-iframe" title="360-degree tour" allowfullscreen allow="gyroscope; accelerometer; xr-spatial-tracking; fullscreen"></iframe>
+</div>
+<script>
+  var TOUR_SRC = {
+    lobby: 'lobby-breakfast/index.html?startscene=scene_lobby',
+    breakfast: 'lobby-breakfast/index.html?startscene=scene_breakfast',
+    deluxe: 'deluxe/index.html',
+    twin: 'twin/index.html'
+  };
+  var TOUR_LABEL = { lobby: 'Lobby', breakfast: 'Breakfast', deluxe: 'Deluxe Double', twin: 'Comfort Twin' };
+  function openTour(slug) {
+    var ov = document.getElementById('tour-overlay');
+    document.getElementById('tour-iframe').src = '../tour/' + TOUR_SRC[slug];
+    document.getElementById('tour-caption').textContent = TOUR_LABEL[slug] || '';
+    if (typeof gtag === 'function') gtag('event', 'virtual_tour_open', { tour: slug });
+    ov.classList.add('active');
+    ov.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeTour() {
+    var ov = document.getElementById('tour-overlay');
+    if (!ov.classList.contains('active')) return;
+    ov.classList.remove('active');
+    ov.setAttribute('aria-hidden', 'true');
+    document.getElementById('tour-iframe').src = '';
+    document.body.style.overflow = '';
+  }
+  window.addEventListener('message', function(e) {
+    if (typeof e.data !== 'string') return;
+    if (e.data === 'tour-close') { closeTour(); return; }
+    if (e.data.indexOf('tour-scene:') !== 0) return;
+    var name = TOUR_LABEL[e.data.slice(11)];
+    if (name) document.getElementById('tour-caption').textContent = name;
+  });
+  document.getElementById('tour-overlay').addEventListener('click', function(e) {
+    if (e.target === this) closeTour();
+  });
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeTour();
   });
 </script>
 
