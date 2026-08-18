@@ -30,7 +30,7 @@
 	               thumbs_loop="false"
 	               tooltips_buttons="false"
 	               tooltips_thumbs="false"
-	               tooltips_hotspots="false"
+	               tooltips_hotspots="true"
 	               tooltips_mapspots="false"
 	               deeplinking="false"
 	               loadscene_flags="MERGE"
@@ -261,11 +261,91 @@
 	       linkedscene_lookat=""
 	       onclick="skin_hotspotstyle_click();"
 	       depth="1000"
-	       scale="0.20"
-	       onover.addevent="tween(scale,0.225);"
-	       onout.addevent="tween(scale,0.20);"
+	       scale="0.15"
+	       onover.addevent="tween(scale,0.17);"
+	       onout.addevent="tween(scale,0.15);"
 	       onloaded.addevent="skin_hotspotstyle_setup();"
 	       />
+
+	<!-- ═══ Infopunt (Poppr, Thomas De Meyer) ═══════════════════════════════
+	     Een klikbaar "i"-rondje dat een paneeltje opent met een titel en een
+	     stukje uitleg. De teksten staan NIET hier maar in tour.xml, per taal,
+	     omdat één tour de Nederlandse, Engelse en Franse site bedient. -->
+	<style name="chamade_infospot" url="chamade-infospot.svg" edge="center" distorted="true"
+	       tooltip="" infotitle="" infobody="" key=""
+	       onclick="chamade_show_infospot();"
+	       depth="1000" scale="0.30"
+	       onover.addevent="tween(scale,0.34);"
+	       onout.addevent="tween(scale,0.30);"
+	       onloaded.addevent="chamade_infospot_setup();"
+	       />
+
+	<action name="chamade_infospot_setup" scope="local">
+		<!-- Het punt haalt zijn eigen tekst op zodra het geladen is. Dat kan niet
+		     bij het starten van de scène: dan bestaat het punt nog niet. `key`
+		     staat op de hotspot in tour.xml, `lg` is de gekozen taal. -->
+		if(caller.key !== null,
+			txtadd(kt, get(lg), '_', get(caller.key), '_title');
+			txtadd(kb, get(lg), '_', get(caller.key), '_body');
+			copy(caller.infotitle, data[get(kt)].content);
+			copy(caller.infobody,  data[get(kb)].content);
+		);
+		if(skin_settings.tooltips_hotspots,
+			copy(caller.tooltip, caller.infotitle);
+			caller.loadstyle(skin_tooltips);
+		);
+	</action>
+
+	<action name="chamade_show_infospot" scope="local">
+		<!-- De teksten worden pas in de lagen gezet NADAT de breedte klopt (in
+		     chamade_fit_infospot). Andersom meet je de hoogte van een tekst die
+		     nog op de oude breedte staat, en dan valt de titel over de tekst. -->
+		copy(global.info_t, caller.infotitle);
+		copy(global.info_b, caller.infobody);
+		set(layer[chamade_info_modal].visible, true);
+		chamade_fit_infospot();
+		tween(layer[chamade_info_modal].alpha, 1.0, 0.18);
+	</action>
+
+	<action name="chamade_fit_infospot">
+		calc(inner_w, layer[chamade_info_modal].pixelwidth - 60);
+		copy(layer[chamade_info_kicker].width, inner_w);
+		copy(layer[chamade_info_title].width, inner_w);
+		copy(layer[chamade_info_body].width, inner_w);
+		set(layer[chamade_info_body].y, 98);
+		copy(layer[chamade_info_title].html, global.info_t);
+		copy(layer[chamade_info_body].html, global.info_b);
+		set(fit_tries, 0);
+		delayedcall(0.05, chamade_fit_title(); );
+	</action>
+
+	<!-- Meten kan pas als de tekst getekend is. Hoogte 0 betekent: nog niet
+	     klaar, dus nog even wachten. Na tien pogingen stoppen we ermee en blijft
+	     de doos op zijn standaardhoogte staan, liever dat dan eeuwig proberen. -->
+	<action name="chamade_fit_title">
+		inc(fit_tries);
+		if(layer[chamade_info_title].pixelheight LT 4 AND fit_tries LT 10,
+			delayedcall(0.05, chamade_fit_title(); );
+		  ,
+			calc(body_y, 48 + layer[chamade_info_title].pixelheight + 8);
+			copy(layer[chamade_info_body].y, body_y);
+			set(fit_tries, 0);
+			delayedcall(0.05, chamade_fit_body(); );
+		);
+	</action>
+
+	<action name="chamade_fit_body">
+		inc(fit_tries);
+		if(layer[chamade_info_body].pixelheight LT 4 AND fit_tries LT 10,
+			delayedcall(0.05, chamade_fit_body(); );
+		  ,
+			calc(layer[chamade_info_modal].height, body_y + layer[chamade_info_body].pixelheight + 24);
+		);
+	</action>
+
+	<action name="chamade_hide_infospot">
+		tween(layer[chamade_info_modal].alpha, 0.0, 0.15, default, set(layer[chamade_info_modal].visible, false));
+	</action>
 
 	<action name="skin_hotspotstyle_setup" scope="local">
 		if(isvalue(caller.linkedscene) AND skin_settings.tooltips_hotspots,
@@ -311,6 +391,32 @@
 	       html=""
 	       />
 
+
+	<!-- Het paneeltje van een infopunt. Breedte meebewegend, want op een telefoon
+	     vult de tour het hele scherm en paste een vaste 480 px er niet in. -->
+	<layer name="chamade_info_modal" keep="true" type="container" parent="STAGE"
+	       align="center" width="88%" maxwidth="460" height="160" bgcolor="0x2A3D2F" bgalpha="0.98"
+	       bgborder="1 0xD9927E 0.9" bgroundedge="0" bgshadow="0 12 36 0x1E2820 0.35"
+	       visible="false" alpha="0" zorder="1000" safearea="true">
+		<!-- Geen `padding` op de doos: krpano schuift de lagen dan wel op, maar
+		     `width="100%"` blijft de VOLLE breedte, zodat de tekst er rechts uit
+		     liep. De marge zit daarom in x, en de breedte wordt bij het openen
+		     uitgerekend in chamade_fit_infospot (de doos is smaller op een
+		     telefoon). -->
+		<layer name="chamade_info_kicker" type="text" align="lefttop" x="30" y="24" width="100" height="16"
+		       bg="false" enabled="false"
+		       css="color:#E8B4A0; font-family:Jost,Arial,sans-serif; font-size:10px; letter-spacing:2.5px; text-transform:uppercase;"
+		       html="CHAMADE HOTEL" />
+		<layer name="chamade_info_title" type="text" align="lefttop" x="30" y="48" width="100" height="auto"
+		       bg="false" enabled="false"
+		       css="color:#FAF7F2; font-family:Georgia,serif; font-size:25px;" html="" />
+		<layer name="chamade_info_body" type="text" align="lefttop" x="30" y="98" width="100" height="auto"
+		       bg="false" enabled="false"
+		       css="color:#F2D5C8; font-family:Jost,Arial,sans-serif; font-size:14px; line-height:1.55;" html="" />
+		<layer name="chamade_info_close" type="text" align="righttop" x="22" y="18" width="28" height="28"
+		       bg="false" css="color:#FAF7F2; font-family:Arial; font-size:25px; text-align:center;" html="&#215;"
+		       onclick="chamade_hide_infospot();" />
+	</layer>
 
 	<!-- skin layout -->
 	<layer name="skin_layer" keep="true" type="container" align="top" width="get:skin_settings.layout_width" maxwidth="get:skin_settings.layout_maxwidth" height="100%" maskchildren="true" visible="false" bgcapture="false" zorder="1">
@@ -640,7 +746,7 @@
 
 	<!-- determine the visibility of the buttons and calculate their positions -->
 	<action name="skin_arrange_buttons" scope="local">
-		calc(show_selbuttons, scene.count GT 1);
+		set(show_selbuttons, false);   <!-- vorige/volgende: de pijlen in het beeld doen dat -->
 		calc(show_thumbutton, skin_settings.thumbs == true);
 		calc(show_mapbutton,  skin_settings.maps == true);
 		calc(show_gyrobutton, plugin[skin_gyro].isavailable == true AND (view.vlookatrange == 180 OR global.lpinfo.scene === xml.scene));

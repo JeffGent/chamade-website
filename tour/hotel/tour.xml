@@ -1,0 +1,253 @@
+<krpano version="1.20.11" title="Virtual Tour">
+
+	<include url="skin/vtourskin.xml" />
+
+	<!-- customize skin settings: maps, gyro, webvr, thumbnails, tooltips, layout, design, ... -->
+	<skin_settings maps="false"
+	               maps_type="google"
+	               maps_bing_api_key=""
+	               maps_google_api_key=""
+	               maps_zoombuttons="false"
+	               maps_loadonfirstuse="true"
+	               gyro="true"
+	               gyro_keeplookingdirection="false"
+	               webvr="false"
+	               webvr_keeplookingdirection="true"
+	               webvr_prev_next_hotspots="true"
+	               autotour="false"
+	               littleplanetintro="false"
+	               followmousecontrol="false"
+	               title="false"
+	               thumbs="false"
+	               thumbs_width="120" thumbs_height="80" thumbs_padding="10" thumbs_crop="0|40|240|160"
+	               thumbs_opened="false"
+	               thumbs_text="false"
+	               thumbs_dragging="true"
+	               thumbs_onhoverscrolling="false"
+	               thumbs_scrollbuttons="false"
+	               thumbs_scrollindicator="false"
+	               thumbs_loop="false"
+	               tooltips_buttons="false"
+	               tooltips_thumbs="false"
+	               tooltips_hotspots="true"
+	               tooltips_mapspots="false"
+	               deeplinking="false"
+	               loadscene_flags="MERGE"
+	               loadscene_blend="OPENBLEND(0.5, 0.0, 0.75, 0.05, linear)"
+	               loadscene_blend_prev="SLIDEBLEND(0.5, 180, 0.75, linear)"
+	               loadscene_blend_next="SLIDEBLEND(0.5,   0, 0.75, linear)"
+	               loadingtext=""
+	               layout_width="100%"
+	               layout_maxwidth="814"
+	               controlbar_width="-24"
+	               controlbar_height="40"
+	               controlbar_offset="20"
+	               controlbar_offset_closed="-40"
+	               controlbar_overlap.no-fractionalscaling="10"
+	               controlbar_overlap.fractionalscaling="0"
+	               design_skin_images="vtourskin_light.png"
+	               design_bgcolor="0x2A3D2F"
+	               design_bgalpha="0.88"
+	               design_bgborder="0"
+	               design_bgroundedge="0"
+	               design_bgshadow="0 2 14 0x000000 0.22"
+	               design_thumbborder_bgborder="2 0xFAF7F2 1.0"
+	               design_thumbborder_padding="2"
+	               design_thumbborder_bgroundedge="0"
+	               design_text_css="color:#FAF7F2; font-family:Helvetica, Arial, sans-serif; font-weight:300; letter-spacing:0.08em;"
+	               design_text_shadow="1"
+	               />
+
+	<!--
+	    For an alternative skin design either change the <skin_settings> values 
+	    from above or optionally include one of the predefined designs from below.
+	-->
+	<!-- <include url="skin/vtourskin_design_flat_light.xml"  /> -->
+	<!-- <include url="skin/vtourskin_design_glass.xml"       /> -->
+	<!-- <include url="skin/vtourskin_design_ultra_light.xml" /> -->
+	<!-- <include url="skin/vtourskin_design_117.xml"         /> -->
+	<!-- <include url="skin/vtourskin_design_117round.xml"    /> -->
+	<!-- <include url="skin/vtourskin_design_black.xml"       /> -->
+
+
+	
+	<!-- ═══════════════════════════════════════════════════════════════════════
+	     TEKSTEN. Eén tour bedient de Nederlandse, Engelse en Franse site, dus
+	     alle zichtbare tekst staat hier per taal. De taal komt mee in het adres
+	     (?lang=nl|en|fr), meegegeven door de website; onbekend of ontbrekend
+	     wordt Nederlands. Wil je een tekst wijzigen: pas hem hier aan, verder
+	     niets. Geen aanhalingstekens of komma's om rekening mee te houden, het
+	     staat tussen tags.
+	     ═══════════════════════════════════════════════════════════════════ -->
+
+	<data name="nl_scene_lobby">Lobby</data>
+	<data name="en_scene_lobby">Lobby</data>
+	<data name="fr_scene_lobby">Lobby</data>
+
+	<data name="nl_scene_breakfast">Ontbijtzaal</data>
+	<data name="en_scene_breakfast">Breakfast room</data>
+	<data name="fr_scene_breakfast">Salle du petit-déjeuner</data>
+
+	<data name="nl_bf_title">Elke ochtend vers</data>
+	<data name="nl_bf_body">Geen kant-en-klaar buffet. Eieren van vrije-uitloopkippen, fair-trade koffie, confituur van Callas uit Gent, kaas en melk van boeren uit de streek. Van maandag tot vrijdag van 7 tot 10 uur, in het weekend van 8 tot 11.</data>
+	<data name="en_bf_title">Fresh every morning</data>
+	<data name="en_bf_body">No ready-made buffet. Free-range eggs, fair-trade coffee, Callas jam from Ghent, cheese and milk from farmers nearby. Monday to Friday from 7 to 10, weekends from 8 to 11.</data>
+	<data name="fr_bf_title">Frais chaque matin</data>
+	<data name="fr_bf_body">Pas de buffet tout fait. Œufs de poules élevées en plein air, café équitable, confiture Callas de Gand, fromage et lait de fermiers des environs. Du lundi au vendredi de 7 à 10 heures, le week-end de 8 à 11 heures.</data>
+
+	<data name="nl_lobby_title">Aan de receptie</data>
+	<data name="nl_lobby_body">Hier krijg je je sleutel, een stadsplan en de Gentse Citycard. En tips van mensen die Gent echt kennen: waar je goed eet, wat je gerust mag overslaan. Het Sint-Pietersstation ligt op twee minuten wandelen.</data>
+	<data name="en_lobby_title">At reception</data>
+	<data name="en_lobby_body">Where you get your key, a city map and the Ghent Citycard. Plus tips from people who actually know the city: where to eat well, what you can skip. Sint-Pieters station is a two minute walk.</data>
+	<data name="fr_lobby_title">A la réception</data>
+	<data name="fr_lobby_body">Ici vous recevez votre clé, un plan de la ville et la Citycard gantoise. Et les conseils de gens qui connaissent vraiment Gand : où bien manger, ce que vous pouvez laisser de côté. La gare Saint-Pierre est à deux minutes à pied.</data>
+
+	<data name="nl_scene_DeluxeBedroom_Panorama">Deluxe Double</data>
+	<data name="en_scene_DeluxeBedroom_Panorama">Deluxe Double</data>
+	<data name="fr_scene_DeluxeBedroom_Panorama">Deluxe Double</data>
+
+	<data name="nl_scene_DeluxeBathroom_Panorama">Deluxe Double · badkamer</data>
+	<data name="en_scene_DeluxeBathroom_Panorama">Deluxe Double · bathroom</data>
+	<data name="fr_scene_DeluxeBathroom_Panorama">Deluxe Double · salle de bain</data>
+
+	<data name="nl_scene_1-TwinBedroom">Comfort Twin</data>
+	<data name="en_scene_1-TwinBedroom">Comfort Twin</data>
+	<data name="fr_scene_1-TwinBedroom">Comfort Twin</data>
+
+	<data name="nl_scene_2-TwinBathroom">Comfort Twin · badkamer</data>
+	<data name="en_scene_2-TwinBathroom">Comfort Twin · bathroom</data>
+	<data name="fr_scene_2-TwinBathroom">Comfort Twin · salle de bain</data>
+
+	<data name="nl_dlx_title">Onze grootste kamer</data>
+	<data name="nl_dlx_body">35 m² onder het dak, met een bed van twee meter breed. Afhankelijk van de kamer hoort er een ligbad of een eigen terras bij.</data>
+	<data name="en_dlx_title">Our largest room</data>
+	<data name="en_dlx_body">35 m² under the eaves, with a bed two metres wide. Depending on the room it comes with a bathtub or a terrace of your own.</data>
+	<data name="fr_dlx_title">Notre plus grande chambre</data>
+	<data name="fr_dlx_body">35 m² sous les combles, avec un lit de deux mètres de large. Selon la chambre, une baignoire ou une terrasse privée.</data>
+
+	<data name="nl_twn_title">Twee aparte bedden</data>
+	<data name="nl_twn_body">Twee bedden van 90 cm, elk met een eigen leeslamp. Een douche of een ligbad, afhankelijk van de kamer.</data>
+	<data name="en_twn_title">Two separate beds</data>
+	<data name="en_twn_body">Two 90 cm beds, each with its own reading light. A shower or a bathtub, depending on the room.</data>
+	<data name="fr_twn_title">Deux lits séparés</data>
+	<data name="fr_twn_body">Deux lits de 90 cm, chacun avec sa liseuse. Une douche ou une baignoire, selon la chambre.</data>
+
+	<!-- Kiest de taal en zet de namen van de ruimtes. Draait voor het panorama
+	     laadt, zodat de tooltip bij het zweven meteen klopt. -->
+	<action name="chamade_texts" autorun="preinit">
+		set(lg, get(lang));
+		if(lg != 'en' AND lg != 'fr', set(lg, 'nl'));
+		txtadd(k, get(lg), '_scene_lobby');     copy(scene[scene_lobby].title,     data[get(k)].content);
+		txtadd(k, get(lg), '_scene_breakfast'); copy(scene[scene_breakfast].title, data[get(k)].content);
+		txtadd(k, get(lg), '_scene_DeluxeBedroom_Panorama'); copy(scene[scene_DeluxeBedroom_Panorama].title, data[get(k)].content);
+		txtadd(k, get(lg), '_scene_DeluxeBathroom_Panorama'); copy(scene[scene_DeluxeBathroom_Panorama].title, data[get(k)].content);
+		txtadd(k, get(lg), '_scene_1-TwinBedroom'); copy(scene[scene_1-TwinBedroom].title, data[get(k)].content);
+		txtadd(k, get(lg), '_scene_2-TwinBathroom'); copy(scene[scene_2-TwinBathroom].title, data[get(k)].content);
+	</action>
+
+	<scene name="scene_lobby" title="lobby" onstart="js( window.parent.postMessage('tour-scene:lobby','*') );" thumburl="panos/lobby.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="-17.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/lobby.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/lobby.tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<!-- De open deur naar de gang, waar het bordje KAMERS naar wijst (niet de
+		     wc-deur ernaast). Twee pijlen onder elkaar: welke kamer je krijgt zie
+		     je bij het zweven, de tooltip noemt hem. -->
+		<hotspot name="naar_deluxe" style="skin_hotspotstyle" ath="281.0" atv="3.0" linkedscene="scene_DeluxeBedroom_Panorama" />
+		<hotspot name="naar_twin" style="skin_hotspotstyle" ath="281.0" atv="9.0" linkedscene="scene_1-TwinBedroom" />
+		<hotspot name="info_lobby" style="chamade_infospot" key="lobby" ath="25.0" atv="6.0" />
+		<hotspot name="spot_naar_ontbijt" style="skin_hotspotstyle" ath="-42.4" atv="4.0" linkedscene="scene_breakfast" />
+
+	</scene>
+
+	<scene name="scene_breakfast" title="breakfast" onstart="js( window.parent.postMessage('tour-scene:breakfast','*') );" thumburl="panos/breakfast.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="165.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/breakfast.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/breakfast.tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<hotspot name="info_bf" style="chamade_infospot" key="bf" ath="0.0" atv="3.0" />
+		<hotspot name="spot_naar_lobby" style="skin_hotspotstyle" ath="-160.0" atv="6.0" linkedscene="scene_lobby" />
+
+	</scene>
+
+	<scene name="scene_DeluxeBedroom_Panorama" title="DeluxeBedroom Panorama" onstart="js( window.parent.postMessage('tour-scene:deluxe','*') );" thumburl="panos/DeluxeBedroom_Panorama.tiles/thumb.jpg" lat="" lng="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="329.448" vlookat="3.729" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/DeluxeBedroom_Panorama.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/DeluxeBedroom_Panorama.tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+		<!-- Op de kamerdeur: naar buiten, de lobby in. -->
+		<hotspot name="naar_lobby_dlx" style="skin_hotspotstyle" ath="230.0" atv="2.0" linkedscene="scene_lobby" />
+		<hotspot name="info_dlx" style="chamade_infospot" key="dlx" ath="0.0" atv="5.0" />
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="147.484" atv="3.259" linkedscene="scene_deluxebathroom_panorama" />
+
+	</scene>
+
+	<scene name="scene_DeluxeBathroom_Panorama" title="DeluxeBathroom Panorama" onstart="js( window.parent.postMessage('tour-scene:deluxe-bath','*') );" thumburl="panos/DeluxeBathroom_Panorama.tiles/thumb.jpg" lat="" lng="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.163" vlookat="1.777" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/DeluxeBathroom_Panorama.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/DeluxeBathroom_Panorama.tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="157.241" atv="0.648" linkedscene="scene_deluxebedroom_panorama" />
+
+	</scene>
+
+	<scene name="scene_1-TwinBedroom" title="1-TwinBedroom" onstart="js( window.parent.postMessage('tour-scene:twin','*') );" thumburl="panos/1-TwinBedroom.tiles/thumb.jpg" lat="" lng="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="-26.579" vlookat="11.279" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/1-TwinBedroom.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/1-TwinBedroom.tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+		<!-- Op de kamerdeur: naar buiten, de lobby in. -->
+		<hotspot name="naar_lobby_twn" style="skin_hotspotstyle" ath="270.0" atv="2.0" linkedscene="scene_lobby" />
+		<hotspot name="info_twn" style="chamade_infospot" key="twn" ath="0.0" atv="5.0" />
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-108.312" atv="13.659" linkedscene="scene_2-twinbathroom" />
+
+	</scene>
+
+	<scene name="scene_2-TwinBathroom" title="2-TwinBathroom" onstart="js( window.parent.postMessage('tour-scene:twin-bath','*') );" thumburl="panos/2-TwinBathroom.tiles/thumb.jpg" lat="" lng="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="4.329" vlookat="2.577" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/2-TwinBathroom.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/2-TwinBathroom.tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-79.361" atv="1.486" linkedscene="scene_1-twinbedroom" />
+
+	</scene>
+
+</krpano>

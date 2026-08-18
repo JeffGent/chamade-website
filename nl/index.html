@@ -182,8 +182,6 @@
     /* ═══ 360° TOUR ═══ */
     .tour-btn{position:absolute;top:14px;right:14px;z-index:4;display:flex;align-items:center;gap:6px;background:rgba(250,247,242,0.92);color:var(--green-dark);border:none;cursor:pointer;font-family:'Jost',sans-serif;font-size:9px;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;padding:8px 12px;transition:background 0.3s,color 0.3s}
     .tour-btn:hover{background:var(--terra);color:var(--cream)}
-    .hero .tour-btn{position:static;background:none;border:1px solid rgba(250,247,242,0.55);color:var(--cream);padding:14px 26px;font-size:10px;font-weight:500;letter-spacing:0.24em;gap:9px}
-    .hero .tour-btn:hover{background:var(--cream);border-color:var(--cream);color:var(--green-dark)}
     .tour-overlay{position:fixed;inset:0;z-index:10000;background:rgba(20,32,22,0.96);display:none;align-items:center;justify-content:center;opacity:0;transition:opacity 0.3s}
     .tour-overlay.active{display:flex;opacity:1}
     .tour-overlay iframe{width:92vw;height:86vh;border:0;background:var(--green-dark);box-shadow:0 8px 40px rgba(0,0,0,0.4)}
@@ -192,7 +190,6 @@
     .tour-caption{position:absolute;top:28px;left:32px;color:var(--cream);font-family:'Dahlia',serif;font-size:18px;opacity:0.8;pointer-events:none}
     @media(max-width:640px){
       .tour-btn{font-size:8px;padding:7px 10px;letter-spacing:0.14em}
-      .hero .tour-btn{padding:12px 20px;font-size:9px;letter-spacing:0.18em}
       .tour-overlay iframe{width:100vw;height:100vh;height:100dvh;box-shadow:none}
       .tour-overlay::before{content:'';position:absolute;top:0;left:0;right:0;height:96px;background:linear-gradient(rgba(20,32,22,0.65),rgba(20,32,22,0));pointer-events:none;z-index:1}
       .tour-close{top:12px;right:12px;opacity:0.95;z-index:3}
@@ -497,7 +494,6 @@
     <div class="hero-actions">
       <a href="https://booking.roomraccoon.com/hotel-chamade/nl/" class="btn-primary">Beschikbaarheid controleren</a>
       <a href="#kamers" class="btn-ghost">Onze kamers &rarr;</a>
-      <button type="button" class="tour-btn" onclick="openTour('lobby')" aria-label="360-graden rondleiding openen"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16.466 7.5C15.643 4.237 13.952 2 12 2 9.239 2 7 6.477 7 12s2.239 10 5 10c.342 0 .677-.069 1-.2"/><path d="m15.194 13.707 3.814 1.86-1.86 3.814"/><path d="M19 15.57c-1.804.885-4.274 1.43-7 1.43-5.523 0-10-2.239-10-5s4.477-5 10-5c4.838 0 8.873 1.718 9.8 4"/></svg>360&deg; rondleiding</button>
     </div>
   </div>
   <div class="scroll-ind" aria-hidden="true"><div class="scroll-line"></div><span>Scroll</span></div>
@@ -1015,16 +1011,24 @@
   <iframe id="tour-iframe" title="360-graden rondleiding" allowfullscreen allow="gyroscope; accelerometer; xr-spatial-tracking; fullscreen"></iframe>
 </div>
 <script>
+  // Eén tour voor het hele hotel: elke knop opent hem in een andere ruimte.
   var TOUR_SRC = {
-    lobby: 'lobby-breakfast/index.html?startscene=scene_lobby',
-    breakfast: 'lobby-breakfast/index.html?startscene=scene_breakfast',
-    deluxe: 'deluxe/index.html',
-    twin: 'twin/index.html'
+    breakfast: 'hotel/index.html?startscene=scene_breakfast',
+    deluxe: 'hotel/index.html?startscene=scene_DeluxeBedroom_Panorama',
+    twin: 'hotel/index.html?startscene=scene_1-TwinBedroom'
   };
-  var TOUR_LABEL = { lobby: 'Lobby', breakfast: 'Ontbijt', deluxe: 'Deluxe Double', twin: 'Comfort Twin' };
+  // Het bijschrift boven de tour volgt de ruimte waar de bezoeker staat.
+  var TOUR_LABEL = {
+    lobby: 'Lobby', breakfast: 'Ontbijt',
+    deluxe: 'Deluxe Double', 'deluxe-bath': 'Deluxe Double · badkamer',
+    twin: 'Comfort Twin', 'twin-bath': 'Comfort Twin · badkamer'
+  };
   function openTour(slug) {
     var ov = document.getElementById('tour-overlay');
-    document.getElementById('tour-iframe').src = '../tour/' + TOUR_SRC[slug];
+    // De tour bedient alle drie de talen vanuit één map, dus hij moet weten
+    // welke taal de bezoeker leest (titels en infopunten).
+    var src = '../tour/' + TOUR_SRC[slug];
+    document.getElementById('tour-iframe').src = src + (src.indexOf('?') < 0 ? '?' : '&') + 'lang=nl';
     document.getElementById('tour-caption').textContent = TOUR_LABEL[slug] || '';
     if (typeof gtag === 'function') gtag('event', 'virtual_tour_open', { tour: slug });
     ov.classList.add('active');
