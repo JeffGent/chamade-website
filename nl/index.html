@@ -11,6 +11,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#1e2820">
   <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <title>Chamade Hotel Gent — Boutique hotel nabij Sint-Pietersstation</title>
   <meta name="description" content="Hotel Chamade is een 3-sterren boutique hotel in Gent, op 2 minuten van het Sint-Pietersstation. Vers ontbijt met lokale producten, Green Key gecertificeerd.">
@@ -721,7 +722,7 @@
 <!-- ═══ LOCATION ═══ -->
 <section class="location-wrap" id="contact">
   <div class="location-map">
-    <iframe src="https://www.google.com/maps/embed/v1/place?q=Hotel+Chamade,+Koningin+Elisabethlaan+3,+9000+Gent&key=AIzaSyDN7DttIfY3W5-6m7KsCgQNrygaCJKAAOs&zoom=15&language=nl" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Locatie Hotel Chamade" allow="fullscreen"></iframe>
+    <iframe src="https://www.google.com/maps/embed/v1/place?q=Hotel+Chamade,+Koningin+Elisabethlaan+3,+9000+Gent&key=AIzaSyBaZgyAM-NrZV8SQ6RPLK3wBZH-hXwXG8U&zoom=15&language=nl" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Locatie Hotel Chamade" allow="fullscreen"></iframe>
   </div>
   <div class="location-text">
     <div><span class="section-label">Hoe ons vinden</span><h2 class="section-title light">Praktisch</h2></div>
@@ -1008,7 +1009,7 @@
 <div class="tour-overlay" id="tour-overlay" aria-hidden="true">
   <button class="tour-close" onclick="closeTour()" aria-label="Sluiten"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button>
   <div class="tour-caption" id="tour-caption"></div>
-  <iframe id="tour-iframe" title="360-graden rondleiding" allowfullscreen allow="gyroscope; accelerometer; xr-spatial-tracking; fullscreen"></iframe>
+  <iframe id="tour-iframe" title="360-graden rondleiding" allow="gyroscope; accelerometer; xr-spatial-tracking; fullscreen"></iframe>
 </div>
 <script>
   // Eén tour voor het hele hotel: elke knop opent hem in een andere ruimte.
@@ -1186,58 +1187,102 @@
 <script>
 (function(){
   var PLACE_ID='ChIJD1Dkj19xw0cR46Fzb_YNnXk';
-  var API_KEY='AIzaSyDN7DttIfY3W5-6m7KsCgQNrygaCJKAAOs';
+  var API_KEY='AIzaSyBaZgyAM-NrZV8SQ6RPLK3wBZH-hXwXG8U';
   var MAPS_URL='https://www.google.com/maps/search/?api=1&query=Hotel+Chamade+Gent&query_place_id=ChIJD1Dkj19xw0cR46Fzb_YNnXk';
   var LANG='nl';
   var FALLBACK='Bekijk onze reviews op Google';
+  var CACHE_KEY='chamade-reviews-'+LANG;
+  var CACHE_MS=24*60*60*1000;
   function star(){return'<svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>';}
-  function renderReviews(place){
+  function esc(s){
+    return String(s==null?'':s).replace(/[&<>"']/g,function(c){
+      return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];
+    });
+  }
+  function showFallback(){
+    var grid=document.getElementById('reviews-grid');
+    if(grid)grid.innerHTML='<div class="review-card"><p class="review-text"><a href="'+MAPS_URL+'" target="_blank" rel="noopener" style="color:var(--terra)">'+FALLBACK+' →</a></p></div>';
+  }
+  // Wat we van Google bewaren: alleen wat de kaartjes tonen.
+  function toData(place){
+    var revs=(place.reviews||[]).slice().sort(function(a,b){
+      return (b.publishTime?b.publishTime.getTime():0)-(a.publishTime?a.publishTime.getTime():0);
+    }).slice(0,3).map(function(r){
+      return{
+        name:r.authorAttribution&&r.authorAttribution.displayName?r.authorAttribution.displayName:'Google',
+        when:r.relativePublishTimeDescription||'',
+        rating:r.rating||0,
+        text:r.text&&r.text.length>240?r.text.substring(0,240)+'…':r.text||''
+      };
+    });
+    return{rating:typeof place.rating==='number'?place.rating:null,
+           count:typeof place.userRatingCount==='number'?place.userRatingCount:null,
+           reviews:revs};
+  }
+  function paint(data){
     var grid=document.getElementById('reviews-grid');
     var scoreEl=document.getElementById('reviews-score');
     var countEl=document.getElementById('reviews-count');
-    if(scoreEl&&place.rating)scoreEl.textContent=place.rating.toFixed(1);
-    if(countEl&&place.user_ratings_total)countEl.textContent=place.user_ratings_total+' reviews';
-    if(!place.reviews||!place.reviews.length){
-      grid.innerHTML='<div class="review-card"><p class="review-text"><a href="'+MAPS_URL+'" target="_blank" rel="noopener" style="color:var(--terra)">'+FALLBACK+' →</a></p></div>';
-      return;
-    }
-    var revs=place.reviews.sort(function(a,b){return b.time-a.time}).slice(0,3);
-    grid.innerHTML=revs.map(function(r){
-      var txt=r.text&&r.text.length>240?r.text.substring(0,240)+'…':r.text||'';
+    if(scoreEl&&data.rating)scoreEl.textContent=data.rating.toFixed(1);
+    if(countEl&&data.count)countEl.textContent=data.count+' reviews';
+    if(!grid)return;
+    if(!data.reviews||!data.reviews.length){showFallback();return;}
+    grid.innerHTML=data.reviews.map(function(r){
       var stars='';
-      for(var i=0;i<Math.round(r.rating);i++)stars+=star();
+      for(var i=0;i<Math.round(r.rating||0);i++)stars+=star();
       return'<div class="review-card">'
         +'<div class="review-header">'
-        +'<div><div class="review-author-name">'+r.author_name+'</div>'
-        +'<div class="review-date">'+r.relative_time_description+'</div></div>'
+        +'<div><div class="review-author-name">'+esc(r.name)+'</div>'
+        +'<div class="review-date">'+esc(r.when)+'</div></div>'
         +'<div class="review-stars-row">'+stars+'</div>'
         +'</div>'
-        +'<p class="review-text">"'+txt+'"</p>'
+        +'<p class="review-text">"'+esc(r.text)+'"</p>'
         +'</div>';
     }).join('');
   }
+  // Een reviewoproep bij Google kost geld, dus onthouden we het antwoord een dag.
+  function readCache(){
+    try{
+      var o=JSON.parse(localStorage.getItem(CACHE_KEY));
+      if(o&&o.ts&&o.data&&(Date.now()-o.ts)<CACHE_MS)return o.data;
+    }catch(e){}
+    return null;
+  }
+  function writeCache(data){
+    try{localStorage.setItem(CACHE_KEY,JSON.stringify({ts:Date.now(),data:data}));}catch(e){}
+  }
+  // Places API (New): de oude PlacesService is sinds maart 2025 niet meer
+  // beschikbaar voor projecten die hem nog niet gebruikten.
   window.__initReviews=function(){
-    var mapDiv=document.createElement('div');
-    mapDiv.style.display='none';
-    document.body.appendChild(mapDiv);
-    var map=new google.maps.Map(mapDiv,{center:{lat:51.035,lng:3.715},zoom:15});
-    var svc=new google.maps.places.PlacesService(map);
-    svc.getDetails({
-      placeId:PLACE_ID,
-      fields:['rating','user_ratings_total','reviews']
-    },function(place,status){
-      if(status===google.maps.places.PlacesServiceStatus.OK){
-        renderReviews(place);
-      }else{
-        var grid=document.getElementById('reviews-grid');
-        grid.innerHTML='<div class="review-card"><p class="review-text"><a href="'+MAPS_URL+'" target="_blank" rel="noopener" style="color:var(--terra)">'+FALLBACK+' →</a></p></div>';
-      }
+    google.maps.importLibrary('places').then(function(lib){
+      var place=new lib.Place({id:PLACE_ID,requestedLanguage:LANG});
+      return place.fetchFields({fields:['rating','userRatingCount','reviews']});
+    }).then(function(res){
+      var data=toData(res&&res.place?res.place:{});
+      writeCache(data);
+      paint(data);
+    }).catch(function(){
+      showFallback();
     });
   };
-  var s=document.createElement('script');
-  s.src='https://maps.googleapis.com/maps/api/js?key='+API_KEY+'&libraries=places&language='+LANG+'&callback=__initReviews';
-  s.async=true;s.defer=true;
-  document.head.appendChild(s);
+  function fetchReviews(){
+    var cached=readCache();
+    if(cached){paint(cached);return;}
+    var s=document.createElement('script');
+    s.src='https://maps.googleapis.com/maps/api/js?key='+API_KEY+'&loading=async&libraries=places&language='+LANG+'&callback=__initReviews';
+    s.async=true;s.defer=true;
+    document.head.appendChild(s);
+  }
+  // Pas ophalen wanneer het reviewblok in beeld komt: wie nooit zo ver
+  // scrollt, kost ook niets.
+  var anchor=document.getElementById('reviews-grid');
+  if(!anchor||typeof IntersectionObserver!=='function'){fetchReviews();return;}
+  var io=new IntersectionObserver(function(entries){
+    for(var i=0;i<entries.length;i++){
+      if(entries[i].isIntersecting){io.disconnect();fetchReviews();return;}
+    }
+  },{rootMargin:'300px'});
+  io.observe(anchor);
 })();
 </script>
 <script>
