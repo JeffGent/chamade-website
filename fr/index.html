@@ -56,8 +56,9 @@
     /* ═══ NAV ═══ */
     nav.site-nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:22px 48px;display:flex;align-items:center;gap:28px;transition:all 0.4s ease}
     nav.site-nav.scrolled{background:rgba(250,247,242,0.97);backdrop-filter:blur(16px);padding:12px 48px;box-shadow:0 1px 0 rgba(58,82,64,0.1)}
-    .nav-logo{font-family:'Dahlia',serif;font-size:24px;letter-spacing:0.07em;color:var(--cream);text-decoration:none;text-transform:uppercase;transition:color 0.4s;margin-right:auto}
-    nav.site-nav.scrolled .nav-logo{color:var(--green)}
+    .nav-logo{display:block;height:34px;margin-right:auto;transition:height 0.4s ease}
+    .nav-logo img{height:100%;width:auto;display:block}
+    nav.site-nav.scrolled .nav-logo{height:28px}
     .nav-links{display:flex;gap:26px;list-style:none}
     .nav-links a{font-size:10px;font-weight:400;letter-spacing:0.2em;text-transform:uppercase;color:rgba(250,247,242,0.72);text-decoration:none;transition:color 0.3s}
     nav.site-nav.scrolled .nav-links a{color:var(--text-mid)}
@@ -314,12 +315,9 @@
 
     /* ═══ FOOTER ═══ */
     footer{background:var(--green-dark);padding:72px 48px 36px}
-    .footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;padding-bottom:48px;border-bottom:1px solid rgba(250,247,242,0.08);margin-bottom:32px}
-    .f-brand-name{font-family:'Dahlia',serif;font-size:34px;color:rgba(250,247,242,0.9);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:12px}
-    .f-tagline{font-size:13px;font-weight:300;font-style:italic;color:rgba(250,247,242,0.36);margin-bottom:20px;line-height:1.6}
-    .f-addr{font-size:12px;font-weight:300;color:rgba(250,247,242,0.3);line-height:1.85}
-    .f-addr a{color:rgba(250,247,242,0.3);text-decoration:none;transition:color 0.3s}
-    .f-addr a:hover{color:var(--rose)}
+    .footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;padding-bottom:48px;border-bottom:1px solid rgba(250,247,242,0.08);margin-bottom:32px;align-items:center}
+    .f-brand-name{margin-bottom:12px}
+    .f-brand-name img{height:150px;width:auto;display:block;margin:0 auto}
     .footer-col h4{font-size:9px;font-weight:500;letter-spacing:0.28em;text-transform:uppercase;color:rgba(250,247,242,0.52);margin-bottom:20px}
     .footer-col ul{list-style:none}
     .footer-col li{font-size:13px;font-weight:300;color:rgba(250,247,242,0.32);margin-bottom:12px}
@@ -449,7 +447,7 @@
 
 <!-- ═══ NAV ═══ -->
 <nav class="site-nav" id="nav">
-  <a href="./" class="nav-logo">Chamade</a>
+  <a href="./" class="nav-logo"><img src="../images/logo-chamade-icon.png" alt="Chamade Hotel" width="668" height="682"></a>
   <ul class="nav-links"><li><a href="#chambres">Chambres</a></li>
       <li><a href="#petitdej">Petit-déjeuner</a></li>
       <li><a href="#gand">Gand</a></li>
@@ -843,12 +841,7 @@
 <footer>
   <div class="footer-top">
     <div>
-      <div class="f-brand-name">Chamade</div>
-      <p class="f-tagline">"Make Yourself At Home."</p>
-      <address class="f-addr">Koningin Elisabethlaan 3<br>9000 Gand, Belgique<br><br>
-        <a href="tel:+3292201515">+32 (0)9 220 15 15</a><br>
-        <a href="mailto:info@chamade.be">info@chamade.be</a>
-      </address>
+      <div class="f-brand-name"><img src="../images/logo-chamade-full-white.png" alt="Chamade Hotel" width="968" height="1077"></div>
     </div>
     <div class="footer-col"><h4>Hôtel</h4><ul>
       <li><a href="#chambres">Chambres</a></li>
