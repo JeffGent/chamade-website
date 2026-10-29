@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<title>Persmap | Hotel Chamade Gent</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<!-- Gemaakt door tools/persmap-bouw.mjs. Niet met de hand bewerken: pas persmap-bron/ aan en bouw opnieuw. -->
+<style>
+  @font-face{font-family:'Dahlia';src:url('../fonts/dahlia.woff2') format('woff2');font-weight:500;font-display:swap}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:Jost,sans-serif;background:#3a5240;color:#faf7f2;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px 16px}
+  .lock{width:100%;max-width:360px;text-align:center}
+  .lock img{height:56px;margin-bottom:28px}
+  h1{font-family:Dahlia,serif;font-size:2.6rem;font-weight:500;margin-bottom:10px}
+  p{font-size:.92rem;font-weight:300;line-height:1.6;color:rgba(250,247,242,.72);margin-bottom:28px}
+  form{display:flex;flex-direction:column;gap:12px}
+  input{font-family:Jost,sans-serif;font-size:16px;padding:14px 16px;border:1px solid rgba(250,247,242,.25);background:rgba(250,247,242,.08);color:#faf7f2;outline:none;text-align:center;letter-spacing:.06em}
+  input:focus{border-color:#e8b4a0}
+  button{font-family:Jost,sans-serif;font-size:12px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;padding:14px;border:none;background:#b8604a;color:#faf7f2;cursor:pointer;transition:background .2s}
+  button:hover{background:#c4785a}
+  button:disabled{opacity:.6;cursor:wait}
+  .err{min-height:1.4em;font-size:.85rem;color:#f2d5c8;margin-top:6px}
+  .help{margin-top:28px;font-size:.8rem;color:rgba(250,247,242,.5)}
+  .help a{color:rgba(250,247,242,.75)}
+</style>
+</head>
+<body>
+<main class="lock">
+  <img src="../images/logo-chamade-full-white.png" alt="Hotel Chamade">
+  <h1>Persmap</h1>
+  <p>Deze pagina is beveiligd. Vul het wachtwoord in dat u van ons kreeg.</p>
+  <form id="f">
+    <input id="pw" type="password" autocomplete="current-password" placeholder="Wachtwoord" aria-label="Wachtwoord" required autofocus>
+    <button id="b" type="submit">Openen</button>
+    <div class="err" id="err" role="alert"></div>
+  </form>
+  <p class="help">Geen wachtwoord? Mail <a href="mailto:info@chamade.be">info@chamade.be</a>.</p>
+</main>
+<script>
+(function () {
+  var PAYLOAD = {{PAYLOAD}};
+  var KEY = 'chamade-persmap';
+  var form = document.getElementById('f');
+  var input = document.getElementById('pw');
+  var btn = document.getElementById('b');
+  var err = document.getElementById('err');
+
+  function bytes(b64) {
+    var s = atob(b64), u = new Uint8Array(s.length);
+    for (var i = 0; i < s.length; i++) u[i] = s.charCodeAt(i);
+    return u;
+  }
+
+  async function open(password) {
+    var enc = new TextEncoder();
+    var base = await crypto.subtle.importKey('raw', enc.encode(password), 'PBKDF2', false, ['deriveKey']);
+    var key = await crypto.subtle.deriveKey(
+      { name: 'PBKDF2', salt: bytes(PAYLOAD.salt), iterations: PAYLOAD.iterations, hash: 'SHA-256' },
+      base, { name: 'AES-GCM', length: 256 }, false, ['decrypt']
+    );
+    var plain = await crypto.subtle.decrypt({ name: 'AES-GCM', iv: bytes(PAYLOAD.iv) }, key, bytes(PAYLOAD.data));
+    return new TextDecoder().decode(plain);
+  }
+
+  function show(html, password) {
+    try { sessionStorage.setItem(KEY, password); } catch (e) {}
+    document.open();
+    document.write(html);
+    document.close();
+  }
+
+  if (!window.crypto || !crypto.subtle) {
+    err.textContent = 'Deze browser kan de pagina niet openen. Probeer een recente versie van Chrome, Safari, Firefox of Edge.';
+    btn.disabled = true;
+    return;
+  }
+
+  var saved = null;
+  try { saved = sessionStorage.getItem(KEY); } catch (e) {}
+  if (saved) {
+    open(saved).then(function (html) { show(html, saved); }, function () {
+      try { sessionStorage.removeItem(KEY); } catch (e) {}
+    });
+  }
+
+  form.addEventListener('submit', function (ev) {
+    ev.preventDefault();
+    var password = input.value;
+    err.textContent = '';
+    btn.disabled = true;
+    btn.textContent = 'Even geduld…';
+    open(password).then(function (html) { show(html, password); }, function () {
+      err.textContent = 'Dat wachtwoord klopt niet.';
+      btn.disabled = false;
+      btn.textContent = 'Openen';
+      input.select();
+    });
+  });
+})();
+</script>
+</body>
+</html>
