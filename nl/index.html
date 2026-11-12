@@ -73,6 +73,11 @@
     nav.site-nav.scrolled .nav-sep{background:rgba(58,82,64,0.18)}
     .nav-book{font-size:10px;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:var(--cream)!important;background:var(--terra);padding:11px 22px;text-decoration:none;transition:all 0.3s;white-space:nowrap;flex-shrink:0}
     .nav-book:hover{background:var(--green)}
+    .nav-portal{font-size:10px;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:var(--cream);border:1px solid rgba(250,247,242,0.5);padding:10px 22px;text-decoration:none;transition:all 0.3s;white-space:nowrap;flex-shrink:0}
+    .nav-portal:hover{background:var(--cream);color:var(--green)}
+    nav.site-nav.scrolled .nav-portal{color:var(--green);border-color:var(--green)}
+    nav.site-nav.scrolled .nav-portal:hover{background:var(--green);color:var(--cream)}
+    .nav-portal+.nav-book{margin-left:-18px}
     .nav-toggle{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px;flex-shrink:0}
     .nav-toggle span{display:block;width:22px;height:1.5px;background:var(--cream);transition:all 0.3s}
     nav.site-nav.scrolled .nav-toggle span{background:var(--green)}
@@ -334,6 +339,7 @@
     /* ═══ RESPONSIVE 1024 ═══ */
     @media(max-width:1024px){
       nav.site-nav{padding:18px 32px;gap:20px}
+      .nav-portal{display:none}
       nav.site-nav.scrolled{padding:12px 32px}
       .nav-links{gap:18px}
       .hero-content{padding:0 40px 64px}
@@ -354,7 +360,7 @@
       nav.site-nav.scrolled{padding:12px 20px}
       .nav-links{display:none}
       .nav-langs{display:none}
-      .nav-book{display:none}
+      .nav-book,.nav-portal{display:none}
       .nav-toggle{display:flex;z-index:201}
       .hero-content{padding:0 20px 56px}
       .hero-title{font-size:clamp(46px,12vw,80px)}
@@ -364,6 +370,7 @@
       .booking-label{display:none}
       .booking-fields{flex-direction:column;max-width:100%}
       .b-input{padding:13px 16px}
+      .coupon-hint{white-space:normal;text-align:center;padding:4px 0}
       .btn-book-bar{text-align:center;padding:13px}
       .usp-band{grid-template-columns:1fr 1fr}
       .usp-item{padding:16px 16px}
@@ -461,7 +468,8 @@
       <span class="nav-sep"></span>
       <a href="../en/" hreflang="en">EN</a>
   </div>
-  <a href="https://booking.roomraccoon.com/hotel-chamade/nl/" class="nav-book">Boek nu</a>
+  <a href="https://portal.chamade.be" class="nav-portal" target="_blank" rel="noopener">Gasten portaal</a>
+  <a href="#" class="nav-book" data-rumo-book>Boek nu</a>
   <button class="nav-toggle" id="navToggle" aria-label="Menu openen" aria-expanded="false">
     <span></span><span></span><span></span>
   </button>
@@ -472,7 +480,8 @@
   <a href="#gent">Gent</a>
   <a href="#duurzaamheid">Duurzaamheid</a>
   <a href="#contact">Contact</a>
-  <a href="https://booking.roomraccoon.com/hotel-chamade/nl/" style="color:var(--rose)!important">Boek nu</a>
+  <a href="#" style="color:var(--rose)!important" data-rumo-book>Boek nu</a>
+  <a href="https://portal.chamade.be" target="_blank" rel="noopener">Gasten portaal</a>
   <div class="drawer-langs">
       <a href="./" class="active" hreflang="nl">NL</a>
       <span class="nav-sep"></span>
@@ -491,7 +500,7 @@
     <h1 class="hero-title">Make Yourself<span class="sub">At Home.</span></h1>
     <p class="hero-sub">Een warm, persoonlijk hotel op 2 minuten van het Sint-Pietersstation en op wandelafstand van het historische Gent. Vers ontbijt, duurzaam ondernemen, eerlijke service.</p>
     <div class="hero-actions">
-      <a href="https://booking.roomraccoon.com/hotel-chamade/nl/" class="btn-primary">Beschikbaarheid controleren</a>
+      <a href="#" class="btn-primary" data-rumo-book>Beschikbaarheid controleren</a>
       <a href="#kamers" class="btn-ghost">Onze kamers &rarr;</a>
     </div>
   </div>
@@ -504,9 +513,9 @@
   <div class="booking-fields">
     <input type="text" class="b-input b-date" id="b-arrival" placeholder="Check-in" aria-label="Check-in" readonly>
     <input type="text" class="b-input b-date" id="b-departure" placeholder="Check-out" aria-label="Check-out" readonly>
-    <input type="text" class="b-input" id="b-coupon" placeholder="Kortingscode" aria-label="Kortingscode" value="OURSECRET"><span class="coupon-hint">psst — 5% korting, al toegepast</span>
   </div>
-  <a href="https://booking.roomraccoon.com/hotel-chamade/nl/" class="btn-book-bar" onclick="return goBook(this)">Controleer beschikbaarheid</a>
+  <span class="coupon-hint">psst — vul kortingscode <strong>OURSECRET</strong> in bij het boeken voor 5% korting</span>
+  <a href="#" class="btn-book-bar" data-rumo-book>Controleer beschikbaarheid</a>
 </div>
 <script>
 (function(){
@@ -561,12 +570,6 @@
     },arrDate||isoStr(new Date()));
   });
   document.addEventListener('click',closeAll);
-  window.goBook=function(el){
-    var base=el.getAttribute('href'),p=[];
-    if(arrDate)p.push('dateStart='+arrDate);if(depDate)p.push('dateEnd='+depDate);
-    var c=document.getElementById('b-coupon').value.trim();if(c)p.push('coupon='+encodeURIComponent(c));
-    if(p.length)el.href=base+(base.includes('?')?'&':'?')+p.join('&');return true;
-  };
 })();
 </script>
 
@@ -584,7 +587,7 @@
 <section class="rooms-section" id="kamers">
   <div class="rooms-head">
     <div><h2 class="section-title">The Rooms</h2></div>
-    <a href="https://booking.roomraccoon.com/hotel-chamade/nl/" class="text-link">Alle kamers &amp; beschikbaarheid &rarr;</a>
+    <a href="#" class="text-link" data-rumo-book>Alle kamers &amp; beschikbaarheid &rarr;</a>
   </div>
   <div class="rooms-grid">
     <article class="room-card" data-slide="0">
@@ -859,6 +862,7 @@
       <li><a href="voorwaarden.html">Annuleringsbeleid</a></li>
       <li><a href="#" onclick="document.getElementById('modal-privacy').classList.add('active');return false">Privacyverklaring</a></li>
       <li><a href="#voorwaarden" onclick="document.getElementById('modal-terms').classList.add('active');return false">Algemene voorwaarden</a></li>
+      <li><a href="https://portal.chamade.be" target="_blank" rel="noopener">Gasten portaal</a></li>
       <li><a href="../guest/nl/">Info voor gasten</a></li>
       <li><a href="https://www.instagram.com/chamadehotel/" target="_blank" rel="noopener">Instagram</a></li>
     </ul></div>
@@ -1173,7 +1177,7 @@
 
 <!-- ═══ MOBILE BOOK BAR ═══ -->
 <div class="mobile-book-bar">
-  <a href="https://booking.roomraccoon.com/hotel-chamade/nl/">Boek nu</a>
+  <a href="#" data-rumo-book>Boek nu</a>
 </div>
 
 <!-- ═══ GOOGLE REVIEWS (Places API) ═══ -->
@@ -1289,5 +1293,6 @@
   });
 })();
 </script>
+<script src="https://app.rumo.eu/embed.js" data-hotel="chamade" data-label="Boek nu"></script>
 </body>
 </html>

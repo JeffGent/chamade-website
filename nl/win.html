@@ -60,6 +60,11 @@
     nav.site-nav.scrolled .nav-sep{background:rgba(58,82,64,0.18)}
     .nav-book{font-size:10px;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:var(--cream)!important;background:var(--terra);padding:11px 22px;text-decoration:none;transition:all 0.3s;white-space:nowrap;flex-shrink:0}
     .nav-book:hover{background:var(--green)}
+    .nav-portal{font-size:10px;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:var(--cream);border:1px solid rgba(250,247,242,0.5);padding:10px 22px;text-decoration:none;transition:all 0.3s;white-space:nowrap;flex-shrink:0}
+    .nav-portal:hover{background:var(--cream);color:var(--green)}
+    nav.site-nav.scrolled .nav-portal{color:var(--green);border-color:var(--green)}
+    nav.site-nav.scrolled .nav-portal:hover{background:var(--green);color:var(--cream)}
+    .nav-portal+.nav-book{margin-left:-18px}
     .nav-toggle{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px;flex-shrink:0}
     .nav-toggle span{display:block;width:22px;height:1.5px;background:var(--cream);transition:all 0.3s}
     nav.site-nav.scrolled .nav-toggle span{background:var(--green)}
@@ -139,6 +144,7 @@
     /* RESPONSIVE */
     @media(max-width:1024px){
       nav.site-nav{padding:18px 32px;gap:20px}
+      .nav-portal{display:none}
       nav.site-nav.scrolled{padding:12px 32px}
       .nav-links{gap:18px}
       .prize{padding:80px 32px}
@@ -151,7 +157,7 @@
       nav.site-nav.scrolled{padding:12px 20px}
       .nav-links{display:none}
       .nav-langs{display:none}
-      .nav-book{display:none}
+      .nav-book,.nav-portal{display:none}
       .nav-toggle{display:flex;z-index:201}
       .prize{padding:64px 20px}
       .prize-grid{gap:20px}
@@ -180,7 +186,8 @@
       <span class="nav-sep"></span>
       <a href="../en/win.html" hreflang="en">EN</a>
   </div>
-  <a href="https://booking.roomraccoon.com/hotel-chamade/nl/" class="nav-book">Boek nu</a>
+  <a href="https://portal.chamade.be" class="nav-portal" target="_blank" rel="noopener">Gasten portaal</a>
+  <a href="#" class="nav-book" data-rumo-book>Boek nu</a>
   <button class="nav-toggle" id="navToggle" aria-label="Menu openen" aria-expanded="false">
     <span></span><span></span><span></span>
   </button>
@@ -190,7 +197,8 @@
   <a href="./#ontbijt">Ontbijt</a>
   <a href="./#duurzaamheid">Duurzaamheid</a>
   <a href="./#contact">Contact</a>
-  <a href="https://booking.roomraccoon.com/hotel-chamade/nl/" style="color:var(--rose)!important">Boek nu</a>
+  <a href="#" style="color:var(--rose)!important" data-rumo-book>Boek nu</a>
+  <a href="https://portal.chamade.be" target="_blank" rel="noopener">Gasten portaal</a>
   <div class="drawer-langs">
       <a href="win.html" class="active" hreflang="nl">NL</a>
       <span class="nav-sep"></span>
@@ -300,5 +308,6 @@
 
 </script>
 
+<script src="https://app.rumo.eu/embed.js" data-hotel="chamade" data-label="Boek nu"></script>
 </body>
 </html>
